@@ -1,7 +1,7 @@
 <!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Viaggio">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202610141819 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202610141842 -->
 <title>Calcolatore Viaggio</title></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -976,7 +976,7 @@ function vData(){
  <div class="card stack"><h2>Copia di sicurezza</h2>
   <p class="note" style="margin:0">Versione da viaggio: i viaggi restano su questo telefono. Ripristina qui il backup scaricato dall'app principale prima di partire; al ritorno scarica il backup e ripristinalo nell'app principale.</p><p class="note" style="margin:0">Ripristinando un backup, i viaggi già presenti vengono aggiornati (non duplicati), a meno che qui non siano più recenti. Serve anche per la versione da viaggio offline.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:end"><button class="btn" data-a="backup" type="button" id="btnBak">Scarica backup di tutti i viaggi (.json)</button>
-  <label for="bfile" style="flex:1 1 220px">Ripristina da backup<input type="file" id="bfile" accept=".json"></label></div></div>`}
+  <label for="bfile" style="flex:1 1 220px">Ripristina da backup<input type="file" id="bfile"></label></div></div>`}
 
 function impPreview(p){
  const li=[];
@@ -2000,7 +2000,7 @@ function vHome(){const ids=sortedIds().slice().sort((x,y)=>{const a=tripStats(x)
    <span class="tact"><button class="tlink" data-a="tdup" data-id="${esc(id)}" type="button">Duplica</button>${ids.length>1?`<button class="tlink" data-a="tdel" data-id="${esc(id)}" type="button">Elimina</button>`:''}</span></div>`}).join('')}
   <button class="tcard tnew" data-a="newtrip" type="button"><span class="tplus">+</span><span>Nuovo viaggio</span></button></div>
   <div class="card stack" style="margin-top:18px"><h2>Porta i viaggi dentro e fuori</h2><p class="note" style="margin:0">Prima di partire: nell'app principale scarica il backup, poi qui tocca «Ripristina da backup». Al ritorno: qui «Scarica backup», poi ripristinalo nell'app principale. Lo stesso viaggio viene aggiornato, non duplicato.</p>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:end"><button class="btn pri" data-a="backup" type="button">Scarica backup</button><label for="bfile" style="flex:1 1 220px">Ripristina da backup<input type="file" id="bfile" accept=".json,application/json"></label></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:end"><button class="btn pri" data-a="backup" type="button">Scarica backup</button><label for="bfile" style="flex:1 1 220px">Ripristina da backup<input type="file" id="bfile"></label></div>
   ${IMPMSG?`<div class="msg ${IMPMSG[0]}">${esc(IMPMSG[1])}</div>`:''}</div>`}
 function render(){if(!VIEWS[tab])tab='itin';renderTrips();
  document.body.classList.toggle('home',!!HOME);if(HOME){document.getElementById('view').innerHTML=HOME==='trip'?vTripHome():vHome();return}
@@ -2226,10 +2226,10 @@ document.addEventListener('change',ev=>{const t=ev.target;
  if(t.dataset.f==='link'){const e=S.exc.find(x=>x.id===+t.value);if(e){e.hd=+t.dataset.d;touch();const sy=window.scrollY;render();window.scrollTo(0,sy)}return}
  if(t.id==='bfile'&&t.files[0]){t.files[0].text().then(txt=>{try{const x=JSON.parse(txt);const src=x.trips||(x.state?{[newId()]:x}:null);if(!src)throw 0;let n=0;
    let up=0,skip=0;Object.entries(src).forEach(([k,v])=>{if(!v||!v.state)return;const L=TRIPS[k];
-    if(L){if((L.updatedAt||0)>(v.updatedAt||0)){skip++;return}TRIPS[k]={...L,name:v.name,state:v.state,updatedAt:v.updatedAt||Date.now()};touch(k,false);up++;return}
+    if(L){if((L.updatedAt||0)>(v.updatedAt||0)&&!confirm(`«${L.name}» qui è stato modificato dopo questo backup. Lo sostituisco con quello del backup?`)){skip++;return}TRIPS[k]={...L,name:v.name,state:v.state,updatedAt:v.updatedAt||Date.now()};touch(k,false);up++;return}
     const id=/^[A-Za-z0-9_-]{1,80}$/.test(k)?k:newId()+n;TRIPS[id]={name:v.name,state:v.state,updatedAt:v.updatedAt||Date.now()};touch(id,false);n++});
    if(CUR&&TRIPS[CUR])setCurrent(CUR);
-   {const ms=[n?`Aggiunt${n===1?'o 1 viaggio':'i '+n+' viaggi'}`:'',up?`${n?'aggiornat':'Aggiornat'}${up===1?'o 1 viaggio':'i '+up+' viaggi'}`:'',skip?`${skip} non ${skip===1?'aggiornato perché qui è più recente':'aggiornati perché qui sono più recenti'}`:''].filter(Boolean).join(', ');IMPMSG=ms?['ok',ms.charAt(0).toUpperCase()+ms.slice(1)+'.']:['warn','Niente da ripristinare.']}}catch(e){IMPMSG=['bad','Il file non è un backup del calcolatore.']}render()});return}
+   {const ms=[n?`Aggiunt${n===1?'o 1 viaggio':'i '+n+' viaggi'}`:'',up?`${n?'aggiornat':'Aggiornat'}${up===1?'o 1 viaggio':'i '+up+' viaggi'}`:'',skip?`${skip} ${skip===1?'lasciato com\'era':'lasciati com\'erano'}`:''].filter(Boolean).join(', ');IMPMSG=ms?['ok',ms.charAt(0).toUpperCase()+ms.slice(1)+'.']:['warn','Niente da ripristinare.']}t.value='';}catch(e){IMPMSG=['bad','Il file non è un backup del calcolatore.']}render();const m=document.getElementById('bfile');const mm=m&&m.closest('.card')&&m.closest('.card').querySelector('.msg');if(mm)mm.scrollIntoView({block:'center'})});return}
  if(t.dataset.f==='flg'){const x=txOf(S.days[dayIdx(+t.dataset.d)])[+t.dataset.k],from=t.dataset.gk;let to=t.value;
   if(to==='__new'){const g={id:'g'+Date.now().toString(36),name:'',n:'',col:GCOL[GRP().length%GCOL.length]};GRP().push(g);to=g.id}
   (x.voli||[]).forEach(f=>{if(((f.grp||[])[0]||'')===from)f.grp=to?[to]:[]});touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}

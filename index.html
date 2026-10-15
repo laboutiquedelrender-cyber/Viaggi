@@ -1,7 +1,7 @@
 <!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Viaggio">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202610150836 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202610150841 -->
 <title>Calcolatore Viaggio</title></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -1967,8 +1967,10 @@ function vCComune(){const C=ccData();if(CCDAY==null){const ti=ccTodayIdx();CCDAY
   <div class="ccset2"><label>Cassiere<select data-f="ccc" data-x="cassiere">${C.people.map(p=>`<option value="${p.id}"${C.cassiere===p.id?' selected':''}>${esc(p.n)}</option>`).join('')}</select></label></div></details>`;
  const cnt={};C.mv.forEach(x=>cnt[x.day]=(cnt[x.day]||0)+1);
  // versione da viaggio: si vedono solo ieri, oggi e domani (gli altri con «…»)
- const ti=ccTodayIdx(),few=window.TRAVEL&&ti>=0&&!CCALLD,show=i=>!few||Math.abs(i-ti)<=1||S.days[i].id===CCDAY;
- const chips=`<div class="daychips" role="tablist" aria-label="Giorni">${S.days.map((d,i)=>{if(!show(i))return '';const x=dObj(i);return `<button type="button" class="dchip${CCDAY===d.id?' on':''}${cnt[d.id]?' has':''}" data-a="ccday" data-d="${d.id}" title="${esc(dateOf(i))}${cnt[d.id]?' · '+cnt[d.id]+' movimenti':''}"><b>${i+1}</b><small>${x?String(x.getDate()).padStart(2,'0')+'/'+String(x.getMonth()+1).padStart(2,'0'):''}</small></button>`}).join('')}${window.TRAVEL&&ti>=0?`<button type="button" class="dchip all" data-a="ccmore" title="${CCALLD?'Mostra solo ieri, oggi e domani':'Mostra tutti i giorni'}">${CCALLD?'‹ meno':'… tutti i giorni'}</button>`:''}<button type="button" class="dchip all${CCDAY==='all'?' on':''}" data-a="ccday" data-d="all">Tutti</button></div>`;
+ const ti=ccTodayIdx(),nD=S.days.length,a0=dObj(0),td=new Date();td.setHours(0,0,0,0);
+ // prima della partenza i primi tre giorni, durante ieri-oggi-domani, dopo il ritorno gli ultimi tre
+ const anc=ti>=0?ti:(a0&&td<new Date(a0.getFullYear(),a0.getMonth(),a0.getDate())?1:nD-2),few=window.TRAVEL&&nD>3&&!CCALLD,show=i=>!few||Math.abs(i-Math.min(Math.max(anc,1),nD-2))<=1||S.days[i].id===CCDAY;
+ const chips=`<div class="daychips" role="tablist" aria-label="Giorni">${S.days.map((d,i)=>{if(!show(i))return '';const x=dObj(i);return `<button type="button" class="dchip${CCDAY===d.id?' on':''}${cnt[d.id]?' has':''}" data-a="ccday" data-d="${d.id}" title="${esc(dateOf(i))}${cnt[d.id]?' · '+cnt[d.id]+' movimenti':''}"><b>${i+1}</b><small>${x?String(x.getDate()).padStart(2,'0')+'/'+String(x.getMonth()+1).padStart(2,'0'):''}</small></button>`}).join('')}${window.TRAVEL&&nD>3?`<button type="button" class="dchip all" data-a="ccmore" title="${CCALLD?'Mostra solo tre giorni':'Mostra tutti i giorni'}">${CCALLD?'‹ meno':'… tutti i giorni'}</button>`:''}<button type="button" class="dchip all${CCDAY==='all'?' on':''}" data-a="ccday" data-d="all">Tutti</button></div>`;
  const idx=C.mv.map((x,j)=>({x,j})).filter(o=>CCDAY==='all'||o.x.day===CCDAY).sort((a,b)=>dayIdx(a.x.day)-dayIdx(b.x.day)||a.j-b.j);
  let list='';if(CCDAY==='all'){let last=null;idx.forEach(o=>{if(o.x.day!==last){last=o.x.day;const i=dayIdx(last);list+=`<div class="ccdh">Giorno ${i+1} · ${esc(dateShort(i))}</div>`}list+=ccRow(o.x,o.j)})}else list=idx.map(o=>ccRow(o.x,o.j)).join('');
  const tl=CCDAY==='all'?'Tutti i giorni':`Giorno ${dayIdx(CCDAY)+1} · ${esc(dateOf(dayIdx(CCDAY)))}`;

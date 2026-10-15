@@ -1,7 +1,7 @@
 <!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Viaggio">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202610141842 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202610150836 -->
 <title>Calcolatore Viaggio</title></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -156,7 +156,7 @@ details summary{cursor:pointer;color:var(--muted);font-size:12px}
 .exh-l{color:var(--muted);font-size:11px}
 .exf{display:flex;flex-direction:column;gap:8px;min-width:0}
 .exprog input{font-weight:500;background:var(--pg);border-color:var(--pgb)}
-.exgrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr) minmax(0,1.1fr) minmax(0,.9fr) minmax(0,.7fr) minmax(0,1fr);gap:6px}
+.exgrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1.1fr) minmax(0,.9fr) minmax(0,.6fr) minmax(0,1.3fr);gap:6px}
 .exres{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
 .mini{width:auto;font-size:12px;background:var(--calc);color:var(--calc-fg);border-radius:6px}
 .mini th,.mini td{padding:4px 8px;border-bottom:0;text-align:right}
@@ -375,10 +375,32 @@ body.home .crumb#crumb{display:none}
 .cccash{display:inline-block;margin-right:12px}.ccpk{display:flex!important;flex-direction:row!important;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer;font-size:14px;color:var(--fg)}.ccpk input{width:18px!important;height:18px!important;min-height:0;margin:2px 0 0;flex:none}.ccpk span{display:flex;flex-direction:column}.ccpk small{color:var(--muted)}.ccpk.used{opacity:.5}
 .cccashg{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}.cccashb{border:1px solid var(--line);border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:2px}
 .cccashb b{font-family:var(--mono,monospace);font-size:20px}.cccashb small{color:var(--muted);font-size:12px}.cccashb.tot{background:var(--hl);border-color:var(--hlb)}.cccashb.neg b{color:#b3261e}
+
+.hdrtog{display:none}.tabs .tdesk{display:contents}.tabs .tmob{display:none}
+@media(max-width:600px){
+ .hdrtog{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:8px;padding:6px 12px;cursor:pointer;max-width:100%}
+ .hdrar{color:var(--accent);font-size:12px}
+ body:not(.hdropen) .toph .tsel,body:not(.hdropen) .toph #sync,body:not(.hdropen) .toph #status,body:not(.hdropen) .toph #dead,body:not(.hdropen) .trip{display:none!important}
+ .tabs.hasmob .tdesk{display:none}.tabs.hasmob .tmob{display:flex;gap:6px;width:100%}
+ .tabs.hasmob .tmob>.tab{flex:1 1 auto}
+ .tabmore{position:relative;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);background:var(--card);color:var(--fg);padding:7px 14px;border-radius:6px;flex:0 0 auto;font-size:inherit;margin:0}
+ .tabmore.on{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+ .tabmore select{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;font-size:16px}
+}
+.ccpg td{background:var(--hl);font-weight:600;font-size:13px}.ccdesc{display:flex;gap:6px;flex:1 1 260px;min-width:0}.ccdesc .cct{flex:1 1 auto;min-width:0}.ccdesc .cccat{flex:0 0 auto;width:auto;max-width:48%}
+.exfilt{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:0 0 10px}.exfilt .chip small{opacity:.75;margin-left:2px}.exfiltm{display:none;margin:0 0 10px}
+.exfiltm summary{list-style:none;display:inline-flex}.exfiltm summary::-webkit-details-marker{display:none}.exfmenu{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 12px;margin-top:6px;max-width:280px}
+@media(max-width:600px){.exfilt{display:none}.exfiltm{display:block}}
+.ro .rohead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:10px}.rotab{width:100%;border-collapse:collapse;font-size:13.5px}
+.rotab th{background:#1f6f5c;color:#fff;text-align:left;padding:7px 8px;font-weight:600}.ro .rotab td,.ro .rotab th{text-align:left;white-space:normal;vertical-align:top}.rotab td{padding:7px 8px;border:1px solid var(--line);line-height:1.4}.rotab td.c3{min-width:260px}.rotab td.c2{min-width:150px}.rotab td.c5{min-width:150px}
+.rotab tr.odd td{background:color-mix(in srgb,var(--line) 45%,var(--card))}.ro .rotab td.c0{text-align:center;font-weight:600;width:2.5em}.ro .rotab td.c1{white-space:nowrap}.rotab tfoot td{background:var(--hl)}.ro .rotab td.m{text-align:right;white-space:nowrap}.rohotel .rotab{min-width:0}@media(max-width:600px){.ro.rohotel .rotab td.m{white-space:normal}.rotab{font-size:13px}}
+.rotw .rotab{min-width:820px}.roinfo{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 10px}.roinfo span{display:flex;flex-direction:column}.roinfo small{color:var(--muted);font-size:12px}
+.rointol{margin:10px 0 0;padding:8px 12px;border:2px solid #d9622b;border-left-width:6px;background:#ffecd6;color:#96320a;font-weight:700;border-radius:4px}.ronote{margin:8px 0 0;font-size:14px}
 </style>
 
 <div class="toph">
   <h1><button class="homebtn" data-a="gohome" type="button" title="Torna a tutti i viaggi"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4"/><path d="M32 12 L37 32 L32 52 L27 32 Z" fill="currentColor"/><path d="M32 12 L37 32 L27 32 Z" fill="#d9622b"/></svg>Calcolatore Viaggio</button></h1>
+  <button id="hdrtog" class="hdrtog" data-a="hdrtog" type="button" aria-label="Mostra o nascondi i dati del viaggio"></button>
   <label for="tripSel" class="tsel">Viaggio<select id="tripSel"></select></label>
   <span id="sync" class="sync" title="Solo su questo dispositivo">Solo qui</span>
   <span id="status" class="status ok" title="Controlli automatici: dettagli nella scheda Riepilogo">Tutto ok</span>
@@ -505,14 +527,19 @@ function hotelCalc(d){const h=d.hotel,r=rate(h.cur);if(!r)return{gr:0,pasti:0,ph
 function excCalc(e){const r=rate(e.cur);if(!r)return{gr:0,pax:0,eur:0,paxeur:0};
  const persone=e.tlf?Math.max(0,P()-1):P();const gr=e.tipo==='pax'?num(e.imp)*persone:num(e.imp);
  return{gr,pax:gr/P(),eur:gr/r,paxeur:gr/P()/r}}
-const EXCAT=[['exc','Escursione'],['tras','Trasporto'],['manc','Mancia']];
-const excKey=e=>e.cat==='tras'||e.cat==='manc'?e.cat:'exc';
-const BRK=[['Hotel','hotel'],['Pasti non inclusi','pasti'],['Escursioni','exc'],['Trasporti','tras'],['Mance','manc']];
+// categorie del viaggio, le stesse per Escursioni e Cassa Comune
+const CC_CATS=['Pasto','Hotel','Trasporti','Mance','Corrispondente','Escursioni'];
+function tripCats(){if(!Array.isArray(S.cats)){const old=S.cc&&Array.isArray(S.cc.cats)?S.cc.cats:[];S.cats=[...CC_CATS,...old.filter(c=>!CC_CATS.includes(c))]}return S.cats}
+function addCat(n){n=String(n||'').trim();if(!n)return '';const L=tripCats(),f=L.find(c=>c.toLowerCase()===n.toLowerCase());if(f)return f;L.push(n);return n}
+const excCat=e=>({tras:'Trasporti',manc:'Mance',exc:'Escursioni'})[e.cat]||e.cat||'Escursioni';
+let EXF=null;// null = tutte le categorie
+const exUsedCats=()=>{const u=new Set(S.exc.map(excCat));return [...tripCats().filter(c=>u.has(c)),...[...u].filter(c=>!tripCats().includes(c))]};
+const brkList=()=>[['Hotel','hotel'],['Pasti non inclusi','pasti'],...exUsedCats().map(c=>[c,'c:'+c])];
 function totals(){
  const rows=S.days.map(()=>({c:[0,0,0,0,0],eur:0}));
- const sum={hotel:[0,0,0,0,0],pasti:[0,0,0,0,0],exc:[0,0,0,0,0],tras:[0,0,0,0,0],manc:[0,0,0,0,0]},sumE={hotel:0,pasti:0,exc:0,tras:0,manc:0};
+ const sum={hotel:[0,0,0,0,0],pasti:[0,0,0,0,0]},sumE={hotel:0,pasti:0};exUsedCats().forEach(c=>{sum['c:'+c]=[0,0,0,0,0];sumE['c:'+c]=0});
  S.days.forEach((d,i)=>{const h=d.hotel,c=hotelCalc(d);if(c.tot){const r=rate(h.cur);rows[i].c[h.cur]+=c.tot;rows[i].eur+=c.eur;sum.hotel[h.cur]+=c.gr;sum.pasti[h.cur]+=c.pasti;sumE.hotel+=c.gr/r;sumE.pasti+=c.pasti/r}});
- S.exc.forEach(e=>{const i=dayIdx(e.day);const c=excCalc(e);if(i<0||!c.gr)return;rows[i].c[e.cur]+=c.gr;rows[i].eur+=c.eur;const k=excKey(e);sum[k][e.cur]+=c.gr;sumE[k]+=c.eur});
+ S.exc.forEach(e=>{const i=dayIdx(e.day);const c=excCalc(e);if(i<0||!c.gr)return;rows[i].c[e.cur]+=c.gr;rows[i].eur+=c.eur;const k='c:'+excCat(e);sum[k][e.cur]+=c.gr;sumE[k]+=c.eur});
  const tc=[0,1,2,3,4].map(c=>rows.reduce((a,r)=>a+r.c[c],0));const te=rows.reduce((a,r)=>a+r.eur,0);
  const used=[0,1,2,3,4].filter(c=>tc[c]);
  return{rows,sum,sumE,tc,te,used}}
@@ -905,7 +932,7 @@ function excRow(e){return `<div class="exrow" id="ex-${e.id}">
    <label>Importo<select id="e-tipo-${e.id}" data-f="e" data-e="${e.id}" data-k="tipo"><option value="pax"${e.tipo==='pax'?' selected':''}>a persona</option><option value="gr"${e.tipo==='gr'?' selected':''}>totale gruppo</option></select></label>
    <label>Valore<input id="e-imp-${e.id}" data-f="e" data-e="${e.id}" data-k="imp" type="number" step="any" min="0" placeholder="0 se gratis" value="${esc(e.imp)}"></label>
    <label>TLF gratis<select id="e-tlf-${e.id}" data-f="e" data-e="${e.id}" data-k="tlf"><option value="0"${!e.tlf?' selected':''}>No</option><option value="1"${e.tlf?' selected':''}>Sì</option></select></label>
-   <label>Voce<select id="e-cat-${e.id}" data-f="e" data-e="${e.id}" data-k="cat">${EXCAT.map(([k,l])=>`<option value="${k}"${excKey(e)===k?' selected':''}>${l}</option>`).join('')}</select></label>
+   <label>Categoria<select id="e-cat-${e.id}" data-f="e" data-e="${e.id}" data-k="cat">${(()=>{const L=tripCats(),c=excCat(e);return (L.includes(c)?L:[...L,c]).map(k=>`<option${c===k?' selected':''}>${esc(k)}</option>`).join('')})()}<option value="__new">Personalizzato…</option></select></label>
   </div></div>
  <div class="exhot">${linkedHotel(e)?(()=>{const lh=linkedHotel(e);return `<span class="exh-l">⌂ da pagare all'hotel</span><b>${esc(lh.hotel.name||'hotel')}</b>`})():''}</div>
  <div class="exres">
@@ -913,12 +940,16 @@ function excRow(e){return `<div class="exrow" id="ex-${e.id}">
    <tbody><tr><td>Gruppo</td><td class="m" id="eg${e.id}"></td><td class="m" id="ee${e.id}"></td></tr>
    <tr><td>A persona</td><td class="m" id="ep${e.id}"></td><td class="m" id="epe${e.id}"></td></tr></tbody></table>
   <button class="btn del" data-a="delexc" data-e="${e.id}" type="button" aria-label="Elimina escursione ${esc(e.prog)}">Elimina</button></div></div>`}
-function vExc(){
- const chips=dayChips({},null,new Set(S.days.filter(d=>!S.exc.some(e=>e.day===d.id)).map(d=>d.id)));const groups=S.days.map((d,i)=>({d,i,list:S.exc.filter(e=>e.day===d.id)})).filter(g=>SELDAY==='all'?g.list.length:g.d.id===SELDAY);
+const exOn=c=>!EXF||EXF.has(c);
+function exFilterBar(){const U=exUsedCats();if(U.length<2)return '';const cnt=k=>S.exc.filter(e=>excCat(e)===k).length,all=!EXF;
+ return `<div class="exfilt"><span class="note exfl">Mostra</span>${U.map(k=>`<button class="chip${exOn(k)?' on':''}" data-a="exfilt" data-k="${esc(k)}" type="button">${esc(k)} <small>${cnt(k)}</small></button>`).join('')}</div>
+  <details class="exfiltm"><summary class="btn">Categorie: ${all?'tutte':esc(U.filter(exOn).join(', '))} ▾</summary><div class="exfmenu">${U.map(k=>`<label class="ccpk"><input type="checkbox" data-a="exfilt" data-k="${esc(k)}"${exOn(k)?' checked':''}><span><b>${esc(k)}</b><small>${cnt(k)} voci</small></span></label>`).join('')}</div></details>`}
+function vExc(){const fx=e=>exOn(excCat(e));
+ const chips=exFilterBar()+dayChips({},null,new Set(S.days.filter(d=>!S.exc.some(e=>e.day===d.id&&fx(e))).map(d=>d.id)));const groups=S.days.map((d,i)=>({d,i,list:S.exc.filter(e=>e.day===d.id&&fx(e))})).filter(g=>SELDAY==='all'?g.list.length:g.d.id===SELDAY);
  const cards=groups.map(({d,i,list})=>`<div class="card exday ${(i%2)?'dB':'dA'}">
   <div class="exhead dayband"><div style="min-width:0"><h2 style="margin:0">Giorno ${i+1} · ${esc(dateYY(i))}</h2><div class="note">${esc(tappeDay(d)||'Tappe non indicate')}</div></div>
    <div class="extot" id="exd${d.id}"></div></div>
-  ${list.length?list.map(excRow).join(''):'<p class="note" style="margin:10px 0">Nessuna escursione in questo giorno.</p>'}
+  ${list.length?list.map(excRow).join(''):`<p class="note" style="margin:10px 0">${EXF&&S.exc.some(e=>e.day===d.id)?'Nessuna voce delle categorie scelte in questo giorno.':'Nessuna escursione in questo giorno.'}</p>`}
   <button class="btn" data-a="addexc" data-d="${d.id}" type="button">+ Escursione nel giorno ${i+1}</button></div>`).join('');
  return chips+(cards||`<div class="card note">Nessuna escursione. Aggiungile qui sotto o importale dalla scheda Importa e backup.</div>`)+(SELDAY!=='all'?'':
  `<div class="card" style="display:flex;gap:8px;flex-wrap:wrap;align-items:end"><label style="flex:0 1 220px">Aggiungi un'escursione al giorno<select id="exAddDay">${S.days.map((d,i)=>`<option value="${d.id}">${i+1} · ${esc(dateShort(i))}${notte(d)?' · '+esc(notte(d)):''}</option>`).join('')}</select></label><button class="btn pri" data-a="addexc" type="button">+ Escursione</button></div>`)}
@@ -930,7 +961,7 @@ function vRiep(){
  const cc=(v,c)=>c===0?`<td class="m">${v?fmt(v,0):''}</td>`:`<td class="m cg1">${v?fmt(v,0):''}</td><td class="m pax">${v?fmt(v/P(),0):''}</td>`;
  const body=S.days.map((d,i)=>`<tr><td>${i+1} · ${esc(dateShort(i))}</td><td style="text-align:left">${esc(notte(d))||'—'}</td>${cols.map(c=>cc(T.rows[i].c[c],c)).join('')}<td class="m ind sep">${fmt(T.rows[i].eur,0)}</td><td class="m ind">${fmt(T.rows[i].eur/P(),0)}</td></tr>`).join('');
  const foot=`<tr class="tot"><td>Totale</td><td></td>${cols.map(c=>cc(T.tc[c],c)).join('')}<td class="m ind sep">${fmt(T.te,0)}</td><td class="m ind">${fmt(T.te/P(),0)}</td></tr>`;
- const brk=BRK;
+ const brk=brkList();
  const vrow=(n,a,e,cls='')=>`<tr${cls}><td>${n}</td>${cols.map(c=>`<td class="m cg1">${a[c]?fmt(a[c],0):''}</td><td class="m pax">${a[c]?fmt(a[c]/P(),0):''}</td>`).join('')}<td class="m ind sep">${fmt(e,0)}</td><td class="m ind">${fmt(e/P(),0)}</td></tr>`;
  const b=`<thead><tr><th rowspan="2">Voce</th><th colspan="${cols.length*2}" class="cg payh">Da pagare in valuta locale</th><th colspan="2" class="cg indh sep">Equivalente in €</th></tr>
  <tr>${cols.map(c=>`<th class="cg1">${esc(curName(c))} gruppo</th><th>${esc(curName(c))} a persona</th>`).join('')}<th class="sep">Gruppo €</th><th>A persona €</th></tr></thead><tbody>`+brk.map(([n,k])=>vrow(n,T.sum[k],T.sumE[k])).join('')+vrow('Totale',T.tc,T.te,' class="tot"')+'</tbody>';
@@ -1115,7 +1146,7 @@ function textSummary(){const T=totals(),t=TRIPS[CUR];const L=[];
   L.push(`G${pad(i+1,2,true)} ${pad(dateShort(i),10)} ${pad(notte(d)||'—',16)} ${parts.length?parts.join(' + ')+` = ${fmt(r.eur,0)} €`:'—'}`)});
  L.push('');L.push('TOTALE GRUPPO');T.used.forEach(c=>L.push(`  ${pad(curName(c),14)} ${pad(fmt(T.tc[c],0),12,true)}`));L.push(`  ${pad('In euro',14)} ${pad(fmt(T.te,0),12,true)} €`);
  L.push('');L.push('DA RACCOGLIERE A PERSONA');T.used.forEach(c=>L.push(`  ${pad(curName(c),14)} ${pad(fmt(T.tc[c]/P(),0),12,true)}`));L.push(`  ${pad('In euro',14)} ${pad(fmt(T.te/P(),0),12,true)} €`);
- L.push('');L.push('PER VOCE (in €, gruppo · a persona)');BRK.forEach(([n,k])=>L.push(`  ${pad(n,18)} ${pad(fmt(T.sumE[k],0),9,true)} · ${pad(fmt(T.sumE[k]/P(),0),7,true)}`));
+ L.push('');L.push('PER VOCE (in €, gruppo · a persona)');brkList().forEach(([n,k])=>L.push(`  ${pad(n,18)} ${pad(fmt(T.sumE[k],0),9,true)} · ${pad(fmt(T.sumE[k]/P(),0),7,true)}`));
  if(S.exc.length){L.push('');L.push('ESCURSIONI');S.exc.slice().sort((a,b)=>dayIdx(a.day)-dayIdx(b.day)).forEach(e=>{const c=excCalc(e);L.push(`  G${dayIdx(e.day)+1} ${e.prog||'—'}: ${fmt(c.gr,0)} ${curName(e.cur)} (${fmt(c.pax,0)} a persona)${e.tlf?' · TLF gratis':''}`)})}
  const is=openIssues();if(is.length){L.push('');L.push('DA VERIFICARE');is.forEach(x=>L.push('  - '+x))}
  return L.join('\n')}
@@ -1148,7 +1179,7 @@ async function makePDF(){await loadScript(LIB.jspdf);await loadScript(LIB.autota
   foot:[['Totale','','',...cols.map(c=>num0(T.tc[c])),fmt(T.te,0),fmt(T.te/P(),0)],['A persona','','',...cols.map(c=>T.tc[c]?fmt(T.tc[c]/P(),0):''),'','']],
   footStyles:{fillColor:[226,243,232],textColor:20},columnStyles:cs});
  doc.autoTable({...st,startY:doc.lastAutoTable.finalY+6,head:[['Voce',...cols.map(curName),'In €','A persona €']],
-  body:BRK.map(([n,k])=>[n,...cols.map(c=>num0(T.sum[k][c])),fmt(T.sumE[k],0),fmt(T.sumE[k]/P(),0)]),
+  body:brkList().map(([n,k])=>[n,...cols.map(c=>num0(T.sum[k][c])),fmt(T.sumE[k],0),fmt(T.sumE[k]/P(),0)]),
   columnStyles:Object.fromEntries(cols.map((_,i)=>[i+1,{halign:'right'}]).concat([[cols.length+1,{halign:'right'}],[cols.length+2,{halign:'right'}]]))});
  doc.addPage();doc.setFontSize(12);doc.text('Itinerario',12,14);
  const irows=[];S.days.forEach((d,i)=>{const tx=txOf(d);d.tappe.forEach((t,k)=>{if(!t.trim()&&!tx[k].ds)return;irows.push([k?'':i+1,k?'':dateShort(i),t,tx[k].m||'',tx[k].m!=='Volo'&&num(tx[k].km)?fmt(num(tx[k].km),1):'',tx[k].m!=='Volo'?tx[k].h||'':'',tx[k].m==='Volo'?flText(tx[k]):(tx[k].ds||''),k===d.tappe.length-1?notte(d):''])})});
@@ -1681,7 +1712,7 @@ async function makeExportPDF(){await loadScript(LIB.jspdf);await loadScript(LIB.
   table(head,body,{long:[2],columnStyles:cs,didParseCell:dd=>{if(dd.section==='body'&&dd.row.index===body.length-1)dd.cell.styles.fontStyle='bold';if(dd.section==='head'&&dd.column.index>=ne)dd.cell.styles.fillColor=[150,150,150]}})}
  if(has('voce')){title('Riepilogo per voce','A sinistra quanto si paga in ogni valuta; a destra l\'equivalente in euro.');const cols=[0,1,2,3,4].filter(c=>TT.tc[c]);
   const row=(n,a,e)=>[n,...cols.flatMap(c=>[a[c]?fmt(a[c],0):'',a[c]?fmt(a[c]/P(),0):'']),fmt(e,0),fmt(e/P(),2)];
-  const body=BRK.map(([n,k])=>[n==='Pasti non inclusi'?'Pasti':n,k]).map(([n,k])=>row(n,TT.sum[k],TT.sumE[k]));body.push(row('Totale',TT.tc,TT.te));
+  const body=brkList().map(([n,k])=>[n==='Pasti non inclusi'?'Pasti':n,k]).map(([n,k])=>row(n,TT.sum[k],TT.sumE[k]));body.push(row('Totale',TT.tc,TT.te));
   const nc=1+cols.length*2,cs={};for(let i=1;i<nc+2;i++)cs[i]={halign:'right'};cs[nc]={...cs[nc],textColor:[120,120,120],fontStyle:'italic'};cs[nc+1]={...cs[nc+1],textColor:[120,120,120],fontStyle:'italic'};
   table(['Voce',...cols.flatMap(c=>[curName(c)+' gruppo',curName(c)+' a pers.']),'Gruppo €','A pers. €'],body,{long:[0],columnStyles:cs,
    headTop:[{content:'',styles:{fillColor:[255,255,255]}},{content:'Da pagare in valuta locale',colSpan:cols.length*2,styles:{halign:'center'}},{content:'Equivalente in €',colSpan:2,styles:{halign:'center',fillColor:[150,150,150]}}],
@@ -1860,12 +1891,18 @@ function vCarMO(){const M=moData();
   ${items||'<p class="note">Nessuna scheda ancora.</p>'}
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn" data-a="moadd" data-s="${MOSEC}" type="button">+ Aggiungi ${MOSEC==='tappe'?'giorno':'scheda'}</button></div></div>`}
 /* ---------- Cassa Comune: cassiere, raccolte, cambi, spese condivise (tipo Tricount) ---------- */
-let CCDAY=null,CCPICK=false,CCSEL=new Set();
+let CCDAY=null,CCPICK=false,CCSEL=new Set(),CCALLD=false;
 const CCT={sp:['Spesa','💳'],in:['Raccolta','📥'],cx:['Cambio','💱'],out:['Ridistribuzione','📤']};
 function ccData(){S.cc=S.cc||{};const C=S.cc;
  if(!Array.isArray(C.people)||!C.people.length){C.people=Array.from({length:P()},(_,i)=>({id:'p'+(i+1),n:i===0?'Mirko (TL)':'Partecipante '+(i+1)}))}
  if(!Array.isArray(C.mv)){C.mv=(C.sp||[]).map(x=>({...x,type:'sp',by:x.by||'cassa'}));delete C.sp}
- if(!C.cassiere||!C.people.some(p=>p.id===C.cassiere))C.cassiere=C.people[0].id;return C}
+ if(!C.cassiere||!C.people.some(p=>p.id===C.cassiere))C.cassiere=C.people[0].id;
+ tripCats();
+ // le spese del vecchio foglio Cassa passano qui, pagate dalla cassa e divise tra tutti
+ if(S.cassa&&!S.cassa.moved){const O=S.cassa,cm={Pasti:'Pasto'};(O.sp||[]).forEach((x,n)=>{if(!num(x.v)&&!String(x.t||'').trim())return;const cat=cm[x.cat]||x.cat||'';if(cat&&cat!=='Altro')addCat(cat);
+   C.mv.push({id:'m'+Date.now()+n,type:'sp',day:x.day,t:x.t||'',cat:cat==='Altro'?'':cat,v:String(x.v||''),cur:+x.cur||0,by:'cassa',for:C.people.map(p=>p.id),src:x.src})});
+  const nP=C.people.length;Object.entries(O.racc||{}).forEach(([c,v])=>{if(num(v))C.mv.push({id:'r'+Date.now()+c,type:'in',day:S.days[0].id,t:'Raccolta (dal vecchio foglio Cassa)',v:String(Math.round(num(v)/nP*100)/100),cur:+c,for:C.people.map(p=>p.id)})});
+  O.moved=true}return C}
 const ccName=id=>id==='cassa'?'Cassa':((ccData().people.find(x=>x.id===id)||{}).n||'?');
 const ccAllIds=()=>ccData().people.map(p=>p.id);
 // cambio effettivo: se il cassiere ha registrato dei cambi vale la media di quelli, altrimenti il cambio del viaggio
@@ -1890,10 +1927,12 @@ function ccSettle(K){const bal={...Object.fromEntries(Object.entries(K.B).map(([
 // spese già impostate nel programma (hotel, pasti in hotel, escursioni): sempre divise tra tutti, così lo sconto TLF va a beneficio del gruppo
 function ccPlanned(){const all=ccAllIds(),out=[];
  S.days.forEach((d,i)=>{const h=d.hotel,c=hotelCalc(d);
-  if(norm(h.name)&&c.gr)out.push({k:'h'+d.id,day:d.id,t:'Hotel '+h.name,cur:+h.cur,v:Math.round(c.gr),for:all});
-  if(c.ph)out.push({k:'m'+d.id,day:d.id,t:'Pasti in hotel '+h.name,cur:+h.cur,v:Math.round(c.ph),for:all});
-  S.exc.filter(e=>e.day===d.id).forEach(e=>{const ce=excCalc(e);if(ce.gr)out.push({k:'e'+e.id,day:d.id,t:e.prog||'Escursione',cur:+e.cur,v:Math.round(ce.gr),for:all})})});
+  if(norm(h.name)&&c.gr)out.push({k:'h'+d.id,day:d.id,t:'Hotel '+h.name,cat:'Hotel',cur:+h.cur,v:Math.round(c.gr),for:all});
+  if(c.ph)out.push({k:'m'+d.id,day:d.id,t:'Pasti in hotel '+h.name,cat:'Pasto',cur:+h.cur,v:Math.round(c.ph),for:all});
+  S.exc.filter(e=>e.day===d.id).forEach(e=>{const ce=excCalc(e);if(ce.gr)out.push({k:'e'+e.id,day:d.id,t:e.prog||'Escursione',cat:excCat(e),cur:+e.cur,v:Math.round(ce.gr),for:all})})});
  return out}
+// valuta che si usa quel giorno secondo il programma (la prima della giornata)
+function ccDayCur(day){const p=ccPlanned().find(x=>x.day===day&&+x.cur);if(p)return +p.cur;const i=dayIdx(day),h=i>=0?S.days[i].hotel:null;return h&&norm(h.name)&&+h.cur?+h.cur:null}
 const ccDayOpt=sel=>S.days.map((d,i)=>`<option value="${d.id}"${d.id===sel?' selected':''}>${i+1} · ${esc(dateShort(i))}</option>`).join('');
 const ccCurOpt=(sel,list)=>list.map(c=>`<option value="${c}"${+sel===c?' selected':''}>${esc(curName(c))}</option>`).join('');
 // ordine nei pulsanti: prima il cassiere, poi io (il primo partecipante), poi gli altri
@@ -1910,7 +1949,7 @@ function ccRow(x,j){const C=ccData(),cs=cassaCurs(),f=(k,extra='')=>`data-f="ccm
    <input class="ccv" ${f('v',' type="number" step="any" inputmode="decimal"')} value="${esc(x.v??'')}" placeholder="Ottenuti" aria-label="Importo ottenuto"><select ${f('cur')} aria-label="Valuta">${ccCurOpt(x.cur,cs.filter(c=>c))}</select>${del}</div>
    <div class="ccfor"><span class="note" id="ccq-${j}">${r?`1 € = ${fmt(r,2)} ${esc(curName(+x.cur))}`:''}</span></div></div>`}
  const amt=`<input class="ccv" ${f('v',' type="number" step="any" inputmode="decimal"')} value="${esc(x.v??'')}" placeholder="${x.type==='sp'?'Importo':'A persona'}" aria-label="${x.type==='sp'?'Importo':'Importo a persona'}"><select ${f('cur')} aria-label="Valuta">${ccCurOpt(x.cur,cs)}</select>${x.type==='sp'?'':'<span class="ccpp">a persona</span>'}`;
- if(x.type==='sp')return `<div class="ccrow"><div class="ccmain">${head}<input class="cct" ${f('t')} value="${esc(x.t||'')}" placeholder="Descrizione" aria-label="Descrizione">${amt}
+ if(x.type==='sp')return `<div class="ccrow"><div class="ccmain">${head}<span class="ccdesc"><input class="cct" ${f('t')} value="${esc(x.t||'')}" placeholder="Descrizione" aria-label="Descrizione"><select class="cccat" ${f('cat')} aria-label="Categoria"><option value=""${x.cat?'':' selected'}>Categoria…</option>${tripCats().map(k=>`<option${x.cat===k?' selected':''}>${esc(k)}</option>`).join('')}<option value="__new">Personalizzato…</option></select></span>${amt}
    <label class="ccby">Pagato da<select ${f('by')}><option value="cassa"${x.by==='cassa'?' selected':''}>Cassa comune</option>${C.people.map(p=>`<option value="${p.id}"${x.by===p.id?' selected':''}>${esc(p.n)}</option>`).join('')}</select></label>${del}</div>${ccChips(j,x,'Diviso tra')}</div>`;
  return `<div class="ccrow"><div class="ccmain">${head}<input class="cct" ${f('t')} value="${esc(x.t||'')}" placeholder="Nota" aria-label="Nota">${amt}${del}</div>${ccChips(j,x,x.type==='in'?'Versano':'Ricevono dalla cassa')}</div>`}
 function ccPickPanel(){const C=ccData(),used=new Set(C.mv.map(x=>x.src).filter(Boolean)),L=ccPlanned(),here=CCDAY!=='all'?CCDAY:null;
@@ -1920,23 +1959,40 @@ function ccPickPanel(){const C=ccData(),used=new Set(C.mv.map(x=>x.src).filter(B
   ${mine.length?mine.map(item).join(''):'<p class="note" style="margin:0">Niente in programma per questo giorno.</p>'}
   ${other.length?`<details class="srcdet"><summary>Altri giorni (${other.length})</summary>${other.map(item).join('')}</details>`:''}
   <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn pri" data-a="ccpkok" type="button"${CCSEL.size?'':' disabled'}>Aggiungi ${CCSEL.size||''} ${CCSEL.size===1?'spesa':'spese'}</button><button class="btn" data-a="ccpkno" type="button">Chiudi</button></div></div>`}
-function vCComune(){const C=ccData();if(CCDAY==null){const td=new Date();CCDAY='all';S.days.forEach((d,i)=>{const x=dObj(i);if(x&&x.toDateString()===td.toDateString())CCDAY=d.id})}
+function ccTodayIdx(){const td=new Date().toDateString();return S.days.findIndex((d,i)=>{const x=dObj(i);return x&&x.toDateString()===td})}
+function vCComune(){const C=ccData();if(CCDAY==null){const ti=ccTodayIdx();CCDAY=ti>=0?S.days[ti].id:'all'}
  if(CCDAY!=='all'&&dayIdx(CCDAY)<0)CCDAY='all';
- const people=`<details class="card cdet"${OPEN.ccp!==false?' open':''} id="det-ccp"><summary><h2>Partecipanti e cassiere</h2></summary><div class="ccpeople">${C.people.map((p,i)=>`<span class="ccp"><input data-f="ccp" data-i="${i}" value="${esc(p.n)}" aria-label="Nome partecipante ${i+1}">${C.mv.some(x=>x.by===p.id||(x.for||[]).includes(p.id))?'':`<button class="btn xs del" data-a="ccpdel" data-i="${i}" type="button" aria-label="Togli ${esc(p.n)}">×</button>`}</span>`).join('')}
+ const people=`<details class="card cdet"${(OPEN.ccp??!window.TRAVEL)?' open':''} id="det-ccp"><summary><h2>Partecipanti e cassiere</h2></summary><div class="ccpeople">${C.people.map((p,i)=>`<span class="ccp"><input data-f="ccp" data-i="${i}" value="${esc(p.n)}" aria-label="Nome partecipante ${i+1}">${C.mv.some(x=>x.by===p.id||(x.for||[]).includes(p.id))?'':`<button class="btn xs del" data-a="ccpdel" data-i="${i}" type="button" aria-label="Togli ${esc(p.n)}">×</button>`}</span>`).join('')}
   <button class="btn xs" data-a="ccpadd" type="button">+ Partecipante</button></div>
   <div class="ccset2"><label>Cassiere<select data-f="ccc" data-x="cassiere">${C.people.map(p=>`<option value="${p.id}"${C.cassiere===p.id?' selected':''}>${esc(p.n)}</option>`).join('')}</select></label></div></details>`;
  const cnt={};C.mv.forEach(x=>cnt[x.day]=(cnt[x.day]||0)+1);
- const chips=`<div class="daychips" role="tablist" aria-label="Giorni">${S.days.map((d,i)=>{const x=dObj(i);return `<button type="button" class="dchip${CCDAY===d.id?' on':''}${cnt[d.id]?' has':''}" data-a="ccday" data-d="${d.id}" title="${esc(dateOf(i))}${cnt[d.id]?' · '+cnt[d.id]+' movimenti':''}"><b>${i+1}</b><small>${x?String(x.getDate()).padStart(2,'0')+'/'+String(x.getMonth()+1).padStart(2,'0'):''}</small></button>`}).join('')}<button type="button" class="dchip all${CCDAY==='all'?' on':''}" data-a="ccday" data-d="all">Tutti</button></div>`;
+ // versione da viaggio: si vedono solo ieri, oggi e domani (gli altri con «…»)
+ const ti=ccTodayIdx(),few=window.TRAVEL&&ti>=0&&!CCALLD,show=i=>!few||Math.abs(i-ti)<=1||S.days[i].id===CCDAY;
+ const chips=`<div class="daychips" role="tablist" aria-label="Giorni">${S.days.map((d,i)=>{if(!show(i))return '';const x=dObj(i);return `<button type="button" class="dchip${CCDAY===d.id?' on':''}${cnt[d.id]?' has':''}" data-a="ccday" data-d="${d.id}" title="${esc(dateOf(i))}${cnt[d.id]?' · '+cnt[d.id]+' movimenti':''}"><b>${i+1}</b><small>${x?String(x.getDate()).padStart(2,'0')+'/'+String(x.getMonth()+1).padStart(2,'0'):''}</small></button>`}).join('')}${window.TRAVEL&&ti>=0?`<button type="button" class="dchip all" data-a="ccmore" title="${CCALLD?'Mostra solo ieri, oggi e domani':'Mostra tutti i giorni'}">${CCALLD?'‹ meno':'… tutti i giorni'}</button>`:''}<button type="button" class="dchip all${CCDAY==='all'?' on':''}" data-a="ccday" data-d="all">Tutti</button></div>`;
  const idx=C.mv.map((x,j)=>({x,j})).filter(o=>CCDAY==='all'||o.x.day===CCDAY).sort((a,b)=>dayIdx(a.x.day)-dayIdx(b.x.day)||a.j-b.j);
  let list='';if(CCDAY==='all'){let last=null;idx.forEach(o=>{if(o.x.day!==last){last=o.x.day;const i=dayIdx(last);list+=`<div class="ccdh">Giorno ${i+1} · ${esc(dateShort(i))}</div>`}list+=ccRow(o.x,o.j)})}else list=idx.map(o=>ccRow(o.x,o.j)).join('');
  const tl=CCDAY==='all'?'Tutti i giorni':`Giorno ${dayIdx(CCDAY)+1} · ${esc(dateOf(dayIdx(CCDAY)))}`;
  const mov=`<div class="card"><h2>Movimenti</h2>${chips}<div class="ccdaytitle">${tl}</div>${list||'<p class="note">Nessun movimento'+(CCDAY==='all'?'':' in questo giorno')+'.</p>'}
   <div class="ccadd"><button class="btn pri" data-a="ccadd" data-t="sp" type="button">+ Spesa</button><button class="btn" data-a="ccpick" type="button">+ Dal programma</button><button class="btn" data-a="ccadd" data-t="in" type="button">+ Raccolta</button><button class="btn" data-a="ccadd" data-t="cx" type="button">+ Cambio</button><button class="btn" data-a="ccadd" data-t="out" type="button" title="Soldi della cassa dati ai partecipanti, per non girare con troppi contanti">+ Ridistribuzione</button></div>
   ${CCPICK?ccPickPanel():''}</div>`;
- return people+mov+ccCash()+ccSaldi()}
+ return people+mov+ccCash()+ccPrev()+ccSaldi()}
 function ccCash(){const C=ccData(),K=ccCalc(),cs=[...new Set([0,...cassaCurs(),...Object.keys(K.cash).map(Number)])];
  return `<div class="card" id="cccashc"><h2>In cassa <span class="note" style="font-weight:400">· tenuta da ${esc(ccName(C.cassiere))}</span></h2><div class="cccashg">${cs.map(c=>{const v=K.cash[c]||0;return `<div class="cccashb${v<-0.004?' neg':''}"><small>${esc(curName(c))}</small><b>${fmt(v,c?0:2)}</b>${c&&v?`<small>≈ ${fmt(ccEur(v,c),2)} €</small>`:''}</div>`}).join('')}
   <div class="cccashb tot"><small>Totale in euro</small><b>${fmt(K.cashEur,2)} €</b></div></div></div>`}
+function ccPrev(){const C=ccData(),T=totals(),sp={},cat={};let catE={};const di=CCDAY!=='all'&&CCDAY!=null?dayIdx(CCDAY):-1,spD={},spU={};
+ C.mv.forEach(x=>{if(x.type!=='sp'||!num(x.v))return;const c=+x.cur||0,i=dayIdx(x.day);sp[c]=(sp[c]||0)+num(x.v);if(i===di)spD[c]=(spD[c]||0)+num(x.v);if(di>=0&&i>=0&&i<=di)spU[c]=(spU[c]||0)+num(x.v);
+  const k=x.cat||'Senza categoria';cat[k]=cat[k]||{};cat[k][c]=(cat[k][c]||0)+num(x.v);catE[k]=(catE[k]||0)+ccEur(x.v,c)});
+ const cs=[...new Set([...cassaCurs(),...Object.keys(sp).map(Number)])].filter(c=>(T.tc[c]||0)||(sp[c]||0));
+ const pvD=c=>di>=0?T.rows[di].c[c]||0:0,pvU=c=>T.rows.slice(0,di+1).reduce((a,r)=>a+(r.c[c]||0),0);
+ const line=(c,pv,s)=>{const d=s-pv;return `<tr><td>${esc(curName(c))}</td><td class="m">${fmt(pv,0)}</td><td class="m">${fmt(s,0)}</td><td class="m ${d>0?'neg':d<0?'pos':''}">${s||pv?(d>0?'+':'')+fmt(d,0):''}</td><td class="m">${pv?Math.round(s/pv*100)+'%':''}</td></tr>`};
+ const grp=(title,get)=>{const L=cs.map(c=>{const [pv,s]=get(c);return pv||s?line(c,pv,s):''}).join('');return `<tr class="ccpg"><td colspan="5">${title}</td></tr>`+(L||'<tr><td colspan="5" class="note">Niente previsto né speso.</td></tr>')};
+ const rows=cs.length?(di>=0?grp(`Giorno ${di+1} · ${esc(dateShort(di))}`,c=>[pvD(c),spD[c]||0])+grp(`Dal giorno 1 al ${di+1}`,c=>[pvU(c),spU[c]||0]):'')+grp('Tutto il viaggio',c=>[T.tc[c]||0,sp[c]||0]):'';
+ const ks=[...tripCats().filter(k=>cat[k]),...Object.keys(cat).filter(k=>!tripCats().includes(k))];
+ const crows=ks.map(k=>`<tr><td>${esc(k)}</td><td>${Object.entries(cat[k]).map(([c,v])=>`${fmt(v,0)} ${esc(curName(+c))}`).join(' + ')}</td><td class="m">${fmt(catE[k],0)}</td></tr>`).join('');
+ return `<details class="card cdet" id="det-ccprev"${OPEN.ccprev?' open':''}><summary><h2>Speso rispetto al previsto</h2></summary>
+  ${rows?`<div class="tw"><table><thead><tr><th>Valuta</th><th>Previsto</th><th>Speso</th><th>Speso − previsto</th><th>Usato</th></tr></thead><tbody>${rows}</tbody></table></div>`:'<p class="note">Nessuna spesa ancora.</p>'}
+  <p class="note" style="margin:6px 0 0">Previsto: quanto avevi messo nel programma (hotel, pasti, escursioni). Speso: le spese inserite qui, chiunque le abbia pagate. In rosso se hai speso più del previsto.${di<0?' Scegli un giorno in alto per vedere anche quel giorno e il progressivo fino a lì.':''}</p>
+  ${crows?`<h3 style="margin:14px 0 6px;font-size:15px">Per categoria</h3><div class="tw"><table><thead><tr><th>Categoria</th><th>Speso</th><th>≈ €</th></tr></thead><tbody>${crows}</tbody></table></div>`:''}</details>`}
 function ccSaldi(){const C=ccData(),K=ccCalc(),st=ccSettle(K);
  return `<details class="card cdet" id="det-ccsaldi"${OPEN.ccsaldi?' open':''}><summary><h2>Saldi</h2></summary>
   ${K.miss?`<div class="msg warn">${K.miss} ${K.miss===1?'movimento ha':'movimenti hanno'} una valuta senza cambio: ${K.miss===1?'non è contato':'non sono contati'}.</div>`:''}
@@ -1945,16 +2001,61 @@ function ccSaldi(){const C=ccData(),K=ccCalc(),st=ccSettle(K);
   <p class="note" style="margin:6px 0 0">Saldo positivo: deve ricevere. Negativo: deve dare. Le valute locali sono convertite al cambio fatto dal cassiere (media dei cambi registrati) o, se non ci sono cambi, a quello del viaggio.</p>
   <h3 style="margin:14px 0 6px;font-size:15px">Chi deve dare a chi</h3>
   ${st.length?`<ul class="ccset">${st.map(s=>`<li><b>${s.from==='cassa'?'Cassa ('+esc(ccName(C.cassiere))+')':esc(ccName(s.from))}</b> dà <b>${fmt(s.v,2)} €</b> a <b>${s.to==='cassa'?'Cassa ('+esc(ccName(C.cassiere))+')':esc(ccName(s.to))}</b></li>`).join('')}</ul>`:'<p class="note">Tutti in pari.</p>'}</details>`}
-function ccUpd(j){const s=document.getElementById('det-ccsaldi');if(s)s.outerHTML=ccSaldi();const k=document.getElementById('cccashc');if(k)k.outerHTML=ccCash();const x=ccData().mv[j],q=document.getElementById('ccq-'+j);
+function ccUpd(j){const s=document.getElementById('det-ccsaldi');if(s)s.outerHTML=ccSaldi();const pv=document.getElementById('det-ccprev');if(pv)pv.outerHTML=ccPrev();const k=document.getElementById('cccashc');if(k)k.outerHTML=ccCash();const x=ccData().mv[j],q=document.getElementById('ccq-'+j);
  if(x&&q)q.innerHTML=x.type==='cx'?(num(x.eur)&&num(x.v)?`1 € = ${fmt(num(x.v)/num(x.eur),2)} ${esc(curName(+x.cur))}`:''):ccQuota(x)}
-const VIEWS={itin:['Itinerario',vItin],hotel:['Hotel',vHotel],pasti:['Pasti',vPasti],exc:['Escursioni',vExc],riep:['Riepilogo',vRiep],rhotel:['Riepilogo Hotel',vRHotel],cassa:['Cassa',vCassa],ccom:['Cassa Comune',vCComune],carmo:['Caricamenti su MO',vCarMO],esporta:['Esporta in PDF',vExport],dati:['Importa e backup',vData]};
+/* ---------- In viaggio: itinerario e hotel in sola lettura, impaginati come i PDF ---------- */
+const RO={busy:'',msg:'',docs:null};
+function corrRowsIt(){const L=CL.it,fd=i=>{const d=dObj(i);return d?d.toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'2-digit',year:'2-digit'}):''},rows=[];
+ S.days.forEach((d,i)=>{const t=txOf(d);let first=true;
+  d.tappe.forEach((tp,k)=>{const x=t[k]||{};if(!tp.trim()&&!x.ds&&!(x.voli||[]).length)return;
+   const fl=x.m==='Volo'?(x.voli||[]).filter(f=>f.da||f.a||f.nv):[];
+   const lines=fl.length?fl.map(f=>{const gs=flGroups(f);return (gs.length?gs.map(z=>z.name).join(' + '):L.all)+': '+flLine(f)}):[x.ds||''];
+   lines.forEach((ln,n)=>{rows.push({c:[first?String(i+1):'',first?fd(i):'',n?'':tp,ln,'',''],day:i});first=false})});
+  const hn=/^\s*(volo|casa|aereo)\s*$/i.test(d.hotel.name||'')?'':(d.hotel.name||'');if(first&&hn)rows.push({c:[String(i+1),fd(i),'','','',''],day:i});
+  const lr=rows.filter(r=>r.day===i).pop();if(lr&&hn){lr.c[4]=hn;lr.c[5]=d.hotel.addr||''}});
+ return {title:L.title,head:[L.day,L.date,L.stages,L.prog,L.hotel,L.addr],rows}}
+function vItinRO(){const L=CL.it,fd=i=>{const d=dObj(i);return d?d.toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'2-digit'}):''};
+ const rows=S.days.map((d,i)=>{const t=txOf(d),tp=d.tappe.flatMap(x=>String(x).split(';')).map(x=>x.trim()).filter(Boolean).filter((x,k,a)=>!k||norm(x)!==norm(a[k-1]));
+  const prog=[];d.tappe.forEach((_,k)=>{const x=t[k]||{},fl=x.m==='Volo'?(x.voli||[]).filter(f=>f.da||f.a||f.nv):[];
+   if(fl.length)fl.forEach(f=>{const gs=flGroups(f);prog.push('✈ '+(gs.length?gs.map(z=>z.name).join(' + ')+': ':'')+flLine(f))});else if(String(x.ds||'').trim())prog.push(String(x.ds).trim())});
+  const hn=/^\s*(volo|casa|aereo)\s*$/i.test(d.hotel.name||'')?'':(d.hotel.name||'');return {i,c:[String(i+1),fd(i),tp.join(' · '),prog.join('\n'),hn,hn?(d.hotel.addr||''):'']}});
+ return `<div class="card ro"><div class="rohead"><div><h2 style="margin:0">Itinerario giorno per giorno</h2><div class="note">${esc(tripFull())} · ${esc(paxLbl())} partecipanti</div></div>
+  <button class="btn pri" data-a="roitpdf" type="button"${dl&&!RO.busy?'':' disabled'}>${RO.busy==='it'?'Preparo…':'Apri PDF'}</button></div>
+  ${RO.msg?`<div class="msg ${RO.msg[0]}">${esc(RO.msg[1])}</div>`:''}
+  <div class="tw rotw"><table class="rotab"><thead><tr>${[L.day,L.date,L.stages,L.prog,L.hotel,L.addr].map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>
+  ${rows.map(r=>`<tr class="${r.i%2?'odd':''}">${r.c.map((c,k)=>`<td class="c${k}">${esc(c).replace(/\n/g,'<br>')}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`}
+function roHotelKeys(){const ks=[];S.days.forEach(d=>{const k=norm(d.hotel.name);if(k&&!/^(volo|casa|aereo)$/i.test(String(d.hotel.name).trim())&&!ks.includes(k))ks.push(k)});return ks}
+async function roHotelLoad(){const out=[];for(const k of roHotelKeys()){let D=hpdfGet(k,'it');D=D?JSON.parse(JSON.stringify(D)):await buildHotelDoc(k,'it');try{await syncIntolNote(D,'it')}catch(e){}
+  const h=(S.days.find(d=>norm(d.hotel.name)===k)||{hotel:{}}).hotel;out.push({k,D,addr:h.addr||'',tel:h.tel||'',pag:h.pag||'',paid:!!h.paid})}
+ RO.docs={trip:CUR,list:out};if(tab==='rhotel'&&PHASE==='in')render()}
+function vRHotelRO(){if(!RO.docs||RO.docs.trip!==CUR){RO.docs={trip:CUR,list:null};roHotelLoad().catch(e=>{RO.docs={trip:CUR,list:[],err:e.message};render()})}
+ const L=RO.docs.list;if(!L)return '<div class="card note">Preparo il riepilogo degli hotel…</div>';
+ if(!L.length)return `<div class="card note">${RO.docs.err?esc(RO.docs.err):'Nessun hotel inserito.'}</div>`;
+ return (RO.msg?`<div class="msg ${RO.msg[0]}">${esc(RO.msg[1])}</div>`:'')+L.map(({k,D,addr,tel,pag,paid})=>{const il=String(D.intolLine||'').trim(),note=String(D.note||'').split('\n').filter(l=>l.trim()&&l.trim()!==il&&l.trim()!==HL.it.note).join('\n');
+  return `<div class="card ro rohotel"><div class="rohead"><div><h2 style="margin:0">${esc(D.hotel)}</h2>${addr||tel?`<div class="note">${esc([addr,tel].filter(Boolean).join(' · '))}</div>`:''}</div>
+   <button class="btn" data-a="rohpdf" data-k="${esc(k)}" type="button"${dl&&!RO.busy?'':' disabled'}>${RO.busy===k?'Preparo…':'Apri PDF'}</button></div>
+   <div class="roinfo">${D.info.filter(x=>String(x[1]).trim()).map(x=>`<span><small>${esc(x[0])}</small><b>${esc(x[1])}</b></span>`).join('')}${pag?`<span><small>Pagamento</small><b>${esc(pag)}${pag==='Anticipato'?(paid?' · già pagato':' · da pagare'):''}</b></span>`:''}</div>
+   <div class="tw"><table class="rotab"><thead><tr>${D.head.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${D.rows.filter(r=>r.some(c=>String(c).trim())).map(r=>`<tr>${r.map((c,i)=>`<td${i===2?' class="m"':''}>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody>
+   <tfoot><tr><td></td><td><b>${esc(D.total[0])}</b></td><td class="m"><b>${esc(D.total[1])}</b></td></tr></tfoot></table></div>
+   ${il?`<div class="rointol">${esc(il)}</div>`:''}${note.trim()?`<p class="ronote">${esc(note).replace(/\n/g,'<br>')}</p>`:''}</div>`}).join('')}
+async function roPdf(kind,k){RO.busy=kind==='it'?'it':k;RO.msg='';render();
+ try{let blob,name;if(kind==='it'){const D=S.corr&&S.corr.it?S.corr.it:await buildCorrDoc('it');blob=await renderCorrPDF(D);name=`${fname(tripFull())}-itinerario.pdf`}
+  else{const x=RO.docs.list.find(z=>z.k===k);blob=await renderHotelPDF(x.D);name=`${fname(tripFull())}-${fname(x.D.hotel)}-it.pdf`}
+  const ok=await saveFile(name,blob);if(!ok)RO.msg=['warn','Annullato.']}
+ catch(e){RO.msg=['bad',(e&&e.message)||String(e)]}RO.busy='';render()}
+// versione da viaggio: all'apertura va dritto alla Cassa Comune del viaggio in corso, o del prossimo in partenza
+function travelStart(){const td=new Date();td.setHours(0,0,0,0);const L=Object.keys(TRIPS).map(id=>({id,s:tripStats(id)})).filter(x=>x.s.a&&x.s.b);if(!L.length)return;
+ const now=L.find(x=>x.s.a<=td&&x.s.b>=td),next=L.filter(x=>x.s.a>td).sort((a,b)=>a.s.a-b.s.a)[0],last=L.slice().sort((a,b)=>b.s.b-a.s.b)[0],pick=(now||next||last).id;
+ setCurrent(pick);HOME=false;PHASE='in';tab='ccom';CCDAY=null}
+let LASTPH=null,LASTTAB=null;
+const VIEWS={itin:['Itinerario',vItin],hotel:['Hotel',vHotel],pasti:['Pasti',vPasti],exc:['Escursioni',vExc],riep:['Riepilogo',vRiep],rhotel:['Riepilogo Hotel',vRHotel],ccom:['Cassa Comune',vCComune],carmo:['Caricamenti su MO',vCarMO],esporta:['Esporta in PDF',vExport],dati:['Importa e backup',vData]};
 /* ---------- home page: titolo con logo su un'immagine, poi un riquadro per ogni viaggio ---------- */
 let HOME='home',PHASE='pre';
 // fasi del viaggio: ogni fase mostra solo i fogli che servono in quel momento
 const PHASES={
  pre:{t:'Pianificazione',d:'Prepara il viaggio: itinerario, hotel, pasti, escursioni, costi, PDF e materiale.',ico:'🧭',tabs:['itin','hotel','pasti','exc','riep','rhotel','esporta','dati']},
- in:{t:'In viaggio',d:'Cassa con raccolto e spese giorno per giorno, programma e conti degli hotel.',ico:'🎒',tabs:['cassa','ccom','itin','riep','rhotel']},
- post:{t:'Al ritorno',d:'Chiudi i conti: cassa finale, speso contro previsto e quanto resta.',ico:'🏁',tabs:['cassa','carmo']}};
+ in:{t:'In viaggio',d:'Cassa comune con raccolte, cambi e spese giorno per giorno; itinerario e hotel da consultare.',ico:'🎒',tabs:['ccom','itin','riep','rhotel']},
+ post:{t:'Al ritorno',d:'Chiudi i conti della cassa comune e prepara i caricamenti su MO.',ico:'🏁',tabs:['ccom','carmo']}};
 const LOGO=`<svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#fff" opacity=".95"/><circle cx="32" cy="32" r="25" fill="none" stroke="#1f6f5c" stroke-width="2.2"/>
  <g stroke="#1f6f5c" stroke-width="1.6" opacity=".55"><line x1="32" y1="9" x2="32" y2="14"/><line x1="32" y1="50" x2="32" y2="55"/><line x1="9" y1="32" x2="14" y2="32"/><line x1="50" y1="32" x2="55" y2="32"/></g>
  <path d="M32 13 L36.5 32 L32 51 L27.5 32 Z" fill="#1f6f5c"/><path d="M32 13 L36.5 32 L27.5 32 Z" fill="#d9622b"/><circle cx="32" cy="32" r="3" fill="#fff" stroke="#1f6f5c" stroke-width="1.5"/>
@@ -2002,14 +2103,20 @@ function vHome(){const ids=sortedIds().slice().sort((x,y)=>{const a=tripStats(x)
   <div class="card stack" style="margin-top:18px"><h2>Porta i viaggi dentro e fuori</h2><p class="note" style="margin:0">Prima di partire: nell'app principale scarica il backup, poi qui tocca «Ripristina da backup». Al ritorno: qui «Scarica backup», poi ripristinalo nell'app principale. Lo stesso viaggio viene aggiornato, non duplicato.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:end"><button class="btn pri" data-a="backup" type="button">Scarica backup</button><label for="bfile" style="flex:1 1 220px">Ripristina da backup<input type="file" id="bfile"></label></div>
   ${IMPMSG?`<div class="msg ${IMPMSG[0]}">${esc(IMPMSG[1])}</div>`:''}</div>`}
-function render(){if(!VIEWS[tab])tab='itin';renderTrips();
+function render(){if(tab==='cassa')tab='ccom';if(!VIEWS[tab])tab='itin';renderTrips();
  document.body.classList.toggle('home',!!HOME);if(HOME){document.getElementById('view').innerHTML=HOME==='trip'?vTripHome():vHome();return}
  // se si salta a un foglio di un'altra fase (es. da una scadenza), passa a quella fase
  if(!PHASES[PHASE].tabs.includes(tab)){const ph=['pre','in','post'].find(k=>PHASES[k].tabs.includes(tab));if(ph)PHASE=ph}
+ if(tab==='cassa')tab='ccom';LASTPH=PHASE;
  const PT=PHASES[PHASE].tabs;if(!PT.includes(tab))tab=PT[0];
  document.getElementById('crumb').innerHTML=`<button class="crb" data-a="gohome" type="button">Tutti i viaggi</button><span>›</span><button class="crb" data-a="gotrip" type="button">${esc(tripFull())}</button><span>›</span><b>${PHASES[PHASE].ico} ${PHASES[PHASE].t}</b>`;
- document.getElementById('tabs').innerHTML=Object.entries(VIEWS).filter(([k])=>PT.includes(k)).sort((a,b)=>PT.indexOf(a[0])-PT.indexOf(b[0])).map(([k,[n]])=>`<button class="tab" role="tab" data-tab="${k}" aria-selected="${k===tab}" type="button">${n}</button>`).join('');
- document.getElementById('view').innerHTML=VIEWS[tab][1]();fitAll();
+ const TL=Object.entries(VIEWS).filter(([k])=>PT.includes(k)).sort((a,b)=>PT.indexOf(a[0])-PT.indexOf(b[0])),tb=([k,[n]])=>`<button class="tab" role="tab" data-tab="${k}" aria-selected="${k===tab}" type="button">${n}</button>`;
+ const mob=PHASE==='in'&&PT.includes('ccom'),rest=TL.filter(([k])=>k!=='ccom'),inRest=rest.some(([k])=>k===tab);
+ const te=document.getElementById('tabs');te.classList.toggle('hasmob',mob);
+ te.innerHTML=`<span class="tdesk">${TL.map(tb).join('')}</span>`+(mob?`<span class="tmob">${tb(TL.find(([k])=>k==='ccom'))}<label class="tabmore${inRest?' on':''}"><span>${inRest?esc(VIEWS[tab][0]):'Altro…'} ▾</span><select id="tabMore" aria-label="Altri fogli"><option value="">Altro…</option>${rest.map(([k,[n]])=>`<option value="${k}"${k===tab?' selected':''}>${n}</option>`).join('')}</select></label></span>`:'');
+ const ht=document.getElementById('hdrtog');if(ht)ht.innerHTML=`<span class="hdrar">${document.body.classList.contains('hdropen')?'▾':'▸'}</span> ${esc(tripFull()||'Viaggio')}`;
+ if(tab!==LASTTAB){if(tab==='rhotel')RO.docs=null;RO.msg='';LASTTAB=tab}
+ document.getElementById('view').innerHTML=(PHASE==='in'&&tab==='itin'?vItinRO:PHASE==='in'&&tab==='rhotel'?vRHotelRO:VIEWS[tab][1])();fitAll();
  const bp=document.getElementById('btnPdf');if(bp)bp.disabled=!dl;const bg=document.getElementById('btnGrpPdf');if(bg)bg.disabled=!dl;const bb=document.getElementById('btnBak');if(bb)bb.disabled=!dl;
  updateCalc()}
 
@@ -2019,6 +2126,7 @@ function newTripState(from){return{p:{n:from.p.n},start:new Date().toISOString()
 const newId=()=>'t'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
 document.addEventListener('click',async ev=>{
  const t=ev.target.closest('[data-tab],[data-a]');if(!t)return;
+ if(t.dataset.a==='hdrtog'){document.body.classList.toggle('hdropen');const ht=document.getElementById('hdrtog');if(ht)ht.querySelector('.hdrar').textContent=document.body.classList.contains('hdropen')?'▾':'▸';return}
  if(t.dataset.tab){tab=t.dataset.tab;EXPMSG='';cacheLocal();render();return}
  if(t.dataset.a==='gohome'){HOME='home';render();window.scrollTo(0,0);return}
  if(t.dataset.a==='gotrip'){HOME='trip';render();window.scrollTo(0,0);return}
@@ -2064,12 +2172,16 @@ document.addEventListener('click',async ev=>{
  if(a==='ckadd'){checks().push({id:'c'+Date.now(),t:'',done:false});touch();render();const l=[...document.querySelectorAll('.ckt')].pop();if(l)l.focus();return}
  if(a==='ckdel'){checks().splice(+t.dataset.i,1);touch();render();return}
  if(a==='ckreset'){checks().forEach(x=>x.done=false);touch();render();return}
+ if(a==='roitpdf'){roPdf('it');return}
+ if(a==='rohpdf'){roPdf('h',t.dataset.k);return}
+ if(a==='ccmore'){CCALLD=!CCALLD;render();return}
+ if(a==='exfilt'){const k=t.dataset.k,U=exUsedCats();if(!EXF)EXF=new Set(U);EXF.has(k)?EXF.delete(k):EXF.add(k);if(!EXF.size||U.every(c=>EXF.has(c)))EXF=null;const sy=window.scrollY,inm=t.tagName==='INPUT';render();if(inm){const m=document.querySelector('.exfiltm');if(m)m.open=true}window.scrollTo(0,sy);return}
  if(a==='ccpadd'){const C=ccData();let k=C.people.length+1;while(C.people.some(p=>p.id==='p'+k))k++;C.people.push({id:'p'+k,n:'Partecipante '+(C.people.length+1)});touch();render();return}
  if(a==='ccpdel'){ccData().people.splice(+t.dataset.i,1);touch();render();return}
  if(a==='ccday'){CCDAY=t.dataset.d==='all'?'all':+t.dataset.d;CCSEL.clear();render();return}
  if(a==='ccadd'){const C=ccData(),ty=t.dataset.t,cs=cassaCurs(),loc=cs.find(c=>c)||0;const day=CCDAY!=='all'?CCDAY:(C.mv.length?C.mv[C.mv.length-1].day:S.days[0].id);
   const last=[...C.mv].reverse().find(x=>x.type===ty);
-  C.mv.push(ty==='cx'?{id:'c'+Date.now(),type:'cx',day,eur:'',v:'',cur:loc}:{id:'c'+Date.now(),type:ty,day,t:'',v:'',cur:ty==='in'?0:(last?last.cur:loc),by:'cassa',for:ccAllIds()});
+  const dc=ccDayCur(day);C.mv.push(ty==='cx'?{id:'c'+Date.now(),type:'cx',day,eur:'',v:'',cur:dc??loc}:{id:'c'+Date.now(),type:ty,day,t:'',cat:'',v:'',cur:ty==='in'?0:(dc??(last?last.cur:loc)),by:'cassa',for:ccAllIds()});
   touch();render();const rs=document.querySelectorAll('.ccrow');const el=[...rs].map(r=>r.querySelector('.cct,.ccv')).filter(Boolean);const all=document.querySelectorAll('[data-f=ccm][data-j="'+(C.mv.length-1)+'"]');const fe=[...all].find(e=>e.tagName==='INPUT');if(fe){fe.scrollIntoView({block:'center'});fe.focus({preventScroll:true})}return}
  if(a==='ccdel'){if(!confirmBtn(t,'Sicuro?'))return;ccData().mv.splice(+t.dataset.j,1);touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}
  if(a==='ccall'){const C=ccData(),x=C.mv[+t.dataset.j];if(x){x.for=(x.for||[]).length===C.people.length?[]:ccAllIds()}touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}
@@ -2077,7 +2189,7 @@ document.addEventListener('click',async ev=>{
  if(a==='ccpick'){CCPICK=!CCPICK;CCSEL.clear();render();if(CCPICK){const el=document.querySelector('.ccpick');if(el)el.scrollIntoView({block:'nearest'})}return}
  if(a==='ccpk'){t.checked?CCSEL.add(t.dataset.k):CCSEL.delete(t.dataset.k);const b=document.querySelector('[data-a=ccpkok]');if(b){b.disabled=!CCSEL.size;b.textContent=`Aggiungi ${CCSEL.size||''} ${CCSEL.size===1?'spesa':'spese'}`}return}
  if(a==='ccpkno'){CCPICK=false;CCSEL.clear();render();return}
- if(a==='ccpkok'){const C=ccData();ccPlanned().filter(p=>CCSEL.has(p.k)).forEach((p,n)=>C.mv.push({id:'c'+Date.now()+n,type:'sp',day:CCDAY!=='all'?CCDAY:p.day,t:p.t,v:String(p.v),cur:p.cur,by:'cassa',for:p.for,src:p.k}));CCPICK=false;CCSEL.clear();touch();render();return}
+ if(a==='ccpkok'){const C=ccData();ccPlanned().filter(p=>CCSEL.has(p.k)).forEach((p,n)=>C.mv.push({id:'c'+Date.now()+n,type:'sp',day:CCDAY!=='all'?CCDAY:p.day,t:p.t,cat:p.cat,v:String(p.v),cur:p.cur,by:'cassa',for:p.for,src:p.k}));CCPICK=false;CCSEL.clear();touch();render();return}
  if(a==='mosec'){MOSEC=MOSEC===t.dataset.s?null:t.dataset.s;MOMSG='';render();return}
  if(a==='moadd'){moData()[t.dataset.s].push(moBlank(t.dataset.s));MOMSG='';touch();render();return}
  if(a==='model'){if(!confirmBtn(t,'Sicuro?'))return;moData()[t.dataset.s].splice(+t.dataset.i,1);touch();render();return}
@@ -2197,7 +2309,9 @@ document.addEventListener('input',ev=>{
  if(f==='hpaid'){t.dataset.g.split(',').map(Number).forEach(id=>{const x=S.days[dayIdx(id)];if(x)x.hotel.paid=t.checked});touch();updDeadPill();return}
  if(f==='ccp'){const p=ccData().people[+t.dataset.i];if(p)p.n=t.value;touch();if(p)document.querySelectorAll(`select[data-x=by] option[value="${p.id}"],.chip[data-p="${p.id}"] .cn`).forEach(e=>e.textContent=e.tagName==='SPAN'&&p.id===ccData().people[0].id?p.n.replace(/\s*\(TL\)\s*/i,' ').trim():p.n);const s=document.getElementById('det-ccsaldi');if(s)s.outerHTML=ccSaldi();const k=document.getElementById('cccashc');if(k)k.outerHTML=ccCash();return}
  if(f==='ccc'){ccData()[t.dataset.x]=t.value;touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return;const s=document.getElementById('det-ccsaldi');if(s)s.outerHTML=ccSaldi();const k=document.getElementById('cccashc');if(k)k.outerHTML=ccCash();return}
- if(f==='ccm'){const x=ccData().mv[+t.dataset.j];if(!x)return;const k=t.dataset.x;x[k]=k==='day'||k==='cur'?+t.value:t.value;touch();
+ if(f==='ccm'){const x=ccData().mv[+t.dataset.j];if(!x)return;const k=t.dataset.x;
+  if(k==='cat'){if(t.value==='__new'){const n=String(prompt('Nome della nuova categoria:')||'').trim();if(n)x.cat=addCat(n);touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}x.cat=t.value;touch();const s=document.getElementById('det-ccprev');if(s)s.outerHTML=ccPrev();return}
+ x[k]=k==='day'||k==='cur'?+t.value:t.value;touch();
   if(k==='day'&&CCDAY!=='all'){CCDAY=x.day;const sy=window.scrollY;render();window.scrollTo(0,sy);return}if(k==='cur'){const sy=window.scrollY;render();window.scrollTo(0,sy);return}ccUpd(+t.dataset.j);return}
  if(f==='mo'){const r=moData()[t.dataset.s][+t.dataset.i];if(r)r[t.dataset.x]=t.value;touch();return}
  if(f==='mosv'){const r=moData().corr[+t.dataset.i];if(r&&r.serv[+t.dataset.j])r.serv[+t.dataset.j][t.dataset.x]=t.value;touch();return}
@@ -2211,10 +2325,12 @@ document.addEventListener('input',ev=>{
  if(f==='tip'){if(!S.tips)return;const i=+t.dataset.i,x=t.dataset.x;if(i<0)S.tips[x]=t.value;else if(S.tips.sec[i])S.tips.sec[i][x]=t.value}
  if(f==='inf'){const i=+t.dataset.i,x=t.dataset.x;if(!S.info){if(x==='sign')INFO.sign=t.value;return}if(i<0)S.info[x]=t.value;else if(S.info.sec[i])S.info.sec[i][x]=t.value}
  if(f==='st'&&S.story){const i=+t.dataset.i,x=t.dataset.x;if(i<0)S.story[x]=t.value;else if(S.story.days[i])S.story.days[i][x]=t.value}
+ if(f==='e'&&k==='cat'&&t.value==='__new'){const e=S.exc.find(x=>x.id===+t.dataset.e);const n=String(prompt('Nome della nuova categoria:')||'').trim();if(e&&n)e.cat=addCat(n);touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}
  if(f==='e'){const e=S.exc.find(x=>x.id===+t.dataset.e);e[k]=(k==='cur'||k==='day')?+t.value:k==='tlf'?t.value==='1':t.value}
  updateCalc();touch()});
 document.addEventListener('toggle',ev=>{const id=ev.target&&ev.target.id;if(id&&id.startsWith('det-'))OPEN[id.slice(4)]=ev.target.open;if(id&&id.startsWith('srcDet-')){INFO.open=INFO.open&&typeof INFO.open==='object'?INFO.open:{};INFO.open[id.slice(7)]=ev.target.open}},true);
 document.addEventListener('change',ev=>{const t=ev.target;
+ if(t.id==='tabMore'){if(t.value){tab=t.value;EXPMSG='';cacheLocal();render();window.scrollTo(0,0)}return}
  if(t.id==='tripSel'){setCurrent(t.value);cacheLocal();IMPP=null;render();return}
  if(t.id==='tripName'||t.id==='tripYr'){renderTrips();return}
  if(t.id==='xfile'&&t.files[0]){readFile(t.files[0]);return}
@@ -2244,7 +2360,7 @@ if(f==='e'&&t.dataset.k==='day'&&SELDAY!=='all')SELDAY=+t.value;
 if(f==='cn'||f==='start'||f==='p'||(f==='h'&&t.dataset.k==='name')||(t.tagName==='SELECT'&&(f==='e'||f==='h'))){render();
   if(f==='e'&&t.dataset.k==='day'){const el=document.getElementById('e-day-'+t.dataset.e);if(el){(el.closest('.exrow')||el).scrollIntoView({block:'center'});el.focus({preventScroll:true})}}}});
 
-loadLocal();render();initCloud();
+window.TRAVEL=true;loadLocal();try{travelStart()}catch(e){}render();initCloud();
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
 </script>

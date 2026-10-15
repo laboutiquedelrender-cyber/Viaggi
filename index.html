@@ -1,7 +1,7 @@
 <!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Viaggio">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202610151507 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202610151558 -->
 <title>Calcolatore Viaggio</title></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -396,7 +396,7 @@ body.home .crumb#crumb{display:none}
 .rotab tr.odd td{background:color-mix(in srgb,var(--line) 45%,var(--card))}.ro .rotab td.c0{text-align:center;font-weight:600;width:2.5em}.ro .rotab td.c1{white-space:nowrap}.rotab tfoot td{background:var(--hl)}.ro .rotab td.m{text-align:right;white-space:nowrap}.rohotel .rotab{min-width:0}@media(max-width:600px){.ro.rohotel .rotab td.m{white-space:normal}.rotab{font-size:13px}}
 .rotw .rotab{min-width:820px}.roinfo{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 10px}.roinfo span{display:flex;flex-direction:column}.roinfo small{color:var(--muted);font-size:12px}
 .rointol{margin:10px 0 0;padding:8px 12px;border:2px solid #d9622b;border-left-width:6px;background:#ffecd6;color:#96320a;font-weight:700;border-radius:4px}.ronote{margin:8px 0 0;font-size:14px}
-</style>
+.morem{margin:0 0 12px}</style>
 
 <div class="toph">
   <h1><button class="homebtn" data-a="gohome" type="button" title="Torna a tutti i viaggi"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4"/><path d="M32 12 L37 32 L32 52 L27 32 Z" fill="currentColor"/><path d="M32 12 L37 32 L27 32 Z" fill="#d9622b"/></svg>Calcolatore Viaggio</button></h1>
@@ -417,7 +417,7 @@ body.home .crumb#crumb{display:none}
   <div class="tabs" role="tablist" id="tabs"></div>
 </div>
 <main id="view"></main>
-<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 15/10/2026 15:07</p>
+<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 15/10/2026 15:58</p>
 
 <script>
 /* ---------- stato ---------- */
@@ -490,6 +490,8 @@ function joinYear(id){const t=TRIPS[id];if(!t||!t.state||t.state.year===undefine
 function setCurrent(id){if(!TRIPS[id])id=sortedIds()[0];if(CUR!==id&&typeof INFO!=='undefined'){INFO.msg='';INFO.ask=false;INFO.edit=false;INFO.paste=false;STORY.msg='';STORY.ask=false;STORY.edit=false;EXPO.msg='';TIPS.msg='';TIPS.ask=false;TIPS.edit=false;RHP.open=null;RHP.edit=null;RHP.msg=null;RHP.ask=false;CORR.lang=null;CORR.msg='';CORR.ask=false;CMP.msg=''}CUR=id;S=TRIPS[id].state;{const fx=Object.keys(TRIPS).filter(joinYear);if(fx.length)setTimeout(()=>{fx.forEach(x=>touch(x));renderTrips()},0)}
  S.days=S.days&&S.days.length?S.days:blankDays(1);S.exc=S.exc||[];S.cur=S.cur||[];while(S.cur.length<4)S.cur.push({name:'Valuta '+(S.cur.length+1),rate:''});
  S.meals=S.meals||{c:'',p:'',d:''};S.p=S.p||{n:1};
+ // la vecchia lista di controllo non c'è più: elimina i dati rimasti
+ if(S.check!==undefined){delete S.check;setTimeout(()=>touch(id,false),0)}
  uid=Math.max(100,...S.days.map(d=>+d.id||0),...S.exc.map(e=>+e.id||0))}
 function cacheLocal(){try{localStorage.setItem(LKEY,JSON.stringify({trips:TRIPS,cur:CUR,tab}))}catch(e){}}
 function loadLocal(){try{const x=JSON.parse(localStorage.getItem(LKEY));if(x&&x.trips&&Object.keys(x.trips).length){TRIPS=x.trips;CUR=x.cur;tab=x.tab||tab}}catch(e){}
@@ -1824,24 +1826,36 @@ function moDayCountries(){const C=moCountryNames();if(!C.length)return S.days.ma
  const first=res.find(Boolean)||C[0].it;return res.map(x=>x||first)}
 const moPP=(imp,cur,tipo,tlf)=>{if(blank(imp))return '';const v=num(imp);if(!v)return 'gratis';const per=tipo==='pax'?v:v/Math.max(1,tlf?P()-1:P());
  return `${fmt(per,0)} ${curName(+cur)} a persona${tipo==='notte'?' a notte':''}${tlf?' – TLF':''}`};
+// prezzi reali pagati, presi dalla Cassa Comune (spese prese dal programma, o nuove)
+function moReal(){const Rm={},X=[],L=S.cc&&Array.isArray(S.cc.mv)?S.cc.mv:[];
+ L.forEach(x=>{if(x.type!=='sp'||blank(x.v))return;const m={v:num(x.v),cur:+x.cur||0,n:(x.for||[]).length||P(),day:x.day,t:String(x.t||'').trim(),cat:x.cat||''};if(x.src)(Rm[x.src]=Rm[x.src]||[]).push(m);else X.push(m)});return{Rm,X}}
+const moSumIn=(list,cur)=>list.reduce((a,m)=>a+(+m.cur===+cur?m.v:(rate(+m.cur)&&rate(+cur)?m.v/rate(+m.cur)*rate(+cur):0)),0);
 // proposte prese dai dati del viaggio: si aggiungono solo quelle che mancano
-function moFromTrip(sec){const DC=moDayCountries(),out=[];
+function moFromTrip(sec){const DC=moDayCountries(),out=[],RL=moReal();
  if(sec==='tappe')S.days.forEach((d,i)=>{const t=txOf(d),j=a=>a.map(x=>String(x||'').trim()).filter(Boolean).join(';');
   const tp=d.tappe.flatMap(x=>String(x).split(';')).map(x=>x.trim()).filter(Boolean).filter((x,k,a)=>!k||norm(x)!==norm(a[k-1]));
   const fl=[...new Set(t.flatMap(x=>x.m==='Volo'?(x.voli||[]).filter(f=>f.da||f.a||f.nv).map(flLine):[]))],ds=t.filter(x=>!(x.m==='Volo'&&(x.voli||[]).some(f=>f.da||f.a||f.nv))).map(x=>String(x.ds||'').trim()).filter(Boolean);
   out.push({data:moDate(i),tappe:tp.join(';'),mezzi:j(t.map(x=>x.m)),dist:j(t.map(x=>x.km)),tempi:j(t.map(x=>x.h)),note:fl.concat(ds).join('\n')})});
  if(sec==='pern'){const seen=new Set();S.days.forEach(d=>{const h=d.hotel,n=String(h.name||'').trim();if(!n||/^(volo|casa|aereo)$/i.test(n)||seen.has(norm(n)))return;seen.add(norm(n));
-  const tp=h.tipo||'Gruppo',pp=blank(h.imp)?'':!num(h.imp)?'gratis':`${fmt(tp.startsWith('Gruppo')?num(h.imp)/P():num(h.imp),0)} ${curName(+h.cur)} a persona a notte${tp==='Pax+TLF'?' – TLF':''}`;
+  const tp=h.tipo||'Gruppo';let pp=blank(h.imp)?'':!num(h.imp)?'gratis':`${fmt(tp.startsWith('Gruppo')?num(h.imp)/P():num(h.imp),0)} ${curName(+h.cur)} a persona a notte${tp==='Pax+TLF'?' – TLF':''}`;
+  {const hd=S.days.filter(x=>norm(x.hotel.name)===norm(n)),src=hd.flatMap(x=>RL.Rm['h'+x.id]||[]),byName=RL.X.filter(m=>m.cat==='Hotel'&&norm(m.t).includes(norm(n)));
+   if(src.length||byName.length){const cur=+h.cur,tot=byName.length?moSumIn(src.concat(byName),cur):hd.reduce((a,x)=>{const r=RL.Rm['h'+x.id];return a+(r?moSumIn(r,cur):hotelCalc(x).gr)},0);
+    const per=tot/Math.max(1,hd.length)/Math.max(1,tp==='Pax+TLF'?P()-1:P());pp=per?`${fmt(per,0)} ${curName(cur)} a persona a notte${tp==='Pax+TLF'?' – TLF':''}`:'gratis'}}
   const nt=[];if(/[0-9a-z]/i.test(h.camere||''))nt.push('Sistemazione camere: '+String(h.camere).trim());if(String(h.pag||'').trim())nt.push('Pagamento: '+String(h.pag).trim().toLowerCase());
   [['c','Colazione'],['p','Pranzo'],['d','Cena']].forEach(([k,l])=>{const st=mealSt(h[k]);if(st==='inc')nt.push(l+' inclusa');else if(st==='hp'){const m=(h.mp||{})[k]||{};nt.push(l+': '+(moPP(m.imp,h.cur,'pax',m.tlf)||'a pagamento'))}});
   const ids=S.days.filter(x=>norm(x.hotel.name)===norm(n)).map(x=>x.id);S.exc.filter(e=>ids.includes(e.hd)&&String(e.prog||'').trim()).forEach(e=>{const c=moPP(e.imp,e.cur,e.tipo,e.tlf);nt.push('Escursione: '+String(e.prog).trim()+(c?' – '+c:''))});
   out.push({paese:DC[S.days.indexOf(d)]||'',loc:moLastStop(d),nome:n,addr:h.addr||'',tel:h.tel||'',email:'',web:'',costi:pp,val:'',note:nt.join('\n')})})}
  if(sec==='esc')S.exc.forEach(e=>{const n=String(e.prog||'').trim();if(!n)return;const d=S.days[dayIdx(e.day)];
-  out.push({paese:d?DC[dayIdx(e.day)]||'':'',loc:d?moLastStop(d):'',desc:n,costi:moPP(e.imp,e.cur,e.tipo,e.tlf),note:''})});
+  let costi=moPP(e.imp,e.cur,e.tipo,e.tlf);const r=RL.Rm['e'+e.id];
+  if(r){const cur=r[0].cur,tot=moSumIn(r,cur),nP=Math.max(...r.map(m=>m.n)),per=tot/Math.max(1,e.tlf?nP-1:nP);costi=per?`${fmt(per,0)} ${curName(cur)} a persona${e.tlf?' – TLF':''}`:'gratis'}
+  out.push({paese:d?DC[dayIdx(e.day)]||'':'',loc:d?moLastStop(d):'',desc:n,costi,note:''})});
+ // escursioni non previste, segnate in viaggio nella Cassa Comune
+ if(sec==='esc')RL.X.filter(m=>m.cat==='Escursioni'&&m.t).forEach(m=>{const i=dayIdx(m.day),d=S.days[i],per=m.v/Math.max(1,m.n);
+  out.push({paese:d?DC[i]||'':'',loc:d?moLastStop(d):'',desc:m.t,costi:per?`${fmt(per,0)} ${curName(m.cur)} a persona`:'gratis',note:''})});
  return out}
 function moFill(sec){const L=moData()[sec],k=MOF[sec].key,have=new Set(L.map(x=>norm(String(x[k]||''))));let n=0;
  moFromTrip(sec).forEach(x=>{const ex=L.find(y=>norm(String(y[k]||''))===norm(String(x[k]||'')));
-  if(ex){let ch=false;Object.keys(x).forEach(f=>{const old=String(ex[f]||'').trim(),auto=(f==='costi'&&/ (a notte|a persona|totale|TLF|TLF gratuito|TLF pagante)$/.test(old))||(f==='note'&&sec==='pern'&&old.split('\n').every(l=>/^(Sistemazione camere:|Pagamento:|Colazione|Pranzo|Cena|Escursione:)/.test(l.trim())));if((!old||auto)&&x[f]&&x[f]!==old){ex[f]=x[f];ch=true}});if(ch)n++;return}
+  if(ex){let ch=false;Object.keys(x).forEach(f=>{const old=String(ex[f]||'').trim(),auto=(f==='costi'&&(/ (a notte|a persona|totale|TLF|TLF gratuito|TLF pagante)$/.test(old)||old==='gratis'))||(f==='note'&&sec==='pern'&&old.split('\n').every(l=>/^(Sistemazione camere:|Pagamento:|Colazione|Pranzo|Cena|Escursione:)/.test(l.trim())));if((!old||auto)&&x[f]&&x[f]!==old){ex[f]=x[f];ch=true}});if(ch)n++;return}
   L.push(Object.assign(moBlank(sec),x));n++});
  if(sec==='tappe'){const ord=new Map(S.days.map((d,i)=>[moDate(i),i]));L.sort((a,b)=>(ord.has(a.data)?ord.get(a.data):1e9)-(ord.has(b.data)?ord.get(b.data):1e9))}
  return n}
@@ -1877,7 +1891,7 @@ function moField(sec,i,x,f){const [k,lab,hint,kind]=f,a=`data-f="mo" data-s="${s
  return `<label class="mof"><span>${esc(lab)}</span>${inp}</label>`}
 function vCarMO(){const M=moData();
  const btns=`<div class="mobtns">${MOORD.map(s=>`<button class="mobtn${MOSEC===s?' on':''}" data-a="mosec" data-s="${s}" type="button"><span class="moico">${MOF[s].ico}</span><b>${esc(MOF[s].t)}</b><small>${M[s].length?M[s].length+(M[s].length===1?' scheda':' schede'):'vuota'}</small></button>`).join('')}</div>`;
- const head=`<div class="card"><h2>Caricamenti su MO</h2><p class="note" style="margin:0 0 10px">Le sei schede da caricare sul sito dell'agenzia al ritorno. Compilale qui, poi scarica le schede da copiare: si aprono nel browser e con un doppio clic su un campo lo selezioni e lo copi.</p>${btns}
+ const head=`<div class="card"><h2>Caricamenti su MO</h2><p class="note" style="margin:0 0 10px">Le sei schede da caricare sul sito dell'agenzia al ritorno. Compilale qui, poi scarica le schede da copiare: si aprono nel browser e con un doppio clic su un campo lo selezioni e lo copi.</p>${window.TRAVEL?'':`<div class="msg warn morem"><b>Prima di prendere i dati:</b> se in viaggio hai usato il telefono, apri lì la versione da viaggio, tocca «Scarica backup» e ripristinalo qui in Importa e backup. Così escursioni e hotel avranno i prezzi che hai pagato davvero.<div style="margin-top:6px"><button class="btn sm" data-tab="dati" type="button">Vai a Importa e backup</button></div></div>`}${btns}
   <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px"><button class="btn pri" data-a="mohtml" type="button"${dl?'':' disabled'} title="Si apre nel browser: doppio clic su un campo per selezionarlo e copiarlo">Scarica schede da copiare</button><button class="btn" data-a="motxt" type="button"${dl?'':' disabled'}>Scarica TXT</button><button class="btn" data-a="mofill" type="button" title="Riempie Tappe, Pernottamenti ed Escursioni: aggiunge quelle che mancano e completa i campi vuoti, senza cambiare quello che hai scritto tu">Prendi dai dati del viaggio</button></div>
   ${MOMSG?`<div class="msg ${MOMSG[0]}" style="margin-top:10px">${esc(MOMSG[1])}</div>`:''}</div>`;
  if(!MOSEC)return head;
@@ -1896,6 +1910,8 @@ let CCDAY=null,CCPICK=false,CCSEL=new Set(),CCALLD=false;
 const CCT={sp:['Spesa','💳'],in:['Raccolta','📥'],cx:['Cambio','💱'],out:['Ridistribuzione','📤']};
 function ccData(){S.cc=S.cc||{};const C=S.cc;
  if(!Array.isArray(C.people)||!C.people.length){C.people=Array.from({length:P()},(_,i)=>({id:'p'+(i+1),n:i===0?'Mirko (TL)':'Partecipante '+(i+1)}))}
+ // se aumentano i partecipanti del viaggio, aggiunge chi manca
+ while(C.people.length<P()){let k=C.people.length+1;while(C.people.some(p=>p.id==='p'+k))k++;C.people.push({id:'p'+k,n:'Partecipante '+(C.people.length+1)})}
  if(!Array.isArray(C.mv)){C.mv=(C.sp||[]).map(x=>({...x,type:'sp',by:x.by||'cassa'}));delete C.sp}
  if(!C.cassiere||!C.people.some(p=>p.id===C.cassiere))C.cassiere=C.people[0].id;
  tripCats();
@@ -1965,6 +1981,7 @@ function vCComune(){const C=ccData();if(CCDAY==null){const ti=ccTodayIdx();CCDAY
  if(CCDAY!=='all'&&dayIdx(CCDAY)<0)CCDAY='all';
  const people=`<details class="card cdet"${(OPEN.ccp??!window.TRAVEL)?' open':''} id="det-ccp"><summary><h2>Partecipanti e cassiere</h2></summary><div class="ccpeople">${C.people.map((p,i)=>`<span class="ccp"><input data-f="ccp" data-i="${i}" value="${esc(p.n)}" aria-label="Nome partecipante ${i+1}">${C.mv.some(x=>x.by===p.id||(x.for||[]).includes(p.id))?'':`<button class="btn xs del" data-a="ccpdel" data-i="${i}" type="button" aria-label="Togli ${esc(p.n)}">×</button>`}</span>`).join('')}
   <button class="btn xs" data-a="ccpadd" type="button">+ Partecipante</button></div>
+  ${C.people.length>P()?`<div class="msg warn" style="margin-top:8px">Qui ci sono ${C.people.length} persone, ma nel viaggio i partecipanti sono ${P()}. Togli chi non c'è più (la × compare se non ha movimenti) o aggiorna il numero dei partecipanti.</div>`:''}
   <div class="ccset2"><label>Cassiere<select data-f="ccc" data-x="cassiere">${C.people.map(p=>`<option value="${p.id}"${C.cassiere===p.id?' selected':''}>${esc(p.n)}</option>`).join('')}</select></label></div></details>`;
  const cnt={};C.mv.forEach(x=>cnt[x.day]=(cnt[x.day]||0)+1);
  // versione da viaggio: si vedono solo ieri, oggi e domani (gli altri con «…»)

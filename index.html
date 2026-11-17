@@ -1,6 +1,6 @@
 <!doctype html><html lang="it"><head><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Viaggio">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202611171619 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202611171720 -->
 <meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
 .modet>summary{cursor:pointer;padding:2px 0}.modet[open]>summary{margin-bottom:6px}.relsec{margin:0 0 8px}.cdet.relsec>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;background:var(--bg);transition:background .15s}.cdet.relsec>summary::-webkit-details-marker{display:none}.cdet.relsec>summary::before{content:'▸';color:var(--accent);font-size:12px;transition:transform .15s}.cdet.relsec[open]>summary::before{transform:rotate(90deg)}.cdet.relsec>summary b{color:var(--accent)}.cdet.relsec>summary .note{margin-left:auto;font-size:12px}.cdet.relsec>summary:hover{background:var(--card)}.cdet.relsec[open]>summary{border-bottom-left-radius:4px;border-bottom-right-radius:4px}.relsec>textarea{margin-top:6px}.reldg{margin:6px 0 6px}.reldg>summary{cursor:pointer}.reldg b{font-size:13px}.reldg>textarea{margin-top:6px}.reldg textarea,.moitem>textarea{width:100%;box-sizing:border-box}
 .uidlg{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px}.uidlg-b{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:16px;max-width:420px;width:100%;box-sizing:border-box}.uidlg-b p{margin:0 0 12px;line-height:1.45}.uidlg-b input{width:100%;box-sizing:border-box;margin-bottom:12px}.uidlg-a{display:flex;justify-content:flex-end;gap:8px}
@@ -33,6 +33,15 @@
 .ccstep{font-size:13px;color:var(--muted)}.ccstep b{display:inline-flex;width:18px;height:18px;border-radius:50%;background:var(--tc);color:#fff;align-items:center;justify-content:center;font-size:11px;margin-right:4px}
 .seg.ccseg{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--card)}.seg.ccseg button{flex:1;font:inherit;font-size:13px;padding:7px 4px;border:0;border-right:1px solid var(--line);background:none;color:var(--fg);cursor:pointer}.seg.ccseg button:last-child{border-right:0}.seg.ccseg button.on{background:var(--tc,var(--accent));color:#fff;font-weight:600}
 .ccsh .chips{display:flex;flex-wrap:wrap;gap:5px}.ccsh .ccfor{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.ccqrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ccqx{font:inherit;font-size:12.5px;font-weight:600;color:var(--acc,#1f6f5c);background:none;border:1px dashed currentColor;border-radius:999px;padding:4px 10px;cursor:pointer}
+.ccqx.on{background:var(--acc,#1f6f5c);color:#fff;border-style:solid}
+.ccqx.re{border-color:transparent}
+.ccqtab{display:flex;flex-direction:column;gap:5px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.ccsh .ccqtab .ccqr{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:10px;font-size:13.5px;margin:0}
+.ccsh .ccqtab .ccqr input{width:120px;flex:0 0 120px;height:auto;min-height:0;padding:6px 8px;text-align:right}
+.ccqtot{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12.5px;border-top:1px solid var(--line);padding-top:6px;margin-top:2px}
+.ccqtot .qok{color:var(--acc,#1f6f5c);font-weight:600}.ccqtot .qbad{color:var(--bad,#c0392b);font-weight:600}
 .ccpk{display:flex;gap:10px;align-items:flex-start;padding:7px 9px;border:1px solid var(--hlb);border-radius:9px;background:var(--card);font-size:14px}.ccpk input[type=checkbox]{width:18px!important;height:18px!important;min-height:0;flex:none;margin:2px 0 0}.ccpk.rate input{width:100%}.ccpk>span{display:flex;flex-direction:column;flex:1;align-items:flex-start}.ccpk>span>b,.ccpk>span>small{align-self:stretch}.ccpk small{color:var(--muted)}.ccpk.used{opacity:.55}
 .ccpk.skip{opacity:.65}.ccpk.skip b{text-decoration:line-through}.ccpkb{display:flex;gap:6px;align-items:center;margin-top:5px;flex-wrap:wrap}.ccpk .pill{background:var(--line);border-radius:999px;padding:1px 8px;font-size:11px}
 .ccpk.rate{flex-direction:column;gap:5px}.ccpkr{display:flex;justify-content:space-between;gap:8px;align-items:center}.ccpkg{font-size:12px;color:var(--muted);margin-top:4px}
@@ -512,7 +521,7 @@ summary .sugbox h3,.sugbox>summary{cursor:pointer}.sugbox>summary h3{display:inl
   <div class="tabs" role="tablist" id="tabs"></div>
 </div>
 <div id="syncbar" class="syncbar" hidden></div><main id="view"></main>
-<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 17/11/2026 16:19</p>
+<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 17/11/2026 17:20</p>
 
 <script>
 /* ---------- stato ---------- */
@@ -2510,7 +2519,7 @@ const ccMoney=(v,c)=>fmt(v,+c?0:2);
 function ccRate(c,dp){c=+c;if(!c)return 1;dp=dp||0;let e=0,l=0;const rr=k=>k?(dp<3?ccRate(k,dp+1):rate(k)):1;
  ccData().mv.forEach(x=>{if(+x.cur!==c||!num(x.eur)||!num(x.v))return;
   if(x.type==='cx'){const fc=+x.fc||0;if(fc===c)return;const r=rr(fc);if(!r)return;e+=num(x.eur)/r;l+=num(x.v)}
-  else if(x.type==='gx'){const n=(x.for||[]).length,r=rr(+x.ec||0);if(!n||!r)return;e+=num(x.eur)*n/r;l+=num(x.v)}});
+  else if(x.type==='gx'){const n=(x.for||[]).length,r=rr(+x.ec||0);if(!n||!r)return;e+=ccSum(x)/r;l+=num(x.v)}});
  return e&&l?l/e:rate(c)}
 const ccEur=(v,c)=>{const r=ccRate(c);return r?num(v)/r:0};
 function ccCalc(){const C=ccData(),B={};C.people.forEach(p=>B[p.id]={vers:0,paid:0,recv:0,share:0,bal:0,dato:0,ridato:0});const cash={};let miss=0;
@@ -2518,13 +2527,14 @@ function ccCalc(){const C=ccData(),B={};C.people.forEach(p=>B[p.id]={vers:0,paid
  C.mv.forEach(x=>{const v=num(x.v),c=+x.cur||0;if(!v&&x.type!=='cx')return;
   if(x.type==='cx'){add(+x.fc||0,-num(x.eur));add(c,v);return}
   if(c&&!ccRate(c)){miss++;return}const e=ccEur(v,c),fr=(x.for||[]).filter(id=>B[id]);
-  if(x.type==='adj'){const sg=x.dir==='out'?-1:1,a=Math.abs(v),ae=Math.abs(e),ids=Object.keys(B);add(c,sg*a);ids.forEach(id=>{B[id].share-=sg*ae/ids.length;B[id].bal+=sg*ae/ids.length});return}
+  if(x.type==='adj'){const sg=x.dir==='out'?-1:1,a=Math.abs(v),ae=Math.abs(e),ids=Object.keys(B);add(c,sg*a);const pp=ccPP(x),qo=ccQon(x);ids.forEach(id=>{const ai=qo?Math.abs(ccEur(pp[id]||0,c)):ae/ids.length;B[id].share-=sg*ai;B[id].bal+=sg*ai});return}
   if(x.type==='gx'){const n=fr.length;if(!n)return;const back=num(x.back),net=v-back*n,ec=+x.ec||0;add(c,net);
-   fr.forEach(id=>{const pe=ccEur(v/n-back,c);B[id].vers+=pe;B[id].bal+=pe;B[id].dato+=ccEur(num(x.eur),ec);B[id].ridato+=ccEur(back,c)});return}
-  if(x.type==='in'){fr.forEach(id=>{B[id].vers+=e;B[id].bal+=e;B[id].dato+=e});add(c,v*fr.length);return}
-  if(x.type==='out'){fr.forEach(id=>{B[id].recv+=e;B[id].bal-=e});add(c,-v*fr.length);return}
+   const pp=ccPP(x),T=fr.reduce((a,id)=>a+(pp[id]||0),0)||1;
+   fr.forEach(id=>{const pe=ccEur(v*(pp[id]||0)/T-back,c);B[id].vers+=pe;B[id].bal+=pe;B[id].dato+=ccEur(pp[id]||0,ec);B[id].ridato+=ccEur(back,c)});return}
+  if(x.type==='in'){const pp=ccPP(x);let sm=0;fr.forEach(id=>{const vi=pp[id]||0,ei=ccEur(vi,c);sm+=vi;B[id].vers+=ei;B[id].bal+=ei;B[id].dato+=ei});add(c,sm);return}
+  if(x.type==='out'){const pp=ccPP(x);let sm=0;fr.forEach(id=>{const vi=pp[id]||0,ei=ccEur(vi,c);sm+=vi;B[id].recv+=ei;B[id].bal-=ei});add(c,-sm);return}
   if(!fr.length)return;if(x.by==='cassa')add(c,-v);else if(B[x.by]){B[x.by].paid+=e;B[x.by].bal+=e}else return;
-  fr.forEach(id=>{B[id].share+=e/fr.length;B[id].bal-=e/fr.length})});
+  const pp=ccPP(x),qo=ccQon(x);fr.forEach(id=>{const ei=qo?ccEur(pp[id]||0,c):e/fr.length;B[id].share+=ei;B[id].bal-=ei})});
  const cashEur=Object.entries(cash).reduce((a,[c,v])=>a+ccEur(v,c),0);return{B,cash,cashEur,miss}}
 // chi deve dare a chi, con la cassa come un partecipante che restituisce quello che le resta
 function ccSettle(K){const bal={...Object.fromEntries(Object.entries(K.B).map(([k,v])=>[k,v.bal])),cassa:-K.cashEur},cr=[],db=[];
@@ -2554,11 +2564,11 @@ function dayKmH(d){let km=0,h=0;txOf(d).forEach(x=>{km+=num(x.km);h+=parseH(x.h)
 /* ---- righe compatte ---- */
 function ccLine(x,j){const C=ccData(),T=CCT[x.type]||['?','•'],cn=c=>esc(curName(+c||0)),n=(x.for||[]).length,tutti=n===C.people.length?'tutti':n+(n===1?' persona':' persone');let ico=T[1],t='',s='',v='';
  if(x.type==='sp'){ico=ccIsRate(x.t)?'⛽':x.cat==='Pasto'?'🍽':'💳';t=esc(x.t||'Spesa')+(x.est?'<span class="ccest">stima</span>':'');
-  s=[x.cat?esc(x.cat):'',x.est?'da correggere':'',x.by==='cassa'?'cassa':'pagato da '+esc(ccName(x.by)),tutti].filter(Boolean).join(' · ');v=`${ccMoney(num(x.v),x.cur)}<small>${cn(x.cur)}</small>`}
- else if(x.type==='in'||x.type==='out'){t=esc(x.t||T[0]);if(x.t)s=T[0]+' · ';s+=`${ccMoney(num(x.v),x.cur)} ${cn(x.cur)} a persona · ${tutti}`;v=`${ccMoney(num(x.v)*n,x.cur)}<small>${cn(x.cur)}</small>`}
+  s=[x.cat?esc(x.cat):'',x.est?'da correggere':'',x.by==='cassa'?'cassa':'pagato da '+esc(ccName(x.by)),tutti,ccQon(x)?'importi diversi':''].filter(Boolean).join(' · ');v=`${ccMoney(num(x.v),x.cur)}<small>${cn(x.cur)}</small>`}
+ else if(x.type==='in'||x.type==='out'){t=esc(x.t||T[0]);if(x.t)s=T[0]+' · ';s+=`${ccQon(x)?'importi diversi':ccMoney(num(x.v),x.cur)+' '+cn(x.cur)+' a persona'} · ${tutti}`;v=`${ccMoney(ccSum(x),x.cur)}<small>${cn(x.cur)}</small>`}
  else if(x.type==='cx'){const fc=+x.fc||0,r=num(x.eur)&&num(x.v)?num(x.v)/num(x.eur):0;t=`Cambio ${cn(fc)} → ${cn(x.cur)}`;s=r?(r>=1?`1 ${cn(fc)} = ${fmt(r,2)} ${cn(x.cur)}`:`1 ${cn(x.cur)} = ${fmt(1/r,2)} ${cn(fc)}`):'';v=`${ccMoney(num(x.eur),fc)} → ${ccMoney(num(x.v),x.cur)}<small>${cn(x.cur)}</small>`}
- else if(x.type==='gx'){const ec=+x.ec||0,net=num(x.v)-num(x.back)*n;t=`Cambio e Ridistribuzione · ${n} persone`;s=`${ccMoney(num(x.eur)*n,ec)} ${cn(ec)} → ${ccMoney(num(x.v),x.cur)} ${cn(x.cur)} · ridati ${ccMoney(num(x.back),x.cur)} a testa`;v=`+${ccMoney(net,x.cur)}<small>in cassa</small>`}
- if(x.type==='adj'){const o=x.dir==='out';t=esc(x.t||'Rettifica cassa');s=`Rettifica cassa · ${o?'soldi mancanti':'soldi in più'}`;v=`${o?'−':'+'}${ccMoney(Math.abs(num(x.v)),x.cur)}<small>${cn(x.cur)}</small>`}
+ else if(x.type==='gx'){const ec=+x.ec||0,net=num(x.v)-num(x.back)*n;t=`Cambio e Ridistribuzione · ${n} persone`;s=`${ccMoney(ccSum(x),ec)} ${cn(ec)}${ccQon(x)?' (importi diversi)':''} → ${ccMoney(num(x.v),x.cur)} ${cn(x.cur)} · ridati ${ccMoney(num(x.back),x.cur)} a testa`;v=`+${ccMoney(net,x.cur)}<small>in cassa</small>`}
+ if(x.type==='adj'){const o=x.dir==='out';t=esc(x.t||'Rettifica cassa');s=`Rettifica cassa · ${o?'soldi mancanti':'soldi in più'}${ccQon(x)?' · importi diversi':''}`;v=`${o?'−':'+'}${ccMoney(Math.abs(num(x.v)),x.cur)}<small>${cn(x.cur)}</small>`}
  return `<div class="ccl t-${x.type==='gx'?'cx':x.type}${x.est?' est':''}" data-a="ccedit" data-j="${j}" role="button" tabindex="0"><span class="ccli">${ico}</span><div class="ccld"><b>${t}</b><small>${s}</small></div><div class="cclv">${v}</div><span class="ccle" aria-label="Modifica">✎</span></div>`}
 /* ---- finestra dal basso ---- */
 const ccSheet=(cls,inner)=>`<div class="ccsh-bg" data-a="ccshno"></div><div class="ccsh ${cls}" role="dialog" aria-modal="true">${inner}</div>`;
@@ -2566,13 +2576,31 @@ function ccChipsE(x,label){const C=ccData(),fr=x.for||[],all=fr.length===C.peopl
  return `<div class="ccfor"><span class="note">${label}</span><button class="chip${all?' on':''}" data-a="cceall" type="button">Tutti (${C.people.length})</button>${ccOrder().map(p=>{const cs=p.id===C.cassiere,me=p.id===C.people[0].id;return `<button class="chip${fr.includes(p.id)?' on':''}${cs?' cass':me?' me':''}" data-a="ccefor" data-p="${p.id}" type="button">${cs?'<span class="capt">C</span>':''}${me?'<span class="capt tl">TL</span>':''}<span class="cn">${esc(me?p.n.replace(/\s*\(TL\)\s*/i,' ').trim():p.n)}</span></button>`}).join('')}</div>`}
 const cce=(k,extra='')=>`data-f="cce" data-x="${k}"${extra}`;
 const ccNum=' type="number" step="any" inputmode="decimal"';
+// importi diversi per persona: x.q = {id: importo}; senza x.q si divide come sempre
+const ccQon=x=>!!(x&&x.q&&typeof x.q==='object');
+const ccIds=x=>x.type==='adj'?ccAllIds():(x.for||[]);
+function ccPP(x){const ids=ccIds(x),n=ids.length||1,on=ccQon(x),o={};
+ const base=x.type==='sp'?num(x.v)/n:x.type==='adj'?Math.abs(num(x.v))/n:x.type==='gx'?num(x.eur):num(x.v);
+ ids.forEach(id=>{o[id]=on?num(x.q[id]):base});return o}
+const ccSum=x=>Object.values(ccPP(x)).reduce((a,b)=>a+b,0);
+// la somma deve tornare con l'importo per spese e rettifiche; per versamenti, ridistribuzioni e cambi è libera
+const ccQTarget=x=>x.type==='sp'?num(x.v):x.type==='adj'?Math.abs(num(x.v)):null;
+function ccQSync(x){if(!ccQon(x))return;const ids=new Set(ccIds(x));Object.keys(x.q).forEach(k=>{if(!ids.has(k))delete x.q[k]})}
+function ccQTot(x){const cur=x.type==='gx'?+x.ec||0:+x.cur||0,cn=esc(curName(cur)),s=ccSum(x),t=ccQTarget(x);
+ if(t==null)return `<span>Totale <b>${ccMoney(s,cur)} ${cn}</b></span>`;
+ const d=t-s,ok=Math.abs(d)<0.005;return `<span>Totale ${ccMoney(s,cur)} di ${ccMoney(t,cur)} ${cn}</span><span class="${ok?'qok':'qbad'}">${ok?'✓ torna':d>0?'mancano '+ccMoney(d,cur):'troppo: '+ccMoney(-d,cur)}</span>`}
+function ccQBox(x){const ids=ccIds(x);if(!ids.length)return '';
+ if(!ccQon(x))return `<div class="ccqrow"><button class="ccqx" data-a="ccqon" type="button">≠ Importi diversi</button></div>`;
+ const ord=ccOrder().filter(p=>ids.includes(p.id));
+ return `<div class="ccqrow"><button class="ccqx on" data-a="ccqon" type="button">≠ Importi diversi</button><button class="ccqx re" data-a="ccqoff" type="button">↺ parti uguali</button></div>
+ <div class="ccqtab">${ord.map(p=>`<div class="ccqr"><span>${esc(String(p.n).replace(/\s*\(TL\)\s*/i,' ').trim())}</span><input ${cce('q.'+p.id,ccNum)} value="${esc(x.q[p.id]??'')}" aria-label="Importo di ${esc(p.n)}"></div>`).join('')}<div class="ccqtot" id="ccqtot">${ccQTot(x)}</div></div>`}
 function ccInfo(x){const n=(x.for||[]).length,cn=c=>esc(curName(+c||0));
- if(x.type==='adj')return num(x.v)?`${x.dir==='out'?'Toglie':'Aggiunge'} ${ccMoney(Math.abs(num(x.v)),x.cur)} ${cn(x.cur)} alla cassa, ${x.dir==='out'?'a carico':'a favore'} di tutto il gruppo in parti uguali`:'';
- if(x.type==='sp')return num(x.v)&&n?`${ccMoney(num(x.v)/n,x.cur)} ${cn(x.cur)} a testa`:'';
+ if(x.type==='adj')return num(x.v)?`${x.dir==='out'?'Toglie':'Aggiunge'} ${ccMoney(Math.abs(num(x.v)),x.cur)} ${cn(x.cur)} alla cassa, ${x.dir==='out'?'a carico':'a favore'} di tutto il gruppo ${ccQon(x)?'con gli importi diversi':'in parti uguali'}`:'';
+ if(x.type==='sp')return ccQon(x)?'':num(x.v)&&n?`${ccMoney(num(x.v)/n,x.cur)} ${cn(x.cur)} a testa`:'';
  if(x.type==='cx'){const fc=+x.fc||0,r=num(x.eur)&&num(x.v)?num(x.v)/num(x.eur):0;return r?(r>=1?`1 ${cn(fc)} = ${fmt(r,2)} ${cn(x.cur)}`:`1 ${cn(x.cur)} = ${fmt(1/r,2)} ${cn(fc)}`):''}
- if(x.type==='gx'){const ec=+x.ec||0,tot=num(x.eur)*n,v=num(x.v);if(!n||!tot||!v)return '';const r=v/tot,sp=v/n,back=num(x.back),net=v-back*n;
-  let h=`1 ${cn(ec)} = ${fmt(r,2)} ${cn(x.cur)} · a testa spetterebbero ${fmt(Math.floor(sp),0)}`;
-  if(back){h+=`<div class="${net<0?'msg bad':'ccok'}" style="margin-top:6px">${net<0?'Ridai più di quanto hai ricevuto':`Restano in cassa <b>${ccMoney(net,x.cur)} ${cn(x.cur)}</b> (≈ ${fmt(net/r/(ec?ccRate(ec):1),2)} €)<br>Versamento vero: <b>≈ ${fmt(net/n/r/(ec?ccRate(ec):1),2)} € a testa</b>`}</div>`}
+ if(x.type==='gx'){const ec=+x.ec||0,tot=ccSum(x),v=num(x.v);if(!n||!tot||!v)return '';const r=v/tot,sp=v/n,back=num(x.back),net=v-back*n;
+  let h=`1 ${cn(ec)} = ${fmt(r,2)} ${cn(x.cur)}${ccQon(x)?'':' · a testa spetterebbero '+fmt(Math.floor(sp),0)}`;
+  if(back){h+=`<div class="${net<0?'msg bad':'ccok'}" style="margin-top:6px">${net<0?'Ridai più di quanto hai ricevuto':`Restano in cassa <b>${ccMoney(net,x.cur)} ${cn(x.cur)}</b> (≈ ${fmt(net/r/(ec?ccRate(ec):1),2)} €)<br>Versamento vero${ccQon(x)?' (in media)':''}: <b>≈ ${fmt(net/n/r/(ec?ccRate(ec):1),2)} € a testa</b>`}</div>`}
   return h}
  return ''}
 function ccEdSheet(){const C=ccData(),x=CCED.x,cs=cassaCurs(),n=(x.for||[]).length,isNew=CCED.j<0,ty=x.type,T=CCT[ty];
@@ -2583,23 +2611,23 @@ function ccEdSheet(){const C=ccData(),x=CCED.x,cs=cassaCurs(),n=(x.for||[]).leng
   body+=`<div class="ccg2"><input ${cce('t')} value="${esc(x.t||'')}" placeholder="Descrizione" aria-label="Descrizione"><select ${cce('cat')} aria-label="Categoria"><option value=""${x.cat?'':' selected'}>Categoria…</option>${tripCats().map(k=>`<option${x.cat===k?' selected':''}>${esc(k)}</option>`).join('')}<option value="__new">Personalizzato…</option></select>
    <input ${cce('v',ccNum)} value="${esc(x.v??'')}" placeholder="Importo" aria-label="Importo"><select ${cce('cur')} aria-label="Valuta">${ccCurOpt(x.cur,cs)}</select></div>
    <label class="ccrowl">Pagato da<select ${cce('by')}><option value="cassa"${x.by==='cassa'?' selected':''}>Cassa comune</option>${C.people.map(p=>`<option value="${p.id}"${x.by===p.id?' selected':''}>${esc(p.n)}</option>`).join('')}</select></label>
-   ${ccChipsE(x,'Diviso tra')}`}
+   ${ccChipsE(x,'Diviso tra')}${ccQBox(x)}`}
  else if(ty==='in'||ty==='out'){const tot=num(x.v)*n;
   body+=`<input ${cce('t')} value="${esc(x.t||'')}" placeholder="Nota (facoltativa)" aria-label="Nota">
-   <div class="ccg2"><label class="ccsl">A persona<input ${cce('v',ccNum)} value="${esc(x.v??'')}" aria-label="Importo a persona"></label><label class="ccsl">Totale gruppo<input ${cce('_tot',ccNum)} value="${tot?+tot.toFixed(2):''}" aria-label="Totale del gruppo"></label></div>
+   ${ccQon(x)?'':`<div class="ccg2"><label class="ccsl">A persona<input ${cce('v',ccNum)} value="${esc(x.v??'')}" aria-label="Importo a persona"></label><label class="ccsl">Totale gruppo<input ${cce('_tot',ccNum)} value="${tot?+tot.toFixed(2):''}" aria-label="Totale del gruppo"></label></div>`}
    <select ${cce('cur')} aria-label="Valuta">${ccCurOpt(x.cur,cs)}</select>
-   ${ccChipsE(x,ty==='in'?'Versano':'Ricevono dalla cassa')}<p class="note" style="margin:0">Scrivi in una delle due caselle: l'altra si calcola da sola (${n} ${n===1?'persona':'persone'}).</p>`}
+   ${ccChipsE(x,ty==='in'?'Versano':'Ricevono dalla cassa')}${ccQBox(x)}${ccQon(x)?'':`<p class="note" style="margin:0">Scrivi in una delle due caselle: l'altra si calcola da sola (${n} ${n===1?'persona':'persone'}).</p>`}`}
  else if(ty==='cx'){const fc=+x.fc||0,loc=cs.filter(c=>c),pairs=[...loc.map(c=>[0,c]),...loc.map(c=>[c,0]),...loc.flatMap(a=>loc.filter(b=>b!==a).map(b=>[a,b]))];
   body+=`<div class="chips">${pairs.map(([a,b])=>`<button type="button" class="chip${fc===a&&+x.cur===b?' on':''}" data-a="ccpair" data-fc="${a}" data-c="${b}">${esc(curName(a))} → ${esc(curName(b))}</button>`).join('')}</div>
    <div class="ccg2"><label class="ccsl">Dai (${esc(curName(fc))})<input ${cce('eur',ccNum)} value="${esc(x.eur??'')}" aria-label="Importo dato"></label><label class="ccsl">Ricevi (${esc(curName(+x.cur))})<input ${cce('v',ccNum)} value="${esc(x.v??'')}" aria-label="Importo ricevuto"></label></div>`}
  else if(ty==='gx'){const ec=+x.ec||0;
-  body+=`<div class="ccstep"><b>1</b> Ogni partecipante dà</div><div class="ccg2"><input ${cce('eur',ccNum)} value="${esc(x.eur??'')}" aria-label="Quanto dà ognuno"><select ${cce('ec')} aria-label="Valuta data">${ccCurOpt(ec,cs)}</select></div>
-   ${ccChipsE(x,'Partecipano')}<p class="note" style="margin:0" id="ccgxtot">${n&&num(x.eur)?`= ${ccMoney(num(x.eur)*n,ec)} ${esc(curName(ec))} in tutto`:''}</p>
+  body+=`<div class="ccstep"><b>1</b> Ogni partecipante dà</div><div class="ccg2">${ccQon(x)?'<span class="note" style="align-self:center">importi qui sotto</span>':`<input ${cce('eur',ccNum)} value="${esc(x.eur??'')}" aria-label="Quanto dà ognuno">`}<select ${cce('ec')} aria-label="Valuta data">${ccCurOpt(ec,cs)}</select></div>
+   ${ccChipsE(x,'Partecipano')}${ccQBox(x)}<p class="note" style="margin:0" id="ccgxtot">${n&&ccSum(x)?`= ${ccMoney(ccSum(x),ec)} ${esc(curName(ec))} in tutto`:''}</p>
    <div class="ccstep"><b>2</b> Ricevuti all'ufficio cambio</div><div class="ccg2"><input ${cce('v',ccNum)} value="${esc(x.v??'')}" aria-label="Ricevuti"><select ${cce('cur')} aria-label="Valuta ricevuta">${ccCurOpt(x.cur,cs.filter(c=>c!==ec))}</select></div>
    <div class="ccstep"><b>3</b> Ridai a ciascuno</div><input ${cce('back',ccNum)} value="${esc(x.back??'')}" placeholder="${esc(curName(+x.cur))}" aria-label="Quanto ridai a ciascuno">`}
  if(ty==='adj')body+=`<div class="seg ccseg"><button type="button" data-a="ccadir" data-v="in" class="${x.dir!=='out'?'on':''}">Soldi in più</button><button type="button" data-a="ccadir" data-v="out" class="${x.dir==='out'?'on':''}">Soldi mancanti</button></div>
    <input ${cce('t')} value="${esc(x.t||'')}" placeholder="Nota (es. resto sbagliato, errore di conteggio)" aria-label="Nota">
-   <div class="ccg2"><input ${cce('v',ccNum)} value="${esc(x.v??'')}" placeholder="Importo" aria-label="Importo"><select ${cce('cur')} aria-label="Valuta">${ccCurOpt(x.cur,cs)}</select></div>
+   <div class="ccg2"><input ${cce('v',ccNum)} value="${esc(x.v??'')}" placeholder="Importo" aria-label="Importo"><select ${cce('cur')} aria-label="Valuta">${ccCurOpt(x.cur,cs)}</select></div>${ccQBox(x)}
    <p class="note" style="margin:0">Per soldi trovati in più o mancanti in cassa, non legati a un partecipante. Scrivi l'importo senza segno.</p>`;
  body+=`<div class="note" id="ccedinfo">${ccInfo(x)}</div>`;
  const foot=`<div class="ccshf">${isNew?'':`<button class="btn del" data-a="ccedel" type="button">Elimina</button>`}<button class="btn" data-a="ccshno" type="button">Annulla</button><button class="btn pri" data-a="ccesave" type="button">Salva</button></div>`;
@@ -2670,7 +2698,7 @@ function vCComune(){const C=ccData();if(CCDAY==null){const ti=ccTodayIdx();CCDAY
  const idx=C.mv.map((x,j)=>({x,j})).filter(o=>(CCDAY==='all'||o.x.day===CCDAY)&&tyOk(o.x)).sort((a,b)=>dayIdx(a.x.day)-dayIdx(b.x.day)||a.j-b.j);
  let list='';if(CCDAY==='all'){let last=null;idx.forEach(o=>{if(o.x.day!==last){last=o.x.day;const i=dayIdx(last);list+=`<div class="ccdh">${esc(dateOf(i))} · giorno ${i+1}</div>`}list+=ccLine(o.x,o.j)})}else list=idx.map(o=>ccLine(o.x,o.j)).join('');
  // totale del tipo scelto
- let tot='';if((CCTYPE||(CCCAT&&catOn))&&idx.length){const s={};idx.forEach(({x})=>{const n=(x.for||[]).length,c=+x.cur||0;const v=x.type==='sp'?num(x.v):x.type==='in'||x.type==='out'?num(x.v)*n:num(x.v);s[c]=(s[c]||0)+v});
+ let tot='';if((CCTYPE||(CCCAT&&catOn))&&idx.length){const s={};idx.forEach(({x})=>{const n=(x.for||[]).length,c=+x.cur||0;const v=x.type==='sp'?num(x.v):x.type==='in'||x.type==='out'?ccSum(x):num(x.v);s[c]=(s[c]||0)+v});
   tot=`<div class="cctot"><b>Totale ${CCDAY==='all'?'del viaggio':'del giorno'}</b><b>${CCTYPE==='cx'?'ricevuti ':''}${Object.entries(s).map(([c,v])=>`${ccMoney(v,c)} ${esc(curName(+c))}`).join(' + ')}${(()=>{const ks=Object.keys(s);if(ks.length===1&&+ks[0]===0)return '';const e=ks.reduce((a,c)=>a+ccEur(s[c],c),0);return ` <span class="note" style="font-weight:400">(≈ ${fmt(e,0)} €)</span>`})()}</b></div>`}
  const di=CCDAY!=='all'?dayIdx(CCDAY):-1,tl=di<0?'Tutto il viaggio':`${esc(dateOf(di).replace(/^./,m=>m.toUpperCase()))} <span class="note" style="font-weight:400">· giorno ${di+1}</span>`;
  const add=`<div class="ccadd2"><button class="t-sp" data-a="ccnew" data-t="sp" type="button">+ Spesa</button><button class="t-in" data-a="ccnew" data-t="in" type="button">+ Versamento</button><button class="t-cx" data-a="ccnew" data-t="cx" type="button">+ Cambio</button><button class="t-out" data-a="ccnew" data-t="out" type="button" title="Soldi della cassa dati ai partecipanti">+ Ridistribuisci</button><button class="ccdp" data-a="ccpick" type="button">📋 + Dal programma</button><button class="t-adj" data-a="ccnew" data-t="adj" type="button" title="Soldi in più o mancanti in cassa, non legati a un partecipante">± Rettifica</button></div>`;
@@ -2715,9 +2743,9 @@ function ccVers(){const C=ccData(),K=ccCalc();if(!C.mv.some(x=>(x.type==='in'||x
   <div class="tw"><table><thead><tr><th>Persona</th><th>Dato €</th><th>Ridato ≈ €</th><th>Versato vero €</th></tr></thead><tbody>${rows}<tr><td><b>Totale</b></td><td class="m">${z(a)}</td><td class="m">${z(b)}</td><td class="m"><b>${z(a-b)}</b></td></tr></tbody></table></div>
   <p class="note" style="margin:6px 0 0">Dato: raccolte e quote dei «Cambio e Ridistribuzione». Ridato: quello che hai restituito subito dopo il cambio, che è diventato soldi loro. Le ridistribuzioni di fine viaggio sono nei Saldi.</p></details>`}
 function ccCambi(){const C=ccData(),L=C.mv.filter(x=>(x.type==='cx'||x.type==='gx')&&num(x.v)).sort((a,b)=>dayIdx(a.day)-dayIdx(b.day));if(!L.length)return '';const cn=c=>esc(curName(+c||0));
- const rows=L.map(x=>{const n=(x.for||[]).length,fc=x.type==='gx'?+x.ec||0:+x.fc||0,dato=x.type==='gx'?num(x.eur)*n:num(x.eur),r=dato?num(x.v)/dato:0;
+ const rows=L.map(x=>{const n=(x.for||[]).length,fc=x.type==='gx'?+x.ec||0:+x.fc||0,dato=x.type==='gx'?ccSum(x):num(x.eur),r=dato?num(x.v)/dato:0;
   return `<tr><td>${esc(ddmm(dayIdx(x.day)))}</td><td>${ccMoney(dato,fc)} ${cn(fc)}${x.type==='gx'?' <span class="note">· di gruppo</span>':''}</td><td class="m">${ccMoney(num(x.v),x.cur)} ${cn(x.cur)}</td><td class="m">${r?(r>=1?fmt(r,2):'1 '+cn(x.cur)+' = '+fmt(1/r,2)):''}</td></tr>`}).join('');
- const loc=[...new Set(L.map(x=>+x.cur))].filter(c=>c),sum=loc.map(c=>{let e=0,l=0;L.forEach(x=>{const fc=x.type==='gx'?+x.ec||0:+x.fc||0;if(+x.cur!==c||fc)return;const n=(x.for||[]).length;e+=x.type==='gx'?num(x.eur)*n:num(x.eur);l+=num(x.v)});
+ const loc=[...new Set(L.map(x=>+x.cur))].filter(c=>c),sum=loc.map(c=>{let e=0,l=0;L.forEach(x=>{const fc=x.type==='gx'?+x.ec||0:+x.fc||0;if(+x.cur!==c||fc)return;const n=(x.for||[]).length;e+=x.type==='gx'?ccSum(x):num(x.eur);l+=num(x.v)});
   if(!e||!rate(c))return '';const gain=l/rate(c)-e;return `<div class="ccpkr"><span>€ → ${cn(c)}, medio</span><b>1 € = ${fmt(l/e,2)} ${cn(c)}</b></div><div class="ccpkr note"><span>Cambio del programma</span><span>1 € = ${fmt(rate(c),2)}</span></div><div class="ccpkr"><span>Differenza</span><b class="${gain<0?'neg':'pos'}">${gain<0?'−':'+'}${fmt(Math.abs(gain),2)} € ${gain<0?'persi':'guadagnati'}</b></div>`}).join('<hr class="cchr">');
  return `<details class="card cdet" id="det-cccambi"${OPEN.cccambi?' open':''}><summary><h2>Cambi</h2></summary>
   <div class="tw"><table><thead><tr><th>Giorno</th><th>Dato</th><th>Ricevuto</th><th>Tasso</th></tr></thead><tbody>${rows}</tbody></table></div>${sum?`<div style="margin-top:10px">${sum}</div>`:''}</details>`}
@@ -2732,11 +2760,12 @@ function ccSaldi(){const C=ccData(),K=ccCalc(),st=ccSettle(K),hp=C.people.some(p
 function ccUpd(j){const s=document.getElementById('det-ccsaldi');if(s)s.outerHTML=ccSaldi();const pv=document.getElementById('det-ccprev');if(pv)pv.outerHTML=ccPrev();const k=document.getElementById('cccashc');if(k)k.outerHTML=ccCash()}
 // campi della finestra: aggiornano la bozza senza ridisegnare (tranne i menu che cambiano il modulo)
 function ccEdInput(t){if(!CCED)return;const x=CCED.x,k=t.dataset.x,n=(x.for||[]).length;
+ if(k&&k.startsWith('q.')){if(!ccQon(x))x.q={};x.q[k.slice(2)]=t.value}else
  if(k==='cat'&&t.value==='__new'){uiPrompt('Nome della nuova categoria:').then(v=>{const nn=String(v||'').trim();if(nn)x.cat=addCat(nn);const sy=window.scrollY;render();window.scrollTo(0,sy)});return}
  if(k==='_tot'){x.v=n&&t.value!==''?String(+(num(t.value)/n).toFixed(2)):'';const o=document.querySelector('[data-f=cce][data-x=v]');if(o)o.value=x.v}
  else{x[k]=k==='day'||k==='cur'||k==='ec'?+t.value:t.value;if(k==='v'&&(x.type==='in'||x.type==='out')){const o=document.querySelector('[data-f=cce][data-x=_tot]');if(o)o.value=n&&t.value!==''?+(num(t.value)*n).toFixed(2):''}}
  if(t.tagName==='SELECT'){const sy=window.scrollY;render();window.scrollTo(0,sy);return}
- const i=document.getElementById('ccedinfo');if(i)i.innerHTML=ccInfo(x);const g=document.getElementById('ccgxtot');if(g)g.textContent=n&&num(x.eur)?`= ${ccMoney(num(x.eur)*n,+x.ec||0)} ${curName(+x.ec||0)} in tutto`:''}
+ const i=document.getElementById('ccedinfo');if(i)i.innerHTML=ccInfo(x);const g=document.getElementById('ccgxtot');if(g)g.textContent=n&&ccSum(x)?`= ${ccMoney(ccSum(x),+x.ec||0)} ${curName(+x.ec||0)} in tutto`:'';const qt=document.getElementById('ccqtot');if(qt)qt.innerHTML=ccQTot(x)}
 /* ---------- In viaggio: itinerario e hotel in sola lettura, impaginati come i PDF ---------- */
 const RO={busy:'',msg:'',docs:null};
 function corrRowsIt(){const L=CL.it,fd=i=>{const d=dObj(i);return d?d.toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'2-digit',year:'2-digit'}):''},rows=[];
@@ -4077,9 +4106,15 @@ document.addEventListener('click',async ev=>{
   CCED.x=t.dataset.t==='gx'?{id:o.id,type:'gx',day:o.day,eur:'',ec:0,v:'',cur:+o.cur||loc,back:'',for:ccAllIds()}:{id:o.id,type:'cx',day:o.day,fc:0,eur:'',v:'',cur:+o.cur||loc};render();return}
  if(a==='ccadir'){if(!CCED)return;CCED.x.dir=t.dataset.v;render();return}
  if(a==='ccpair'){if(!CCED)return;CCED.x.fc=+t.dataset.fc;CCED.x.cur=+t.dataset.c;render();return}
- if(a==='cceall'){if(!CCED)return;const x=CCED.x;x.for=(x.for||[]).length===ccData().people.length?[]:ccAllIds();render();return}
- if(a==='ccefor'){if(!CCED)return;const x=CCED.x,s2=new Set(x.for||[]);s2.has(t.dataset.p)?s2.delete(t.dataset.p):s2.add(t.dataset.p);x.for=ccAllIds().filter(id=>s2.has(id));render();return}
+ if(a==='ccqon'){if(!CCED)return;const x=CCED.x;if(!ccQon(x)){const q={};Object.entries(ccPP(x)).forEach(([id,v])=>{q[id]=String(+v.toFixed(2))});x.q=q}ccKeep(render);return}
+ if(a==='ccqoff'){if(!CCED)return;delete CCED.x.q;ccKeep(render);return}
+ if(a==='cceall'){if(!CCED)return;const x=CCED.x;x.for=(x.for||[]).length===ccData().people.length?[]:ccAllIds();ccQSync(x);render();return}
+ if(a==='ccefor'){if(!CCED)return;const x=CCED.x,s2=new Set(x.for||[]);s2.has(t.dataset.p)?s2.delete(t.dataset.p):s2.add(t.dataset.p);x.for=ccAllIds().filter(id=>s2.has(id));ccQSync(x);render();return}
  if(a==='ccesave'){if(!CCED)return;const C=ccData(),x=CCED.x;
+  if(ccQon(x)){ccQSync(x);const tg=ccQTarget(x),sm=ccSum(x),nn=ccIds(x).length||1,qc=x.type==='gx'?+x.ec||0:+x.cur||0;
+   if(tg!=null&&Math.abs(tg-sm)>=0.005){uiAlert(`Gli importi diversi fanno ${ccMoney(sm,qc)} ${curName(qc)}, ma ${x.type==='sp'?'la spesa':'la rettifica'} è di ${ccMoney(tg,qc)}: correggili oppure premi «↺ parti uguali».`);return}
+   if(x.type==='in'||x.type==='out'){if(!sm){uiAlert('Scrivi almeno un importo.');return}x.v=String(+(sm/nn).toFixed(2))}
+   if(x.type==='gx')x.eur=String(+(sm/nn).toFixed(2))}
   if(x.type==='gx'){const n=(x.for||[]).length;if(!n||!num(x.eur)||!num(x.v)){uiAlert('Scrivi quanto dà ognuno, chi partecipa e quanto hai ricevuto.');return}if(num(x.back)*n>num(x.v)){uiAlert('Ridai più di quanto hai ricevuto.');return}}
   if(x.est&&CCED.est0!=null&&String(x.v)!==String(CCED.est0))delete x.est;
   if(CCED.j<0)C.mv.push(x);else C.mv[CCED.j]=x;
@@ -4103,8 +4138,8 @@ document.addEventListener('click',async ev=>{
   const dc=ccDayCur(day);C.mv.push(ty==='cx'?{id:'c'+Date.now(),type:'cx',day,eur:'',v:'',cur:dc??loc}:{id:'c'+Date.now(),type:ty,day,t:'',cat:'',v:'',cur:ty==='in'?0:(dc??(last?last.cur:loc)),by:'cassa',for:ccAllIds()});
   touch();render();const rs=document.querySelectorAll('.ccrow');const el=[...rs].map(r=>r.querySelector('.cct,.ccv')).filter(Boolean);const all=document.querySelectorAll('[data-f=ccm][data-j="'+(C.mv.length-1)+'"]');const fe=[...all].find(e=>e.tagName==='INPUT');if(fe){fe.scrollIntoView({block:'center'});fe.focus({preventScroll:true})}return}
  if(a==='ccdel'){if(!confirmBtn(t,'Sicuro?'))return;ccData().mv.splice(+t.dataset.j,1);touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}
- if(a==='ccall'){const C=ccData(),x=C.mv[+t.dataset.j];if(x){x.for=(x.for||[]).length===C.people.length?[]:ccAllIds()}touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}
- if(a==='ccfor'){const x=ccData().mv[+t.dataset.j];if(x){const s=new Set(x.for||[]);s.has(t.dataset.p)?s.delete(t.dataset.p):s.add(t.dataset.p);x.for=ccAllIds().filter(id=>s.has(id))}touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}
+ if(a==='ccall'){const C=ccData(),x=C.mv[+t.dataset.j];if(x){x.for=(x.for||[]).length===C.people.length?[]:ccAllIds();ccQSync(x)}touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}
+ if(a==='ccfor'){const x=ccData().mv[+t.dataset.j];if(x){const s=new Set(x.for||[]);s.has(t.dataset.p)?s.delete(t.dataset.p):s.add(t.dataset.p);x.for=ccAllIds().filter(id=>s.has(id));ccQSync(x)}touch();const sy=window.scrollY;render();window.scrollTo(0,sy);return}
  if(a==='ccpick'){CCPICK=true;CCED=null;CCCLOSE=null;CCSEL.clear();CCRATA={};const sy=window.scrollY;render();window.scrollTo(0,sy);return}
  if(a==='ccpk'){t.checked?CCSEL.add(t.dataset.k):CCSEL.delete(t.dataset.k);ccPkBtn();return}
  if(a==='ccpkno'){CCPICK=false;CCSEL.clear();CCRATA={};const sy=window.scrollY;render();window.scrollTo(0,sy);return}

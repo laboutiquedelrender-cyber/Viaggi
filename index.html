@@ -1,6 +1,6 @@
 <!doctype html><html lang="it"><head><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Viaggio">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202611191727 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202611211540 -->
 <meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
 .modet>summary{cursor:pointer;padding:2px 0}.modet[open]>summary{margin-bottom:6px}.relsec{margin:0 0 8px}.cdet.relsec>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;background:var(--bg);transition:background .15s}.cdet.relsec>summary::-webkit-details-marker{display:none}.cdet.relsec>summary::before{content:'▸';color:var(--accent);font-size:12px;transition:transform .15s}.cdet.relsec[open]>summary::before{transform:rotate(90deg)}.cdet.relsec>summary b{color:var(--accent)}.cdet.relsec>summary .note{margin-left:auto;font-size:12px}.cdet.relsec>summary:hover{background:var(--card)}.cdet.relsec[open]>summary{border-bottom-left-radius:4px;border-bottom-right-radius:4px}.relsec>textarea{margin-top:6px}.reldg{margin:6px 0 6px}.reldg>summary{cursor:pointer}.reldg b{font-size:13px}.reldg>textarea{margin-top:6px}.reldg textarea,.moitem>textarea{width:100%;box-sizing:border-box}
 .uidlg{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px}.uidlg-b{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:16px;max-width:420px;width:100%;box-sizing:border-box}.uidlg-b p{margin:0 0 12px;line-height:1.45}.uidlg-b input{width:100%;box-sizing:border-box;margin-bottom:12px}.uidlg-a{display:flex;justify-content:flex-end;gap:8px}
@@ -196,22 +196,24 @@ details.rpx[open]>summary{border-bottom:1px solid var(--line)}
 .itacts{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .itact{white-space:nowrap;font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--card);color:#1f6f5c;text-decoration:none}
 @media (max-width:480px){.itbody{padding-left:12px}.ittl{margin-left:8px}}.rod.today{background:var(--hl);border:1px solid var(--hlb);border-radius:8px;padding:9px 10px}.rod .rhd{white-space:nowrap}.rod .rhn{font-size:14.5px}.rod .ronote{margin:0 0 6px}.rod .roinfo{margin:0}.rhn{flex:1;font-size:16px}.rhdet.paid{opacity:.75}.rhdet[open]>summary{margin-bottom:8px}.rhdet .pill{border-radius:999px;padding:2px 9px;font-size:12px;font-weight:600}.pill.okp{background:var(--okbg);color:var(--ok)}.pill.todo{background:var(--warnbg);color:var(--warn)}
-.sdleg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;margin:0 0 12px;color:var(--muted)}.sdleg span{display:inline-flex;align-items:center;gap:5px}.sdleg i{width:12px;height:12px;border-radius:3px;background:var(--k)}.sdleg i.f{background:repeating-linear-gradient(45deg,var(--muted) 0 3px,transparent 3px 6px);border:1px solid var(--muted)}
+.sdleg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;margin:0 0 12px;color:var(--muted)}.sdleg span{display:inline-flex;align-items:center;gap:5px}.sdleg i{width:12px;height:12px;border-radius:3px;background:var(--k)}.sdleg i.f{background:#ffeedd;border:1.5px dashed #d2772f}
 .k-v{--k:#7d93ad}.k-s{--k:#1f8a6e}.k-t{--k:#b0703a}.k-p{--k:#e0a526}.k-a{--k:#7b6cd9}.k-l{--k:#ffffff}.k-e{--k:#d9604c}
 .sdc{border:1px solid var(--line);border-radius:14px;background:var(--card);margin:0 0 14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+/* giorni alterni: bordo a sinistra verde e blu, intestazione e fondo di colore diverso, per vedere subito dove cambia il giorno */
+.sdc{border-left:6px solid #1f6f5c}.sdc.alt{border-left-color:#2f6fb0;background:#f3f7fc}.sdc.alt .sdch,.sdc.alt .sdhc{background:#dfeaf6}.sdc.alt .sdcg b,.sdc.alt .sdhc1 .gg{color:#2f6fb0}.sdc.alt .sdcp,.sdc.alt .sdhc1 .pp{background:#2f6fb0}
 .sdch{display:flex;gap:14px;align-items:center;padding:10px 14px;background:color-mix(in srgb,var(--accent) 9%,var(--card));border-bottom:1px solid var(--line)}
 .sdcg{min-width:64px;text-align:center;line-height:1.15}.sdcg b{display:block;font-size:22px;color:var(--accent)}.sdcg span{font-size:12px;color:var(--muted)}
 .sdct{flex:1;min-width:0}.sdct>b{font-size:15px}.sdct .note{margin-top:2px}
 .sdcp{text-align:right;background:var(--accent);color:var(--accent-fg);border-radius:10px;padding:6px 12px;max-width:44%}.sdcp b{display:block;font-size:16px;line-height:1.2}.sdcp small{display:block;font-size:11px;opacity:.88}
 .sdbar{position:relative;height:20px;margin:12px 14px 20px;background:color-mix(in srgb,var(--muted) 10%,var(--card));border-radius:6px}
-.sdbar i{position:absolute;top:2px;bottom:2px;background:var(--k);border-radius:4px}.sdbar i.k-l{box-shadow:inset 0 0 0 1px var(--line)}.sdleg .k-l i{border:1px solid var(--line)}.sdtm .k-l .kd{border-color:var(--line)}.sdbar i.f{background:repeating-linear-gradient(45deg,var(--k) 0 4px,transparent 4px 8px);opacity:.8}
+.sdbar i{position:absolute;top:2px;bottom:2px;background:var(--k);border-radius:4px}.sdbar i.k-l{box-shadow:inset 0 0 0 1px var(--line)}.sdleg .k-l i{border:1px solid var(--line)}.sdtm .k-l .kd{border-color:var(--line)}.sdbar i.f{background:#ffeedd;opacity:1;border:1.5px dashed #d2772f;box-sizing:border-box}
 .sdbar u{position:absolute;top:100%;font-size:10px;color:var(--muted);text-decoration:none;transform:translateX(-50%);padding-top:2px}
 .sdcb{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;padding:2px 14px 14px}@media(max-width:780px){.sdcb{grid-template-columns:1fr}.sdcp{max-width:none}.sdch{flex-wrap:wrap}}
 .sdcb h4{margin:2px 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 .sdtm{width:100%;border-collapse:collapse;font-size:13px}.sdtm td{text-align:left;padding:4px 6px;border-bottom:1px solid var(--line);vertical-align:middle}.sdtm tr:last-child td{border-bottom:0}
 .sdtm td.h{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;width:1%}.sdtm td.k{width:1%}
 .sdtm .kd{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border-radius:50%;background:color-mix(in srgb,var(--k) 20%,var(--card));border:1.5px solid var(--k);font-size:12px}
-.sdtm tr.f td{color:var(--muted)}.sdtm tr.f .kd{border-style:dashed}.sdf{font-size:11px;border:1px dashed var(--muted);border-radius:999px;padding:0 6px;margin-left:4px;white-space:nowrap}
+.sdtm tr.f td{color:#8a4a1c;font-style:italic;background:#ffeedd}.sdtm tr.f .kd{border-style:dashed}.sdf{font-size:11px;font-weight:700;color:#a4501a;background:#fff1e4;border:1.5px dashed #d2772f;border-radius:999px;padding:0 7px;margin-left:6px;white-space:nowrap;font-style:normal}
 .sdadd{background:#fff3b0;color:inherit;border-radius:3px;padding:0 2px;box-shadow:0 0 0 1px #f0d76a inset}
 :root[data-theme="dark"] .sdadd{background:#4a3d0f;box-shadow:0 0 0 1px #8a7320 inset}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .sdadd{background:#4a3d0f;box-shadow:0 0 0 1px #8a7320 inset}}
 .sdchi{font-size:12px;color:var(--muted);margin-top:3px}.sdtool{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}.sdtool .sp{flex:1}
@@ -246,7 +248,7 @@ details.rpx[open]>summary{border-bottom:1px solid var(--line)}
 .sdpdfcap .sdcg::before{display:none!important}
 .sdalw{padding:2px 14px 12px}.sdal{width:100%;border-collapse:collapse;font-size:13.5px;table-layout:fixed}.sdal col.cc{width:52%}.sdal col.ch{width:96px}.sdal col.ck{width:34px}.sdal td{white-space:normal;overflow-wrap:anywhere}.sdal td.h{white-space:nowrap}.sdal td .sndc li{white-space:normal}.sdc.cp .sdal col.ch{width:80px}.sdc.cp .sdal col.ck{width:26px}.sdal th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600;padding:4px 6px;border-bottom:1px solid var(--line)}
 .sdal td{text-align:left;padding:5px 6px;border-bottom:1px solid var(--line);vertical-align:top}.sdal tr:last-child td{border-bottom:0}.sdal td.c{padding-right:14px}.sdal td.c .sndc{margin:0;padding-left:16px}.sdal td.h{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;width:1%;border-left:3px solid var(--k,transparent)}
-.sdal td.k{width:1%}.sdal .kd{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border-radius:50%;background:color-mix(in srgb,var(--k) 20%,var(--card));border:1.5px solid var(--k);font-size:12px}.sdal tr.f td{color:var(--muted)}.sdal tr.f .kd{border-style:dashed}.sdal tr.ex td{background:color-mix(in srgb,var(--muted) 6%,var(--card))}
+.sdal td.k{width:1%}.sdal .kd{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border-radius:50%;background:color-mix(in srgb,var(--k) 20%,var(--card));border:1.5px solid var(--k);font-size:12px}.sdal tr.f td{color:#8a4a1c;font-style:italic;background:#ffeedd}.sdal tr.f td.h{border-left-style:dashed}.sdal.nt col.ch{width:8px!important}.sdal.nt td.h{padding:0}.sdal tr.f .kd{border-style:dashed}.sdal tr.ex td{background:color-mix(in srgb,var(--muted) 6%,var(--card))}
 .sdal .k-l .kd,.sdal tr.k-l td.h{border-color:var(--line)}
 @media(max-width:700px){.sdal col.cc{width:46%}.sdal col.ch{width:74px}}
 .sdc.cp .sdbar{height:10px;margin:4px 10px 13px}.sdc.cp .sdbar u{font-size:9px}.sdc.cp .sdalw{padding:0 10px 6px}.sdc.cp .sdal{font-size:12.5px;line-height:1.3}.sdc.cp .sdal td{padding:1px 5px}.sdc.cp .sdal td .sndc li{margin:0}.sdc.cp .sdal th{font-size:10px;padding:2px 5px}.sdc.cp .sdal .kd{width:18px;height:18px;font-size:10px}
@@ -267,7 +269,7 @@ tr.facrow td{color:#9a6a00;font-style:italic;border-top:1px dashed var(--line)}
 .card.dA{background:var(--dA)}.card.dB{background:var(--dB)}details.itc.dA{background:var(--dA)}details.itc.dB{background:var(--dB)}
 #view details.rhdet:nth-of-type(odd){background:var(--dA)}#view details.rhdet:nth-of-type(even){background:var(--dB)}
 .pastic table tbody tr:nth-child(odd) td{background:var(--dA)}.pastic table tbody tr:nth-child(even) td{background:var(--dB)}
-</style></head><body>
+.flptab td,.flptab th{white-space:nowrap}.flph{margin:12px 0 6px;font-size:14px;border-left:5px solid var(--bc,var(--acc));padding-left:8px}.flptab tbody tr:nth-child(even) td{background:var(--dB)}.flptab tbody tr:nth-child(odd) td{background:var(--dA)}.tpmv{display:inline-flex;gap:4px;align-self:end}.tpmv .mv{padding:0 8px;color:var(--muted)}.tpmv .ph{visibility:hidden}.flck{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:6px}.flck li{border-radius:8px;padding:8px 10px;border-left:5px solid #2f9a5c;background:var(--dA)}.flck li.warn{border-left-color:#d49a00;background:#fff6dc}.flck li.ko{border-left-color:#c0392b;background:#fde5e2}.flck .flcl{font-size:12px;font-weight:600;margin-left:6px;color:var(--muted)}.flck li div{margin-top:3px}.facp{display:inline-block;margin-top:4px;font-size:12px;font-weight:600;color:#7a5800;background:#fff0c7;border-radius:999px;padding:1px 10px;align-self:flex-start}.note.tlfwarn{margin:6px 0 0;color:#a3271b;font-size:12px}</style></head><body>
 <title>Calcolatore Viaggio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -328,12 +330,13 @@ input[type=file]{background:transparent;border-style:dashed}
 @media(max-width:560px){.day{grid-template-columns:1fr}}
 .dnum{font-family:var(--mono);font-weight:500}
 .dnum small{display:block;color:var(--muted);font-weight:400}
-.tapx{display:grid;grid-template-columns:minmax(0,1fr) 8.5em 4.8em 5.2em auto;gap:6px;align-items:end;padding-bottom:8px;margin-bottom:8px;border-bottom:1px dashed var(--line)}
+.tapx{display:grid;grid-template-columns:minmax(0,1fr) 8.5em 6.2em 4.8em 5.2em auto;gap:6px;align-items:end;padding-bottom:8px;margin-bottom:8px;border-bottom:1px dashed var(--line)}
 .tapx .ds{grid-column:1/-1}
 .tapx>.btn{align-self:end}
 .tapx input{padding:5px 7px}
 textarea.grow{font-family:var(--sans);font-size:inherit;min-height:0;resize:none;overflow:hidden;padding:5px 7px;line-height:1.4}
-@media(max-width:640px){.tapx{grid-template-columns:minmax(0,1fr) 4.8em 5.2em auto}.tapx .tp{grid-column:1/-1}}
+[data-x="o"]::placeholder{color:#9aa5a1;font-style:italic}
+@media(max-width:640px){.tapx{grid-template-columns:minmax(0,1fr) 5.4em 4.2em 4.6em auto}.tapx .tp{grid-column:1/-1}}
 .calc{font-family:var(--mono);background:var(--calc);color:var(--calc-fg);padding:6px 8px;border-radius:5px;display:inline-block;min-width:0}
 .note{color:var(--muted);font-size:12px}
 .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;align-items:end}
@@ -562,7 +565,7 @@ td.ind{color:var(--muted);font-style:italic}
 .flrow input,.flrow select,.grow1 input,.pdays input,.flbh select,.flbh input,.linksel,select.mini{height:26px}
 input.hname{height:34px}
 .meal{height:28px;box-sizing:border-box;padding-top:0;padding-bottom:0;display:inline-flex;align-items:center;justify-content:center;vertical-align:middle}
-.flimpc{grid-column:span 2;align-self:end;display:flex}.flimpc .btn{width:100%;justify-content:center;white-space:nowrap}
+.flimpc{grid-column:span 3;align-self:end;display:flex}.flimpc .btn{width:100%;justify-content:center;white-space:nowrap}
 .tapx .btn{height:30px;box-sizing:border-box;display:inline-flex;align-items:center}
 
 /* ---- home ---- */
@@ -614,6 +617,13 @@ body.home .crumb#crumb{display:none}
 /* nome e date dentro la fascia colorata */
 .tband{flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:3px;height:auto;min-height:112px;padding:12px 14px}
 .tband .tflags{font-size:30px;gap:5px;margin-bottom:3px}
+.pstat{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;white-space:nowrap;vertical-align:middle}.pstat.old{color:#b3261e}.pstat.unk{color:#9a6b00}.pstat.ok{color:#22784a}
+.pdot{display:inline-block;width:11px;height:11px;border-radius:50%;flex-shrink:0;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.15)}.pdot.ok{background:#2e9e5b}.pdot.old{background:#d63b2f;animation:pdotp 1.6s ease-in-out infinite}.pdot.unk{background:#e3a21a}
+@keyframes pdotp{0%,100%{box-shadow:0 0 0 1px rgba(0,0,0,.15),0 0 0 0 rgba(214,59,47,.5)}50%{box-shadow:0 0 0 1px rgba(0,0,0,.15),0 0 0 5px rgba(214,59,47,0)}}
+.btn .pstat{margin-left:7px}.btn .pdot{box-shadow:0 0 0 1px rgba(0,0,0,.25);border:1.5px solid #fff}.btn .pdot.ok{background:#4fdc8c}
+.tftop{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;width:100%}
+.tyr{flex-shrink:0;white-space:nowrap;font-size:12px;font-weight:700;letter-spacing:.3px;color:#fff;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:3px 10px;margin-top:2px}
+.tyrh{white-space:nowrap;font-weight:700}
 .tband .tname{color:#fff;font-size:20px;text-shadow:0 1px 6px rgba(0,0,0,.25)}
 .tband .tdates{color:#fff;opacity:.95;font-size:12.5px;text-shadow:0 1px 4px rgba(0,0,0,.25)}
 .twhen.in{margin-left:0}
@@ -717,7 +727,7 @@ summary .sugbox h3,.sugbox>summary{cursor:pointer}.sugbox>summary h3{display:inl
 .rsec{border-top:1px solid var(--line);padding:4px 0}.rsec>summary{cursor:pointer}.rsec>summary .rth{display:inline;margin:0}
 .rtipo{border:1px solid var(--hlb);background:var(--hl);border-radius:10px;padding:10px 12px;margin:12px 0}.rtipo>summary{cursor:pointer}.rtipo>summary h3{display:inline}.rtipo[open]>summary{margin-bottom:6px}.rtipo .rth{margin:0 0 4px}.tipot td,.bzt td{vertical-align:top}.tipot td.nw,.bzt td.nw{white-space:nowrap}.bzt textarea{width:100%;box-sizing:border-box;min-width:120px}
 .rzb{font-size:13.5px;line-height:1.5}.rzone .rzn{font-size:13px}
-</style>
+.card.day .tapx{background:var(--card);box-shadow:0 0 0 1px var(--line);border-radius:8px;padding:8px 8px 8px 12px;margin:0 -8px 8px;border-bottom:0;border-left:5px solid #2f9a5c}.card.day .tapx.tpalt{background:color-mix(in srgb,var(--card) 84%,#f0a020);border-left-color:#e08a00}.tpn{font-weight:600;color:var(--ink,inherit)}</style>
 
 <div class="toph">
   <h1><button class="homebtn" data-a="gohome" type="button" title="Torna a tutti i viaggi"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4"/><path d="M32 12 L37 32 L32 52 L27 32 Z" fill="currentColor"/><path d="M32 12 L37 32 L27 32 Z" fill="#d9622b"/></svg>Calcolatore Viaggio</button></h1>
@@ -738,8 +748,7 @@ summary .sugbox h3,.sugbox>summary{cursor:pointer}.sugbox>summary h3{display:inl
   <div class="tabs" role="tablist" id="tabs"></div>
 </div>
 <div id="syncbar" class="syncbar" hidden></div><main id="view"></main>
-<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 19/11/2026 17:27</p>
-
+<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 21/11/2026 15:40</p>
 <script>
 /* ---------- stato ---------- */
 const LKEY='calcolatore-viaggio-v2';
@@ -805,7 +814,9 @@ function defaults(){TRIPS={
   meals:{c:'',p:'',d:''},days:blankDays(16),exc:[]}}};
  CUR='ghana-togo-benin-2026'}
 function sortedIds(){return Object.keys(TRIPS).sort((a,b)=>String(TRIPS[a].state.start||'').localeCompare(String(TRIPS[b].state.start||''))||TRIPS[a].name.localeCompare(TRIPS[b].name))}
-const yrSplit=n=>{const m=/^(.*?)\s+((?:19|20)\d\d(?:\s*[-\/]\s*\d{2,4})?)\s*$/.exec(String(n||''));return m?[m[1],m[2].replace(/\s+/g,'')]:[String(n||''),'']};
+// anno del viaggio in un'etichetta a parte: «2026-27» diventa «2026/27» e non va mai a capo
+const yrLbl=y=>String(y||'').replace(/^(\d\d)\s*[-\/]\s*(\d\d)$/,'20$1/$2').replace(/^((?:19|20)\d\d)\s*[-\/]\s*(?:20)?(\d\d)$/,'$1/$2');
+const yrSplit=n=>{const m=/^(.*?)\s+((?:19|20)\d\d(?:\s*[-\/]\s*\d{2,4})?|\d\d\s*[-\/]\s*\d\d)\s*$/.exec(String(n||''));return m?[m[1],m[2].replace(/\s+/g,'')]:[String(n||''),'']};
 const tripFull=(id=CUR)=>{const t=TRIPS[id];if(!t)return '';const y=t.state&&t.state.year;return (t.name||'')+(y?' '+y:'')};
 // (l'anno era stato separato dal nome: lo rimette nel nome)
 function joinYear(id){const t=TRIPS[id];if(!t||!t.state||t.state.year===undefined)return false;const y=String(t.state.year||'').trim();if(y&&!String(t.name||'').trim().endsWith(y))t.name=(String(t.name||'').trim()+' '+y).trim();delete t.state.year;return true}
@@ -833,6 +844,8 @@ const norm=s=>String(s??'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''
 const curName=i=>i===0?'€':(S.cur[i-1].name||('Valuta '+i));
 const rate=i=>i===0?1:(num(S.cur[i-1].rate)||0);
 const P=()=>Math.max(1,num(S.p.n));
+// TLF (gratuità del coordinatore) solo se il gruppo arriva al numero minimo indicato nei parametri
+const tlfOn=()=>!num(S.p.tlfMin)||P()>=num(S.p.tlfMin);
 const paxLbl=()=>P()>1?`${fmt(P()-1,0)}+1`:fmt(P(),0);
 const dayIdx=id=>S.days.findIndex(d=>d.id===id);
 function dObj(i){if(!S.start)return null;const d=new Date(S.start+'T12:00:00');if(isNaN(d))return null;d.setDate(d.getDate()+i);return d}
@@ -849,15 +862,15 @@ function loadScript(src){return libs[src]||(libs[src]=new Promise((ok,ko)=>{cons
 /* ---------- calcoli ---------- */
 const blank=v=>v===''||v==null||String(v).trim()==='';
 function hotelCalc(d){const h=d.hotel,r=rate(h.cur);if(!r)return{gr:0,pasti:0,ph:0,tot:0,eur:0};
- const tp=h.tipo||'Gruppo';const base=tp.startsWith('Gruppo')?num(h.imp):num(h.imp)*(tp==='Pax+TLF'?Math.max(0,P()-1):P());
+ const tp=h.tipo||'Gruppo';const base=tp.startsWith('Gruppo')?num(h.imp):num(h.imp)*(tp==='Pax+TLF'&&tlfOn()?Math.max(0,P()-1):P());
  const ms=h.ms||{},stima=((h.c||ms.c?0:num(S.meals.c))+(h.p||ms.p?0:num(S.meals.p))+(h.d||ms.d?0:num(S.meals.d)))*r*P();
- const ph=['c','p','d'].reduce((a,k)=>{if(h[k]!=='hp')return a;const m=(h.mp||{})[k]||{};return a+num(m.imp)*(m.tlf?Math.max(0,P()-1):P())},0);
+ const ph=['c','p','d'].reduce((a,k)=>{if(h[k]!=='hp')return a;const m=(h.mp||{})[k]||{};return a+num(m.imp)*(m.tlf&&tlfOn()?Math.max(0,P()-1):P())},0);
  const pasti=stima+ph;return{gr:base,pasti,ph,tot:base+pasti,eur:(base+pasti)/r}}
 const excFac=e=>!!e&&(e.fac!==undefined?!!e.fac:/\(facoltativ[oa]\)/i.test(e.prog||''));
 function excCalc(e){if(e&&(e.skip||excFac(e)))return{gr:0,pax:0,eur:0,paxeur:0};return excCalcRaw(e)}
 function facTot(){let eur=0,n=0;const by=[0,0,0,0,0];S.exc.filter(excFac).forEach(e=>{const c=excCalcRaw(e);n++;eur+=c.eur;by[e.cur]+=c.gr});return {eur,n,by}}
 function excCalcRaw(e){const r=rate(e.cur);if(!r)return{gr:0,pax:0,eur:0,paxeur:0};
- const persone=e.tlf?Math.max(0,P()-1):P();const gr=e.tipo==='pax'?num(e.imp)*persone:num(e.imp);
+ const persone=e.tlf&&tlfOn()?Math.max(0,P()-1):P();const gr=e.tipo==='pax'?num(e.imp)*persone:num(e.imp);
  return{gr,pax:gr/P(),eur:gr/r,paxeur:gr/P()/r}}
 // categorie del viaggio, le stesse per Escursioni e Cassa Comune
 const CC_CATS=['Pasto','Hotel','Trasporti','Mance','Corrispondente','Escursioni'];
@@ -901,32 +914,44 @@ function dayChips(col={},grp=null,empty=null){if(SELDAY!=='all'&&(SELDAY==null||
 function vParams(){const last=S.days.length?dateOf(S.days.length-1):'—';return `<div class="card params"><div class="pleft"><div class="phead"><h2>Parametri del viaggio</h2></div>${DAYMSG?`<div class="msg warn" style="margin:6px 0">${esc(DAYMSG.txt)} <button class="btn sm del" data-a="ndaysok" type="button">Elimina gli ultimi ${DAYMSG.n} giorni</button> <button class="btn sm" data-a="ndaysno" type="button">Annulla</button></div>`:''}
   <div class="hf prow">
    <label class="w-xs">Partecipanti<input id="p-n" data-f="p" type="number" min="1" value="${esc(S.p.n)}"></label>
+   <label class="w-s" title="Se il gruppo è più piccolo di questo numero la TLF non si applica mai, anche dove l'hai indicata. Vuoto = TLF sempre dove indicata.">TLF da n° pers.<input id="p-tlfmin" data-f="ptlf" type="number" min="0" placeholder="sempre" value="${esc(S.p.tlfMin||'')}"></label>
    <label class="w-m">Data di partenza<input id="p-start" data-f="start" type="date" value="${esc(S.start)}"></label>
    <label class="w-xs">Giorni<input id="p-days" data-f="ndays" type="number" min="1" max="120" value="${S.days.length}"></label>
    <label>Fine<span class="calc pfine">${esc(last)}</span></label></div>
+  ${num(S.p.tlfMin)&&!tlfOn()?`<div class="note tlfwarn">⚠ TLF non applicata: siete in ${P()}, la TLF parte da ${num(S.p.tlfMin)} persone.</div>`:''}
   </div><div class="curs">${'<span></span><span class="note">Valuta</span><span class="note">Cambio per 1 €</span>'.replace('<span></span>','<span></span>')}<span class="note cs2 hd2"></span><span class="note hd2">Valuta</span><span class="note hd2">Cambio per 1 €</span>${S.cur.map((c,i)=>`<span class="note${i%2?' cs2':''}">${i+1}</span><input id="cn-${i}" data-f="cn" data-k="${i}" aria-label="Nome valuta ${i+1}" value="${esc(c.name)}"><input id="cr-${i}" data-f="cr" data-k="${i}" type="number" step="any" aria-label="Cambio valuta ${i+1} per 1 euro" value="${esc(c.rate)}">`).join('')}</div></div>`}
+// prezzo stimato di una tappa facoltativa, preso dall'escursione dello stesso giorno con il nome più simile
+function facPrice(d,ds){ds=String(ds||'');if(!/\(facoltativ/i.test(ds))return null;const tk=escTok(ds.replace(/\(facoltativ[oa]\)/i,''));
+ const L=(S.exc||[]).filter(e=>e.day===d.id&&(excFac(e)||/\(facoltativ/i.test(e.prog||'')));let best=null,bs=0;
+ L.forEach(e=>{const et=escTok(String(e.prog||'').replace(/\(facoltativ[oa]\)/i,''));const sc=tk.filter(w=>et.includes(w)).length;if(sc>bs){bs=sc;best=e}});
+ if(!best&&L.length===1&&!tk.length)best=L[0];if(!best)return null;
+ if(!num(best.imp))return /^0+$/.test(String(best.imp||'').trim())?'nessun costo in più':'prezzo da definire';
+ const r=rate(best.cur)||0,c=best.cur?curName(best.cur).replace(/^Rupia\b.*/i,'rupie').replace(/^Dollaro\b.*/i,'dollari'):'€',m=v=>fmt(v,v<10&&v%1?1:0);
+ if(best.tipo==='gr'){const pp=num(best.imp)/P();return `${m(num(best.imp))} ${c} a gruppo${best.cur&&r?` · ≈ ${m(pp/r)} € a pers.`:` · ≈ ${m(pp)} ${c} a pers.`}`}
+ return best.cur?`${m(num(best.imp))} ${c} a pers.${r?` (≈ ${m(num(best.imp)/r)} €)`:''}`:`${m(num(best.imp))} € a pers.`}
 function vItin(){
  const last=S.days.length?dateOf(S.days.length-1):'—';const chips=dayChips();
+ let PG=[];try{PG=planDayG()}catch(e){}
  const days=S.days.map((d,i)=>(SELDAY!=='all'&&SELDAY!==d.id)?'':`<div class="card day ${i%2?'dB':'dA'}"><div class="dnum">Giorno ${i+1}<small>${esc(dateOf(i))}</small></div><div>
   ${d.tappe.map((t,k)=>{const x=txOf(d)[k];return `<div class="tapx${k%2?' tpalt':''}">
-   <label class="tp">Tappe<input id="tap-${d.id}-${k}" data-f="tap" data-d="${d.id}" data-k="${k}" value="${esc(t)}" placeholder="Località separate da ;"></label>
+   <label class="tp"><span class="tpn">Tappa ${k+1}</span><input id="tap-${d.id}-${k}" data-f="tap" data-d="${d.id}" data-k="${k}" value="${esc(t)}" placeholder="Località separate da ;"></label>
    <label>Mezzi${mezziSel(`tx-m-${d.id}-${k}`,d,k,x.m)}</label>
-   ${x.m==='Volo'?`<div class="flimpc"><button class="btn sm flplus" data-a="flimpopen" data-at="${d.id}-${k}" type="button">✈ Importa piano voli</button></div>`:`<label>Km<input id="tx-km-${d.id}-${k}" data-f="tx" data-x="km" data-d="${d.id}" data-k="${k}" type="number" step="any" min="0" value="${esc(x.km)}"></label>
+   ${x.m==='Volo'?`<div class="flimpc"><button class="btn sm flplus" data-a="flimpopen" data-at="${d.id}-${k}" type="button">✈ Importa piano voli</button></div>`:`<label title="Ora di inizio di questa tappa, per esempio 7:30. Vuota: la stimo io dagli orari dei colleghi e dalle durate">Ora<input id="tx-o-${d.id}-${k}" data-f="tx" data-x="o" data-d="${d.id}" data-k="${k}" placeholder="${(()=>{if(k>0)return 'auto';const r=PG[i]&&PG[i].orari.marcia.find(m=>m.li===0);return r&&r.h?esc(r.h)+' (auto)':'auto'})()}" inputmode="numeric" value="${esc(x.o||'')}"></label><label>Km<input id="tx-km-${d.id}-${k}" data-f="tx" data-x="km" data-d="${d.id}" data-k="${k}" type="number" step="any" min="0" value="${esc(x.km)}"></label>
    <label>Tempo<input id="tx-h-${d.id}-${k}" data-f="tx" data-x="h" data-d="${d.id}" data-k="${k}" placeholder="3h30" value="${esc(x.h)}"></label>`}
-   <button class="btn del" data-a="deltap" data-d="${d.id}" data-k="${k}" aria-label="Elimina tappa" type="button">×</button>
-   ${x.m==='Volo'?flightRows(d,k,x):`<label class="ds">Descrizione<textarea id="tx-ds-${d.id}-${k}" class="grow" rows="1" data-f="tx" data-x="ds" data-d="${d.id}" data-k="${k}">${esc(x.ds)}</textarea></label>`}</div>`}).join('')}
+   <span class="tpmv">${k>0?`<button class="btn mv" data-a="mvtap" data-d="${d.id}" data-k="${k}" data-dir="-1" aria-label="Sposta la tappa più su" title="Sposta su" type="button">↑</button>`:'<span class="btn mv ph" aria-hidden="true">↑</span>'}${k<d.tappe.length-1?`<button class="btn mv" data-a="mvtap" data-d="${d.id}" data-k="${k}" data-dir="1" aria-label="Sposta la tappa più giù" title="Sposta giù" type="button">↓</button>`:'<span class="btn mv ph" aria-hidden="true">↓</span>'}<button class="btn del" data-a="deltap" data-d="${d.id}" data-k="${k}" aria-label="Elimina tappa" type="button">×</button></span>
+   ${x.m==='Volo'?flightRows(d,k,x):`<label class="ds">Descrizione<textarea id="tx-ds-${d.id}-${k}" class="grow" rows="1" data-f="tx" data-x="ds" data-d="${d.id}" data-k="${k}">${esc(x.ds)}</textarea>${(fp=>fp?`<span class="facp" title="Prezzo stimato, preso da Escursioni">💶 facoltativo · ${esc(fp)}</span>`:'')(facPrice(d,x.ds))}</label>`}</div>`}).join('')}
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px">
    <button class="btn" data-a="addtap" data-d="${d.id}" type="button">+ Tappa</button>
    <button class="btn" data-a="addday" data-d="${d.id}" type="button">+ Giorno dopo</button>
    <button class="btn del" data-a="delday" data-d="${d.id}" type="button">Elimina giorno</button>
    <span class="note">Km: <span class="calc" id="dk${d.id}">—</span> · Tempo: <span class="calc" id="dh${d.id}">—</span> · Notte: <span class="calc" id="n${d.id}">${esc(notte(d))||'—'}</span> · Hotel: <span class="calc" id="hn${d.id}">${esc(d.hotel.name)||'—'}</span></span></div></div></div>`).join('');
- return vParams()+`
+ return vParams()+flCheckCard()+`
 
   ${chips}${days}<div style="margin:0 0 14px"><button class="btn pri" data-a="addday" data-d="end" type="button">+ Giorno in fondo</button></div>`}
 function groupsCard(){const gs=GRP(),tot=gs.reduce((a,g)=>a+num(g.n),0);
  return `<div class="card"><div class="exhead"><div><h2 style="margin:0">Gruppi di partenza</h2><div class="note">Per i partecipanti che partono da città diverse. Assegna ogni volo ai suoi gruppi con le etichette colorate; un volo senza etichette vale per tutti.</div></div>
   ${gs.length?`<div class="gfilter"><span class="note">Mostra:</span><button type="button" class="gview${!VIEWGRP?' on':''}" data-a="gview" data-g="">Tutti</button>${gs.map(g=>`<button type="button" class="gview${VIEWGRP===g.id?' on':''}" style="--gc:${g.col}" data-a="gview" data-g="${g.id}">${esc(g.name||'?')}</button>`).join('')}
-   <button class="btn sm pri" data-a="grppdf" type="button" id="btnGrpPdf">PDF itinerario${VIEWGRP&&gById(VIEWGRP)?' '+esc(gById(VIEWGRP).name):''}</button></div>`:''}</div>
+   <button class="btn sm pri" data-a="grppdf" type="button" id="btnGrpPdf">PDF itinerario${VIEWGRP&&gById(VIEWGRP)?' '+esc(gById(VIEWGRP).name):''}${pdfDot('fresh',{mini:1})}</button></div>`:''}</div>
   <div class="glist">${gs.map((g,i)=>`<div class="grow1" style="--gc:${g.col}"><span class="gdot"></span><input id="g-name-${g.id}" data-f="grp" data-g="${g.id}" data-x="name" class="fit" placeholder="Città" value="${esc(g.name)}" aria-label="Nome gruppo"><label class="w-xs" style="flex-direction:row;align-items:center;gap:4px">n°<input id="g-n-${g.id}" data-f="grp" data-g="${g.id}" data-x="n" type="number" min="0" value="${esc(g.n)}" aria-label="Partecipanti del gruppo"></label><button class="btn xs del" data-a="delgrp" data-g="${g.id}" type="button" aria-label="Elimina gruppo">×</button></div>`).join('')}
    <button class="btn sm" data-a="addgrp" type="button">+ gruppo</button>${gs.length?`<span class="note">${tot} partecipanti nei gruppi${num(S.p.n)&&tot!==num(S.p.n)?` · nel viaggio sono ${fmt(num(S.p.n),0)}`:''}</span>`:''}</div>
   ${EXPMSG&&tab==='itin'?`<div class="msg ${EXPMSG[0]}" style="margin-top:8px">${esc(EXPMSG[1])}</div>`:''}</div>`}
@@ -1029,8 +1054,8 @@ async function buildHotelDoc(key,lang){const L=HL[lang];const idx=[];S.days.forE
  const rows=[],excN=[];
  idx.forEach(i=>{const d=S.days[i],hh=d.hotel,c=hotelCalc(d);
   if(!blank(hh.imp)){const inc=[mealSt(hh.c)==='inc'&&L.bf,mealSt(hh.p)==='inc'&&L.lu,mealSt(hh.d)==='inc'&&L.di].filter(Boolean);
-   rows.push({d:fd(i),t:L.night+(inc.length?' – '+inc.join(', '):'')+(hh.tipo==='Pax+TLF'?' ('+L.tlFree+')':''),v:c.gr,cur:hh.cur})}
-  ['c','p','d'].forEach(k=>{if(hh[k]!=='hp')return;const m=(hh.mp||{})[k]||{},n=m.tlf?Math.max(0,P()-1):P();rows.push({d:fd(i),t:L.mealFor(L.meal[k],n)+(m.tlf?' ('+L.tlFree+')':''),v:num(m.imp)*n,cur:hh.cur})});
+   rows.push({d:fd(i),t:L.night+(inc.length?' – '+inc.join(', '):'')+(hh.tipo==='Pax+TLF'&&tlfOn()?' ('+L.tlFree+')':''),v:c.gr,cur:hh.cur})}
+  ['c','p','d'].forEach(k=>{if(hh[k]!=='hp')return;const m=(hh.mp||{})[k]||{},n=m.tlf&&tlfOn()?Math.max(0,P()-1):P();rows.push({d:fd(i),t:L.mealFor(L.meal[k],n)+(m.tlf&&tlfOn()?' ('+L.tlFree+')':''),v:num(m.imp)*n,cur:hh.cur})});
   S.exc.filter(e=>e.hd===d.id).forEach(e=>{const ce=excCalc(e);excN.push(e.prog||L.exc);rows.push({d:fd(dayIdx(e.day)),t:null,v:ce.gr,cur:e.cur,ex:true})})});
  const tr=await trList(excN,lang);let k=0;rows.forEach(r=>{if(r.ex)r.t=tr[k++]});
  const tot={};rows.forEach(r=>{tot[r.cur]=(tot[r.cur]||0)+r.v});const totS=Object.keys(tot).filter(c=>tot[c]).map(c=>`${fmt(tot[c],0)} ${curName(+c)}`).join(' + ')||'0';
@@ -1052,8 +1077,20 @@ async function renderHotelPDF(D){await loadScript(LIB.jspdf);await loadScript(LI
  return doc.output('blob')}
 async function makeHotelPDF(key,lang){return renderHotelPDF(await buildHotelDoc(key,lang))}
 const hpdfGet=(k,l)=>S.hpdf&&S.hpdf[k]&&S.hpdf[k][l];
+/* ---------- semaforo dei PDF: verde = aggiornato, rosso = da rifare (dopo averlo creato hai cambiato i dati che contiene) ---------- */
+const fpH=o=>hstr(JSON.stringify(o));
+// itinerario: tappe, mezzi, km, tempi, descrizioni, voli, hotel (+ indirizzi, escursioni, intolleranze se servono)
+function fpItin(o){o=o||{};return fpH({s:S.start,p:P(),d:S.days.map(d=>[d.id,d.tappe,txOf(d).map(x=>[x.m,x.km,x.h,x.ds,(x.voli||[]).map(f=>[f.da,f.a,f.dep,f.arr,f.nv,f.comp,f.grp])]),d.hotel.name,o.addr?[d.hotel.addr,d.hotel.tel]:0]),e:o.exc?(S.exc||[]).map(e=>[e.id,e.day,e.prog,e.dur,e.fac]):0,i:o.intol?S.intol:0})}
+// solo luoghi e date (per info utili e consigli, che non dipendono dai dettagli delle tappe)
+const fpPlaces=()=>fpH({s:S.start,n:S.days.length,c:S.countries,l:S.days.map(d=>notte(d))});
+function fpHotel(key){const idx=S.days.map((d,i)=>norm(d.hotel.name)===key?i:-1).filter(i=>i>=0);return fpH({s:S.start,p:P(),t:tlfOn(),r:S.cur,i:S.intol,d:idx.map(i=>{const d=S.days[i];return [i,d.hotel,(S.exc||[]).filter(e=>e.hd===d.id).map(e=>[e.prog,e.imp,e.cur,e.tipo,e.tlf])]})})}
+const pdfSt=(o,fp)=>!o?null:o.fp==null?'unk':o.fp===fp?'ok':'old';
+// pallino + scritta: fresh = il PDF si crea al momento con i dati di adesso
+function pdfDot(st,o){o=o||{};if(!st)return '';const T={fresh:['ok','Sempre aggiornato: il PDF si crea al momento con i dati di adesso',''],ok:['ok','Aggiornato: dopo averlo creato non hai cambiato i dati che contiene',o.lbl?'Aggiornato':''],
+  old:['old',o.why||'Da rifare: dopo averlo creato hai cambiato i dati che contiene','Da rifare'],unk:['unk','Creato prima di questo controllo: non so se è aggiornato, rifallo per sicurezza','Da verificare']}[st];
+ return `<span class="pstat ${T[0]}" title="${esc(T[1])}"><i class="pdot ${T[0]}"></i>${T[2]&&!o.mini?`<span>${T[2]}</span>`:''}</span>`}
 async function hotelPdfOpen(key,lang,fresh){RHP.busy=key;RHP.msg=null;render();
- try{if(fresh||!hpdfGet(key,lang)){const D=await buildHotelDoc(key,lang);S.hpdf=S.hpdf||{};S.hpdf[key]=S.hpdf[key]||{};S.hpdf[key][lang]=D;touch()}if(await syncIntolNote(hpdfGet(key,lang),lang))touch();RHP.edit={k:key,l:lang};RHP.open=null}
+ try{if(fresh||!hpdfGet(key,lang)){const D=await buildHotelDoc(key,lang);D.fp=fpHotel(key);S.hpdf=S.hpdf||{};S.hpdf[key]=S.hpdf[key]||{};S.hpdf[key][lang]=D;touch()}if(await syncIntolNote(hpdfGet(key,lang),lang))touch();RHP.edit={k:key,l:lang};RHP.open=null}
  catch(e){RHP.msg={k:key,m:['bad',(e&&e.message)||String(e)]}}RHP.busy=null;render()}
 async function hotelPdfGo(key,lang){const D=hpdfGet(key,lang);if(!D)return hotelPdfOpen(key,lang);RHP.busy=key;render();
  try{if(await syncIntolNote(D,lang))touch();const blob=await renderHotelPDF(D);const ok=await saveFile(`${fname(tripFull())}-${fname(D.hotel)}-${lang}.pdf`,blob);RHP.msg=ok?null:{k:key,m:['warn','Download annullato.']}}
@@ -1068,7 +1105,7 @@ function hotelPdfEditor(key){if(!RHP.edit||RHP.edit.k!==key)return '';const l=RH
    <tr><td colspan="4"><button class="btn xs" data-a="hpeadd" type="button">+ Riga</button></td></tr></tbody>
    <tfoot><tr><td></td><td>${inp('total.0',D.total[0],'b')}</td><td>${inp('total.1',D.total[1],'r b')}</td><td></td></tr></tfoot></table>
   <label>Note per l'hotel (le intolleranze inserite nei Pasti si aggiungono da sole)<textarea class="grow" rows="2" data-f="hpe" data-p="note">${esc(D.note)}</textarea></label>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn pri" data-a="hpedl" type="button"${dl?'':' disabled'}>Scarica PDF</button><button class="btn" data-a="hperesetq" type="button">Rifai dai dati</button><button class="btn" data-a="hpeclose" type="button">Chiudi</button>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${pdfDot(pdfSt(D,fpHotel(key)),{lbl:1,why:'Da rifare: dopo averlo creato hai cambiato hotel, notti, pasti, partecipanti o intolleranze. Usa «Rifai dai dati».'})}<button class="btn pri" data-a="hpedl" type="button"${dl?'':' disabled'}>Scarica PDF</button><button class="btn${pdfSt(D,fpHotel(key))==='ok'?'':' pri'}" data-a="hperesetq" type="button">Rifai dai dati</button><button class="btn" data-a="hpeclose" type="button">Chiudi</button>
    ${RHP.ask?`<span class="hclrq">Sei sicuro? Le tue modifiche vanno perse.</span><button class="btn sm del" data-a="hperesetok" type="button">OK</button><button class="btn sm" data-a="hpereseno" type="button">Annulla</button>`:''}</div></div>`}
 /* ---------- itinerario per il corrispondente (in 4 lingue, modificabile) ---------- */
 let CORR={busy:false,msg:'',lang:null,ask:false};
@@ -1080,42 +1117,44 @@ const CL={
 async function buildCorrDoc(lang){const L=CL[lang],H=HL[lang],fd=i=>{const d=dObj(i);return d?d.toLocaleDateString(H.loc,{weekday:'short',day:'2-digit',month:'2-digit',year:'2-digit'}):''};
  const rows=[],tx=[],nc=x=>norm(String(x||'').split(/[,(]/)[0]);
  S.days.forEach((d,i)=>{const t=txOf(d),fls=[],ds=[];
-  d.tappe.forEach((tp,k)=>{const x=t[k]||{};if(x.m==='Volo')(x.voli||[]).filter(f=>f.da||f.a||f.nv).forEach(f=>fls.push(f));else if(String(x.ds||'').trim())ds.push(String(x.ds).trim())});
+  d.tappe.forEach((tp,k)=>{const x=t[k]||{};if(x.m==='Volo')(x.voli||[]).filter(f=>f.da||f.a||f.nv).forEach(f=>fls.push(f));else if(String(x.ds||'').trim()&&!/^\s*(trasferiment|transfer)/i.test(String(x.ds))){const v=String(x.ds).trim();if(!ds.length||norm(ds[ds.length-1])!==norm(v))ds.push(v)}});
   // voli: in grigio e in alto quelli che arrivano a uno scalo (da cui riparte un altro volo dello stesso giorno), a colori quelli che arrivano a destinazione
   const deps=new Set(fls.map(f=>nc(f.da)));
   const fl=fls.map(f=>{const gs=flGroups(f),scalo=deps.has(nc(f.a));const g=gs[0];
    return {t:(gs.length?gs.map(z=>z.name).join(' + '):L.all)+': '+flLine(f),k:scalo?'s':'d',col:scalo?'#8a8a8a':(g?g.col:'#1f6f5c')}});
   fl.sort((a,b)=>(a.k==='s'?0:1)-(b.k==='s'?0:1));
-  const desc=ds.join('; ');const hn=/^\s*(volo|casa|aereo)\s*$/i.test(d.hotel.name||'')?'':(d.hotel.name||'');
-  rows.push({c:[String(i+1),fd(i),(()=>{const out=[];d.tappe.forEach(x=>String(x).split(';').map(y=>y.trim()).filter(Boolean).forEach(y=>{if(!out.length||norm(out[out.length-1])!==norm(y))out.push(y)}));return out.join('; ')})(),desc,hn,hn?(d.hotel.addr||''):''],fl,day:i,trd:desc?tx.push(desc)-1:-1})});
- const tr=await trList(tx,lang);rows.forEach(r=>{if(r.trd>=0)r.c[3]=tr[r.trd]});
+  const desc=ds.join('\n');const hn=/^\s*(volo|casa|aereo)\s*$/i.test(d.hotel.name||'')?'':(d.hotel.name||'');
+  rows.push({c:[String(i+1),fd(i),(()=>{const out=[];d.tappe.forEach(x=>String(x).split(';').map(y=>y.trim()).filter(Boolean).forEach(y=>{if(!out.length||norm(out[out.length-1])!==norm(y))out.push(y)}));return out.join('; ')})(),desc,hn,hn?(d.hotel.addr||''):''],fl,day:i,trd:ds.map(x=>tx.push(x)-1)})});
+ const tr=await trList(tx,lang);rows.forEach(r=>{if(r.trd.length)r.c[3]=r.trd.map(k=>tr[k]).join('\n')});
  return {lang,title:L.title,info:[[L.trip,tripFull()],[L.dates,L.dal(fd(0),fd(S.days.length-1))],[L.pax,HL[lang].paxTl(P())],[L.tl,'Mirko Tomassoni'],...(await intolInfo(lang))],
-  head:[L.day,L.date,L.stages,L.prog,L.hotel,L.addr],rows:rows.map(r=>({c:r.c,fl:r.fl,day:r.day})),v:2,at:Date.now()}}
+  head:[L.day,L.date,L.stages,L.prog,L.hotel,L.addr],rows:rows.map(r=>({c:r.c,fl:r.fl,day:r.day})),v:3,at:Date.now(),fp:fpItin({addr:1,intol:1})}}
+// facoltativi in grigio nel PDF del corrispondente: la riga del programma che li nomina, in qualsiasi lingua
+const corrFac=t=>/facoltativ|optional|opcional|facultati/i.test(String(t||''));
 async function renderCorrPDF(D){await loadScript(LIB.jspdf);await loadScript(LIB.autotable);const{jsPDF}=window.jspdf;const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4'});
  const M=12,W=297,H=210,green=[31,111,92],GREY=[224,228,226],FS=8.5;const safe=v=>String(v??'').replace(/→/g,'>').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[^\x00-\xFF–—…€]/g,'');
  const hex=c=>[parseInt(c.slice(1,3),16),parseInt(c.slice(3,5),16),parseInt(c.slice(5,7),16)];
  doc.setFont('helvetica','bold');doc.setFontSize(17);doc.setTextColor(...green);doc.text(safe(D.title),M,M+4);
  doc.autoTable({startY:M+8,body:D.info.filter(x=>String(x[0]).trim()||String(x[1]).trim()).map(x=>[safe(x[0]),safe(x[1])]),theme:'plain',styles:{fontSize:9.5,cellPadding:{top:0.8,bottom:0.8,left:0,right:4}},columnStyles:{0:{fontStyle:'bold',cellWidth:38}},margin:{left:M,right:M}});
  const body=D.rows.filter(r=>r.c.some(c=>String(c).trim())||(r.fl||[]).length);
- const progLines=r=>[...(r.fl||[]).filter(f=>String(f.t).trim()).map(f=>({t:safe(f.t),col:hex(f.col||'#1f6f5c'),b:true})),...(String(r.c[3]).trim()?[{t:safe(r.c[3]),col:[30,30,30]}]:[])];
+ const progLines=r=>[...(r.fl||[]).filter(f=>String(f.t).trim()).map(f=>({t:safe(f.t),col:hex(f.col||'#1f6f5c'),b:true})),...String(r.c[3]).split('\n').map(x=>x.trim()).filter(Boolean).map(x=>({t:safe(x),col:corrFac(x)?[150,150,150]:[30,30,30]}))];
  doc.autoTable({startY:doc.lastAutoTable.finalY+4,head:[D.head.map(safe)],body:body.map(r=>{const c=r.c.map(safe);c[3]=progLines(r).map(x=>x.t).join('\n');return c}),theme:'grid',rowPageBreak:'avoid',
   headStyles:{fillColor:green,textColor:255},styles:{fontSize:FS,cellPadding:1.8,valign:'top',overflow:'linebreak'},
   columnStyles:{0:{cellWidth:10,halign:'center'},1:{cellWidth:22},2:{cellWidth:45},3:{cellWidth:'auto'},4:{cellWidth:38},5:{cellWidth:48}},margin:{left:M,right:M,top:14,bottom:12},
-  didParseCell:dd=>{if(dd.section!=='body')return;const bg=dd.row.index%2?GREY:[255,255,255];dd.cell.styles.fillColor=bg;if(dd.column.index===3&&(body[dd.row.index].fl||[]).length)dd.cell.styles.textColor=bg},
-  didDrawCell:dd=>{if(dd.section!=='body'||dd.column.index!==3)return;const r=body[dd.row.index];if(!(r.fl||[]).length)return;
+  didParseCell:dd=>{if(dd.section!=='body')return;const bg=dd.row.index%2?GREY:[255,255,255];dd.cell.styles.fillColor=bg;if(dd.column.index===3&&progLines(body[dd.row.index]).length)dd.cell.styles.textColor=bg},
+  didDrawCell:dd=>{if(dd.section!=='body'||dd.column.index!==3)return;const r=body[dd.row.index];if(!progLines(r).length)return;
    const c=dd.cell,pl=c.padding('left'),pt=c.padding('top'),lh=FS*1.15*25.4/72;let y=c.y+pt;doc.setFontSize(FS);
    progLines(r).forEach(x=>{doc.setFont('helvetica','normal');doc.setTextColor(...x.col);doc.splitTextToSize(x.t,c.width-pl-c.padding('right')).forEach(l=>{doc.text(l,c.x+pl,y,{baseline:'top'});y+=lh})});doc.setTextColor(0)},
   didDrawPage:()=>{const n=doc.internal.getNumberOfPages();doc.setFont('helvetica','normal');doc.setFontSize(7.5);doc.setTextColor(120);doc.text(safe(D.info[0]?D.info[0][1]:''),M,H-6);doc.text(String(n),W-M,H-6,{align:'right'})}});
  return doc.output('blob')}
 async function corrOpen(lang,fresh){CORR.busy='Preparo l\'itinerario'+(lang!=='it'?' e traduco le descrizioni con Claude…':'…');CORR.msg='';render();
- try{if(fresh||!(S.corr&&S.corr[lang]&&S.corr[lang].v===2)){const D=await buildCorrDoc(lang);S.corr=S.corr||{};S.corr[lang]=D;touch()}CORR.lang=lang}
+ try{if(fresh||!(S.corr&&S.corr[lang]&&S.corr[lang].v===3)){const D=await buildCorrDoc(lang);S.corr=S.corr||{};S.corr[lang]=D;touch()}CORR.lang=lang}
  catch(e){CORR.msg=['bad',(e&&e.message)||String(e)]}CORR.busy=false;render()}
 async function corrDl(){const D=S.corr&&S.corr[CORR.lang];if(!D)return;CORR.busy='Preparo il PDF…';render();
  try{const ok=await saveFile(`${fname(tripFull())}-itinerario-corrispondente-${CORR.lang}.pdf`,await renderCorrPDF(D));CORR.msg=ok?'':['warn','Download annullato.']}
  catch(e){CORR.msg=['bad',(e&&e.message)||String(e)]}CORR.busy=false;render()}
 function corrCard(){const D=CORR.lang&&S.corr&&S.corr[CORR.lang];
  return `<div class="card"><h2>Itinerario per il corrispondente</h2><p class="note" style="margin:0 0 10px">Itinerario giorno per giorno da mandare al corrispondente locale: tappe, programma e voli, hotel con indirizzo. Senza valute, mezzi, km e tempi. Le descrizioni vengono tradotte da Claude nella lingua scelta; poi puoi modificare tutto.</p>
-  <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">${CORR.busy?`<span class="note">${esc(CORR.busy)}</span>`:`<span class="note">Lingua:</span>${['it','en','es','fr'].map(l=>`<button class="btn sm${CORR.lang===l?' pri':''}" data-a="corrgo" data-l="${l}" type="button">${l.toUpperCase()}</button>`).join('')}${D?`<button class="btn sm" data-a="corrclose" type="button">Chiudi</button>`:''}`}</div>
+  <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">${CORR.busy?`<span class="note">${esc(CORR.busy)}</span>`:`<span class="note">Lingua:</span>${['it','en','es','fr'].map(l=>`<button class="btn sm${CORR.lang===l?' pri':''}" data-a="corrgo" data-l="${l}" type="button">${l.toUpperCase()}${pdfDot(pdfSt(S.corr&&S.corr[l],fpItin({addr:1,intol:1})),{mini:1})}</button>`).join('')}${D?`<button class="btn sm" data-a="corrclose" type="button">Chiudi</button>`:''}`}</div>
   ${CORR.msg?`<div class="msg ${CORR.msg[0]}" style="margin-top:10px">${esc(CORR.msg[1])}</div>`:''}${D&&!CORR.busy?corrEditor(D):''}</div>`}
 function corrEditor(D){const inp=(p,v,cls='')=>`<input class="${cls}" data-f="cre" data-p="${p}" value="${esc(v)}">`,ta=(p,v)=>`<textarea class="grow" rows="1" data-f="cre" data-p="${p}">${esc(v)}</textarea>`;
  return `<div class="hpe" style="margin-top:10px"><div class="hpeh"><b>Itinerario in ${esc(HL[CORR.lang].name)}</b><span class="note">Modifica i testi e scarica. Le modifiche restano salvate per questa lingua.</span></div>
@@ -1124,7 +1163,7 @@ function corrEditor(D){const inp=(p,v,cls='')=>`<input class="${cls}" data-f="cr
   <div class="tw"><table class="hpetab crt"><thead><tr>${D.head.map((h,i)=>`<th>${inp('head.'+i,h)}</th>`).join('')}<th></th></tr></thead><tbody>
    ${D.rows.map((r,ri)=>`<tr class="${ri%2?'odd':''}">${r.c.map((c,ci)=>`<td>${ci===3?(r.fl||[]).map((f,fi)=>`<input class="crfl" style="--fc:${f.col}" data-f="cre" data-p="rows.${ri}.fl.${fi}.t" value="${esc(f.t)}" title="${f.k==='s'?'Volo verso lo scalo (grigio)':'Volo verso la destinazione'}">`).join(''):''}${ci>=2?ta('rows.'+ri+'.c.'+ci,c):inp('rows.'+ri+'.c.'+ci,c)}</td>`).join('')}<td><button class="btn xs del" data-a="credel" data-i="${ri}" type="button" aria-label="Elimina riga">×</button></td></tr>`).join('')}
    <tr><td colspan="7"><button class="btn xs" data-a="creadd" type="button">+ Riga</button></td></tr></tbody></table></div>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn pri" data-a="corrdl" type="button"${dl?'':' disabled'}>Scarica PDF</button><button class="btn" data-a="corrresetq" type="button">Rifai dai dati</button>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${pdfDot(pdfSt(D,fpItin({addr:1,intol:1})),{lbl:1,why:'Da rifare: dopo averlo creato hai cambiato tappe, voli, hotel, partecipanti o intolleranze. Usa «Rifai dai dati».'})}<button class="btn pri" data-a="corrdl" type="button"${dl?'':' disabled'}>Scarica PDF</button><button class="btn${pdfSt(D,fpItin({addr:1,intol:1}))==='ok'?'':' pri'}" data-a="corrresetq" type="button">Rifai dai dati</button>
    ${CORR.ask?`<span class="hclrq">Sei sicuro? Le tue modifiche vanno perse.</span><button class="btn sm del" data-a="corrresetok" type="button">OK</button><button class="btn sm" data-a="corrreseno" type="button">Annulla</button>`:''}</div></div>`}
 /* ---------- intolleranze (uguali per tutto il viaggio, compaiono in ogni hotel) ---------- */
 const intol=()=>S.intol||(S.intol={on:false,list:[]});
@@ -1228,7 +1267,7 @@ function vRHotel(){const map=new Map();
  S.days.forEach((d,i)=>{const h=d.hotel,key=norm(h.name);if(!key)return;
   if(!map.has(key))map.set(key,{name:h.name.trim(),days:[],rows:[],tot:[0,0,0,0,0],h});const g=map.get(key);g.days.push(i);const c=hotelCalc(d);
   if(!blank(h.imp)){g.rows.push({lbl:`Notte del ${dateShort(i)} (giorno ${i+1})`,cur:h.cur,v:c.gr});g.tot[h.cur]+=c.gr}
-  ['c','p','d'].forEach(k=>{if(h[k]!=='hp')return;const m=(h.mp||{})[k]||{},v=num(m.imp)*(m.tlf?Math.max(0,P()-1):P());
+  ['c','p','d'].forEach(k=>{if(h[k]!=='hp')return;const m=(h.mp||{})[k]||{},v=num(m.imp)*(m.tlf&&tlfOn()?Math.max(0,P()-1):P());
    g.rows.push({lbl:`${MEALN[k]} a prezzo hotel, giorno ${i+1}${m.tlf?' · TLF':''}`,cur:h.cur,v});g.tot[h.cur]+=v});
   S.exc.filter(e=>e.hd===d.id).forEach(e=>{const ce=excCalc(e);g.rows.push({lbl:`${e.prog||'Escursione'} (giorno ${dayIdx(e.day)+1})${e.tlf&&e.tipo==='pax'?' · TLF':''}`,cur:e.cur,v:ce.gr,ex:true});g.tot[e.cur]+=ce.gr})});
  const list=[...map.values()].filter(g=>g.rows.length);
@@ -1238,7 +1277,7 @@ function vRHotel(){const map=new Map();
  return `<div class="card"><div class="head"><div><h2>Totale da pagare agli hotel</h2><div class="facts"><span><b>${totLine(G)}</b></span></div></div>
   <div class="extot"><b>${fmt(ge,0)} €</b><span class="note">${fmt(ge/P(),2)} € a persona · ${list.length} hotel</span></div></div></div>`+
  list.map(g=>{const h=g.h,ci=cancInfo(h),te=eur(g.tot);const meta=[h.pag&&`Pagamento: ${h.pag}`,h.cont&&`Contatto: ${h.cont}`,h.tel&&`Tel. ${h.tel}`,ci&&`Canc. gratuita ${ci.txt}`].filter(Boolean);
-  const hk=norm(g.name);return `<div class="card ${list.indexOf(g)%2?'dB':'dA'}"><div class="exhead"><div style="min-width:0"><h2 style="margin:0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">${esc(g.name)}<span class="hpdf">${RHP.busy===hk?'<span class="note">Preparo il PDF…</span>':RHP.open===hk?`<span class="note">Lingua:</span>${['it','en','es','fr'].map(l=>`<button class="btn xs" data-a="hpdfgo" data-k="${esc(hk)}" data-l="${l}" type="button">${l.toUpperCase()}</button>`).join('')}<button class="btn xs" data-a="hpdfx" type="button" aria-label="Chiudi">×</button>`:`<button class="btn xs" data-a="hpdf" data-k="${esc(hk)}" type="button"${dl?'':' disabled'} title="Scarica il riepilogo di questo hotel in PDF">PDF</button>`}${RHP.msg&&RHP.msg.k===hk?`<span class="msg ${RHP.msg.m[0]}" style="padding:2px 8px;font-size:12px">${esc(RHP.msg.m[1])}</span>`:''}</span></h2>
+  const hk=norm(g.name);return `<div class="card ${list.indexOf(g)%2?'dB':'dA'}"><div class="exhead"><div style="min-width:0"><h2 style="margin:0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">${esc(g.name)}<span class="hpdf">${RHP.busy===hk?'<span class="note">Preparo il PDF…</span>':RHP.open===hk?`<span class="note">Lingua:</span>${['it','en','es','fr'].map(l=>`<button class="btn xs" data-a="hpdfgo" data-k="${esc(hk)}" data-l="${l}" type="button">${l.toUpperCase()}${pdfDot(pdfSt(hpdfGet(hk,l),fpHotel(hk)),{mini:1})}</button>`).join('')}<button class="btn xs" data-a="hpdfx" type="button" aria-label="Chiudi">×</button>`:`<button class="btn xs" data-a="hpdf" data-k="${esc(hk)}" type="button"${dl?'':' disabled'} title="Scarica il riepilogo di questo hotel in PDF">PDF${(()=>{const L=['it','en','es','fr'].map(l=>pdfSt(hpdfGet(hk,l),fpHotel(hk))).filter(Boolean);return pdfDot(L.includes('old')?'old':L.includes('unk')?'unk':L.length?'ok':null,{mini:1})})()}</button>`}${RHP.msg&&RHP.msg.k===hk?`<span class="msg ${RHP.msg.m[0]}" style="padding:2px 8px;font-size:12px">${esc(RHP.msg.m[1])}</span>`:''}</span></h2>
    <div class="note">${g.days.length===1?'Notte':'Notti'}: ${g.days.map(i=>`${esc(dateShort(i))}`).join(', ')}${h.addr?' · '+esc(h.addr):''}</div>
    ${meta.length?`<div class="note">${esc(meta.join(' · '))}</div>`:''}</div>
    <div class="extot"><span class="note">Da pagare</span><b>${fmt(te,0)} €</b><span class="note">${fmt(te/P(),2)} € a persona</span></div></div>
@@ -1702,7 +1741,7 @@ function applyFlights(rows){const warn=[];const byDay={};
  rows.forEach(r=>{if(r.day<0||r.day>=S.days.length){warn.push(`${r.da} → ${r.a} del ${r.dlabel}: data fuori dal viaggio, saltato`);return}(byDay[r.day]=byDay[r.day]||[]).push(r)});
  const gid=n=>{if(!n)return null;let g=GRP().find(z=>norm(z.name)===norm(n));if(!g){g={id:'g'+Date.now().toString(36)+GRP().length,name:n,n:'',col:GCOL[GRP().length%GCOL.length]};GRP().push(g)}return g.id};
  Object.entries(byDay).forEach(([di,list])=>{const d=S.days[+di],tx=txOf(d);let k=tx.findIndex(x=>x.m==='Volo');
-  if(k<0){k=d.tappe.findIndex((t,j)=>!t.trim()&&!tx[j].ds&&!tx[j].m);if(k<0){const first=+di===0;k=first?0:d.tappe.length;d.tappe.splice(k,0,'');tx.splice(k,0,emptyTx())}}
+  if(k<0){k=d.tappe.findIndex((t,j)=>!t.trim()&&!tx[j].ds&&!tx[j].m);if(k<0){const first=+di===0||String(list[0].dep||'')<'12:00';k=first?0:d.tappe.length;d.tappe.splice(k,0,'');tx.splice(k,0,emptyTx())}}
   if(!d.tappe[k].trim())d.tappe[k]=`${list[0].da} ; ${list[list.length-1].a}`;
   tx[k].m='Volo';tx[k].voli=list.map(r=>({da:r.da,a:r.a,comp:r.comp,nv:r.nv,dep:r.dep,arr:r.arr,grp:r.group?r.group.split(' + ').map(gid):[]}))});
  return {warn,days:Object.keys(byDay).length}}
@@ -1724,15 +1763,72 @@ Reply with only a JSON array: [{"tag":"E2" or "","da":"MILANO","a":"BRUXELLES","
 /* ---------- esporta in PDF ---------- */
 const EXP_SECS=[['itin','Itinerario giorno per giorno'],['hotel','Hotel (nomi, indirizzi, contatti)'],['hcost','Costi degli hotel'],['pasti','Pasti'],['exc','Escursioni'],['excost','Costi delle escursioni'],['soldi','Soldi richiesti per giorno'],['voce','Riepilogo per voce'],['rhotel','Da pagare agli hotel'],['check','Controlli da verificare']];
 const EXP_PRESETS={part:['itin','voce'],org:EXP_SECS.map(x=>x[0]),costi:['soldi','voce','rhotel']};
-let EXPO={secs:new Set(EXP_PRESETS.org),grp:'',/* gruppo fisso: tutti */orient:'landscape',msg:''};
+let EXPO={secs:new Set(EXP_PRESETS.org),grp:'',/* gruppo fisso: tutti */orient:'landscape',msg:'',times:'all'};
 function vExport(){const gs=GRP();const has=k=>EXPO.secs.has(k);
  return `<details class="card cdet bpc" data-sid="expmain"${STU.open.expmain?' open':''}><summary><h2>Esporta in PDF</h2>${cbadge('no')}<div class="note bpd">Scegli cosa mettere nel documento, poi scarica il PDF. Le scelte restano finché non ricarichi la pagina.</div></summary><div style="height:8px"></div>
   <div class="hf" style="margin-top:0"><span class="note">Pronti:</span><button class="btn sm" data-a="expset" data-p="part" type="button">Per i partecipanti</button><button class="btn sm" data-a="expset" data-p="org" type="button">Completo (accompagnatore)</button><button class="btn sm" data-a="expset" data-p="costi" type="button">Solo costi</button></div>
   <div class="expgrid">${EXP_SECS.map(([k,l])=>`<label class="expck"><input type="checkbox" data-f="expsec" data-k="${k}"${has(k)?' checked':''}> ${l}</label>`).join('')}</div>
   <div class="hf">
+   <label class="w-m">Orari nell'itinerario<select data-f="exptimes"><option value="all"${EXPO.times!=='se'?' selected':''}>Tutti (accompagnatore)</option><option value="se"${EXPO.times==='se'?' selected':''}>Solo partenza e arrivo del giorno (partecipanti)</option></select></label>
    <label class="w-m">Pagina<select id="expOr" data-f="expor"><option value="landscape"${EXPO.orient==='landscape'?' selected':''}>Orizzontale</option><option value="portrait"${EXPO.orient==='portrait'?' selected':''}>Verticale</option></select></label></div>
-  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px"><button class="btn pri" data-a="expgo" id="btnExp" type="button"${dl?'':' disabled'}>Scarica PDF</button><span class="note">${EXPO.secs.size} sezioni · ${esc(tripFull())}</span>${dl?'':'<span class="note">Il download non è disponibile in questa visualizzazione.</span>'}</div>
-  ${EXPO.msg?`<div class="msg ${EXPO.msg[0]}" style="margin-top:10px">${esc(EXPO.msg[1])}</div>`:''}</details>`+`<div class="expg">${[[storyCard(),STORY.edit],[diaryCard(),false],[infoCard(),INFO.edit],[corrCard(),!!CORR.lang],[tipsCard(),TIPS.edit]].map(([h,w])=>w?h.replace('<div class="card"','<div class="card wide"'):h).join('')}${laundryCard()}</div>`}
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px"><button class="btn pri" data-a="expgo" id="btnExp" type="button"${dl?'':' disabled'}>Scarica PDF${pdfDot('fresh',{mini:1})}</button><span class="note">${EXPO.secs.size} sezioni · ${esc(tripFull())}</span>${dl?'':'<span class="note">Il download non è disponibile in questa visualizzazione.</span>'}</div>
+  ${EXPO.msg?`<div class="msg ${EXPO.msg[0]}" style="margin-top:10px">${esc(EXPO.msg[1])}</div>`:''}</details>`+`<div class="expg">${flightPlanCard()}${[[storyCard(),STORY.edit],[diaryCard(),false],[infoCard(),INFO.edit],[corrCard(),!!CORR.lang],[tipsCard(),TIPS.edit]].map(([h,w])=>w?h.replace('<div class="card"','<div class="card wide"'):h).join('')}${laundryCard()}</div>`}
+/* ---------- Verifica con i voli: Claude controlla che l'itinerario torni con gli orari dei voli ---------- */
+let FLCK={busy:false,msg:null};
+function flCheckInput(){return S.days.map((d,i)=>{const tx=txOf(d);const legs=d.tappe.map((t,k)=>{const x=tx[k]||{};
+  if(x.m==='Volo')return `  - VOLO: ${(x.voli||[]).filter(f=>f.da||f.a).map(f=>`${f.da} → ${f.a} ${flCode(f)}, parte ${f.dep||'?'}, arriva ${f.arr||'?'}${flGroups(f).length?' (solo gruppo '+flGroups(f).map(g=>g.name).join(' + ')+')':''}`).join('; ')||'(volo senza dati)'}`;
+  return `  - ${t||'—'}${x.m?' ['+x.m+']':''}${x.h?' · durata '+x.h:''}${x.ds?' · '+x.ds:''}`}).join('\n');
+ return `G${i+1} ${dateShort(i)} · notte a: ${notte(d)||'—'} · hotel: ${d.hotel.name||'NESSUNO'}\n${legs}`}).join('\n')}
+function flCheckCard(){const R=S.flck,has=flightPlanRows().length,L=R&&R.giorni||[],bad=L.filter(x=>x.liv!=='ok').length;
+ const pill=R?(bad?`<span class="snpill ko">${bad} ${bad===1?'punto':'punti'} da guardare</span>`:'<span class="snpill ok">tutto ok</span>'):'';
+ return `<details class="card cdet bpc" data-sid="flck"${STU.open.flck?' open':''}><summary><h2>✈ Verifica con i voli ${pill}</h2>${cbadge('leggero')}<div class="note bpd">Claude controlla che l'itinerario torni con gli orari dei voli: tempi del giorno di arrivo e di partenza, notti e hotel, ordine delle tappe, coincidenze. Rifallo ogni volta che cambia il piano voli.</div></summary><div style="height:8px"></div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button class="btn pri" data-a="flck" type="button"${FLCK.busy||!has?' disabled':''}>${FLCK.busy?'Controllo in corso…':R?'Rifai la verifica':'Verifica'}</button>${R?`<span class="note">Ultima verifica: ${new Date(R.at).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}</span>`:''}${has?'':'<span class="note">Prima inserisci i voli nelle tappe (mezzo «Volo»).</span>'}</div>
+  ${FLCK.msg?`<div class="msg ${FLCK.msg[0]}" style="margin-top:8px">${esc(FLCK.msg[1])}</div>`:''}
+  ${R?`${R.sintesi?`<p style="margin:10px 0 6px"><b>${esc(R.sintesi)}</b></p>`:''}<ul class="flck">${L.map(x=>`<li class="${x.liv==='problema'?'ko':x.liv==='attenzione'?'warn':'ok'}"><b>Giorno ${esc(x.g)}${S.days[x.g-1]?' · '+esc(dateShort(x.g-1)):''}</b> <span class="flcl">${x.liv==='problema'?'Problema':x.liv==='attenzione'?'Da guardare':'Ok'}</span><div>${esc(x.nota)}</div></li>`).join('')}</ul>`:''}</details>`}
+async function flCheckRun(){if(!SAMPLE)throw new Error('La verifica usa Claude: apri l\'app dalla pagina principale.');
+ const r=await stuAsk(`Sono il coordinatore di un viaggio di gruppo: ${tripFull()}. Qui sotto c'è il mio itinerario giorno per giorno, con le tappe in ordine, le durate e i voli con gli orari locali.
+Controlla che l'itinerario torni con i voli. Guarda soprattutto i giorni con un volo e quelli subito prima e subito dopo:
+- giorno di arrivo: dall'atterraggio aggiungi visto, bagagli e trasferimenti e somma le durate delle tappe; le visite devono stare nella giornata e con la luce (considera la stagione e il luogo);
+- giorno di partenza: in aeroporto almeno 3 ore prima per i voli internazionali e 1 ora e mezza per quelli interni; le attività prima devono starci;
+- notti e hotel: se la sera si dorme in un posto serve un hotel; se il volo parte il giorno dopo, quella notte va un hotel; la «notte a» deve essere il posto dove si dorme davvero;
+- ordine delle tappe: i voli e le attività devono essere in ordine di orario;
+- coincidenze: tra un volo e il successivo almeno 1 ora e mezza; voli che arrivano il giorno dopo;
+- voli diversi per gruppi di partenza diversi.
+Segnala solo cose concrete, in frasi brevi e semplici, con gli orari calcolati. Non proporre attività nuove. Metti nell'elenco solo i giorni che hanno un volo, quelli subito prima e dopo, e quelli con un problema.
+
+ITINERARIO:
+${flCheckInput()}
+
+Rispondi solo JSON: {"sintesi":"una frase","giorni":[{"g":2,"liv":"ok|attenzione|problema","nota":"..."}]}`);
+ const L=(r&&Array.isArray(r.giorni)?r.giorni:[]).filter(x=>x&&+x.g>0).map(x=>({g:+x.g,liv:['ok','attenzione','problema'].includes(x.liv)?x.liv:'attenzione',nota:String(x.nota||'')})).sort((a,b)=>a.g-b.g);
+ S.flck={at:Date.now(),sintesi:String(r&&r.sintesi||''),giorni:L};touch()}
+/* ---------- Piano voli: i voli dell'itinerario, semplice, per i partecipanti ---------- */
+let FLP={msg:null};
+function flightPlanRows(){const out=[];S.days.forEach((d,i)=>(d.tx||[]).forEach(x=>{if(x.m!=='Volo')return;(x.voli||[]).forEach(f=>{if(f.da||f.a||f.nv)out.push({i,f})})}));
+ return out.sort((a,b)=>a.i-b.i||String(a.f.dep||'99').localeCompare(String(b.f.dep||'99')))}
+function flightPlanGroups(){const all=flightPlanRows(),gs=GRP().filter(g=>all.some(r=>(r.f.grp||[]).includes(g.id)));
+ if(!gs.length)return [{name:'',col:'',rows:all}];return gs.map(g=>({name:g.name||'Gruppo',col:g.col,rows:all.filter(r=>flFor(r.f,g.id))}))}
+function flDate(i,f){const d=dObj(i);if(!d)return 'G'+(i+1);return d.toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'2-digit'})}
+function flArr(i,f){if(!f.arr)return '';const nx=f.dep&&f.arr<f.dep;if(!nx)return f.arr;const d=dObj(i+1);return f.arr+' (+1'+(d?' · '+d.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'}):'')+')'}
+const flCode=f=>[f.comp,f.nv].filter(x=>String(x||'').trim()).join(' ');
+function flightPlanTable(rows){return `<div class="tw"><table class="rtab flptab"><thead><tr><th>Data</th><th>Volo</th><th>Da</th><th>Partenza</th><th>A</th><th>Arrivo</th></tr></thead><tbody>${rows.map(({i,f})=>`<tr><td>${esc(flDate(i,f))}</td><td>${esc(flCode(f))}</td><td>${esc(f.da)}</td><td><b>${esc(f.dep)}</b></td><td>${esc(f.a)}</td><td><b>${esc(flArr(i,f))}</b></td></tr>`).join('')}</tbody></table></div>`}
+function flightPlanCard(){const G=flightPlanGroups(),n=flightPlanRows().length;
+ const nx=flightPlanRows().some(({f})=>f.dep&&f.arr&&f.arr<f.dep);
+ return `<details class="card cdet bpc wide" data-sid="flplan"${STU.open.flplan?' open':''}><summary><h2>✈ Piano voli <span class="note" style="font-weight:400">· ${n?n+' '+(n===1?'volo':'voli'):'nessun volo'}${G.length>1?' · '+G.length+' gruppi di partenza':''}</span></h2>${cbadge('no')}<div class="note bpd">Tutti i voli del viaggio in una tabella semplice da dare ai partecipanti. I voli si prendono dall'Itinerario (tappe con mezzo «Volo»).</div></summary><div style="height:8px"></div>
+  ${n?`<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><button class="btn pri" data-a="flpdf" type="button"${dl?'':' disabled'}>Esporta il piano voli in PDF${pdfDot('fresh',{mini:1})}</button>${FLP.msg?`<span class="note">${esc(FLP.msg)}</span>`:''}</div>
+  ${G.map(g=>`${g.name?`<h3 class="flph" style="--bc:${g.col}">Partenza da ${esc(g.name)}</h3>`:''}${flightPlanTable(g.rows)}`).join('')}
+  <p class="note" style="margin:8px 0 0">Gli orari sono quelli locali di ogni aeroporto.${nx?' «+1» vuol dire che si arriva il giorno dopo.':''}</p>`:`<p class="note">Nell'Itinerario non ci sono ancora voli: aggiungili nelle tappe scegliendo il mezzo «Volo».</p>`}</details>`}
+async function flightPlanPdf(){await loadScript(LIB.jspdf);await loadScript(LIB.autotable);const{jsPDF}=window.jspdf;const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+ const M=14,green=[31,111,92];let y=M+6;const hex=h=>{const m=/^#?([0-9a-f]{6})$/i.exec(h||'');if(!m)return green;const v=parseInt(m[1],16);return [v>>16&255,v>>8&255,v&255]};
+ doc.setFont('helvetica','bold');doc.setFontSize(18);doc.setTextColor(...green);doc.text('Piano voli',M,y);y+=6;
+ doc.setFont('helvetica','normal');doc.setFontSize(10);doc.setTextColor(90);const d0=dObj(0),d1=dObj(S.days.length-1),fd=d=>d.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit',year:'numeric'});doc.text(pdfSafe(tripFull()+(d0&&d1?' · dal '+fd(d0)+' al '+fd(d1):'')),M,y);y+=8;const nx=flightPlanRows().some(({f})=>f.dep&&f.arr&&f.arr<f.dep);
+ flightPlanGroups().forEach(g=>{const col=g.col?hex(g.col):green;if(y>250){doc.addPage();y=M+4}
+  if(g.name){doc.setFillColor(...col);doc.roundedRect(M,y-4.5,182,7,1.5,1.5,'F');doc.setFont('helvetica','bold');doc.setFontSize(11);doc.setTextColor(255);doc.text(pdfSafe('Partenza da '+g.name),M+3,y);y+=5}
+  doc.autoTable({startY:y,margin:{left:M,right:M},head:[['Data','Volo','Da','Partenza','A','Arrivo']],body:g.rows.map(({i,f})=>[flDate(i,f),flCode(f),f.da,f.dep,f.a,flArr(i,f)].map(v=>pdfSafe(v||''))),
+   theme:'grid',styles:{fontSize:10,cellPadding:2.2,valign:'middle'},headStyles:{fillColor:col,textColor:255},alternateRowStyles:{fillColor:[244,247,245]},columnStyles:{0:{cellWidth:26},3:{fontStyle:'bold',cellWidth:22},5:{fontStyle:'bold',cellWidth:30}}});
+  y=doc.lastAutoTable.finalY+10});
+ doc.setFont('helvetica','italic');doc.setFontSize(9);doc.setTextColor(110);doc.text('Gli orari sono quelli locali di ogni aeroporto.'+(nx?' "+1" vuol dire che si arriva il giorno dopo.':''),M,Math.min(y,285));
+ return saveFile(`${fname(tripFull())}-Piano-voli.pdf`,doc.output('blob'))}
 /* ---------- Cronoprogramma lavanderia: quanti cambi portare, dati i giorni con la lavanderia ---------- */
 // Regole: il cambio si indossa la sera e resta addosso il giorno dopo; la sera di un giorno di lavaggio si lavano tutti i cambi usati
 // (compreso quello tolto quella sera), che tornano puliti dalla sera successiva; si usa sempre il numero pulito più basso, altrimenti uno nuovo.
@@ -1755,7 +1851,7 @@ function laundryPlan(){const L=laundryDays(),n=S.days.length,rows=[],clean=new M
 let LAU={msg:null};
 function laundryCard(){const P0=laundryPlan(),L=laundryDays();
  return `<details class="card cdet bpc" data-sid="laundry"${STU.open.laundry?' open':''}><summary><h2>Cronoprogramma Lavanderia <span class="note" style="font-weight:400">· ${P0.max+1} vestiti da portare${L.size?` · ${L.size} ${L.size===1?'giorno':'giorni'} di lavanderia`:''}</span></h2>${cbadge('no')}<div class="note bpd">Quanti cambi portare e quale indossare ogni sera, in base ai giorni in cui hai la lavanderia.</div></summary><div style="height:8px"></div>
-  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><button class="btn pri" data-a="laupdf" type="button"${dl?'':' disabled'}>Esporta la tabella in PDF</button>${LAU.msg?`<span class="note">${esc(LAU.msg)}</span>`:''}</div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px"><button class="btn pri" data-a="laupdf" type="button"${dl?'':' disabled'}>Esporta la tabella in PDF${pdfDot('fresh',{mini:1})}</button>${LAU.msg?`<span class="note">${esc(LAU.msg)}</span>`:''}</div>
   <div class="laures"><b>Vestiti da portare in tutto: ${P0.max+1}</b> (${P0.max} ${P0.max===1?'cambio':'cambi'} in valigia + quelli con cui parti)${P0.washes?` · ${P0.washes} ${P0.washes===1?'lavaggio':'lavaggi'}`:' · nessun lavaggio'}</div>
   <details class="sugg" data-sid="laudays"${STU.open.laudays?' open':''}><summary><h3>Giorni con la lavanderia <span class="note" style="font-weight:400">· ${L.size?L.size+' '+(L.size===1?'selezionato':'selezionati'):'nessuno'}</span></h3></summary>
    <p class="note" style="margin:6px 0">Spunta i giorni in cui hai accesso a una lavanderia (si lava la sera di quel giorno).</p>
@@ -1781,7 +1877,7 @@ Rispondi solo JSON: {"giorni":[{"g":1,"consiglio":"","fonte":""}]}
 FONTI:${mat}`);
  const g=r&&Array.isArray(r.giorni)?r.giorni:null;if(!g)throw new Error('Claude non ha restituito i consigli: riprova.');
  const tips={};g.forEach(x=>{const d=S.days[(+x.g||0)-1];if(d&&String(x.consiglio||'').trim())tips[d.id]={t:String(x.consiglio).trim(),src:String(x.fonte||'').trim()}});
- S.diary={at:Date.now(),tips};touch()}
+ S.diary={at:Date.now(),tips,fp:fpItin()};touch()}
 async function makeDiaryPDF(){await loadScript(LIB.jspdf);const{jsPDF}=window.jspdf;const doc=new jsPDF({unit:'mm',format:'a4'});
  const W=210,H=297,M=14,CW=W-2*M,F='helvetica',BOT=H-16,green=[33,92,78],acc=[194,87,26],ink=[38,38,38],mut=[125,118,110],beige=[244,236,224],soft=[250,245,238],light=[81,81,81];
  const st=S.story&&S.story.days?S.story:null,tips=(S.diary&&S.diary.tips)||{},T=totals(),P0=Math.max(1,P());
@@ -1837,7 +1933,7 @@ async function diaryGo(withTips){DIARY.msg=null;try{if(withTips){DIARY.busy='Cla
  catch(e){DIARY.msg=['bad',(e&&e.message)||String(e)]}DIARY.busy='';render()}
 function diaryCard(){const D=S.diary,nt=D?Object.keys(D.tips||{}).length:0,hasSrc=(INFO.src[CUR]||[]).length;
  return `<div class="card"><h2>Diario del TL giorno per giorno</h2><p class="note" style="margin:0 0 10px">PDF per te: per ogni giorno costi a testa e di gruppo, voli, spostamenti, descrizione, escursioni con durata, hotel con indirizzo e telefono${D?`, e ${nt} consigli presi dalle relazioni (preparati il ${new Date(D.at).toLocaleDateString('it-IT')})`:''}. La descrizione viene dal «Racconto giorno per giorno» se l'hai già creato, altrimenti dalle descrizioni dell'itinerario.</p>
-  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">${DIARY.busy?`<span class="note"><b>${esc(DIARY.busy)}</b></span>`:`<span style="display:inline-flex;gap:6px;align-items:center"><button class="btn pri" data-a="diarygo" type="button"${dl?'':' disabled'}>Scarica Diario del TL</button>${cbadge('no')}</span>
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">${DIARY.busy?`<span class="note"><b>${esc(DIARY.busy)}</b></span>`:`<span style="display:inline-flex;gap:6px;align-items:center">${D?pdfDot(pdfSt(D,fpItin()),{lbl:1,why:'I consigli dalle relazioni sono stati preparati prima delle ultime modifiche all\'itinerario: usa «Rifai i consigli dalle relazioni».'}):pdfDot('fresh')}<button class="btn pri" data-a="diarygo" type="button"${dl?'':' disabled'}>Scarica Diario del TL</button>${cbadge('no')}</span>
    <span style="display:inline-flex;gap:6px;align-items:center"><button class="btn" data-a="diarytips" type="button"${dl&&SAMPLE?'':' disabled'} title="${hasSrc?'':'Servono relazioni caricate nello Studio (passo 1)'}">${D?'Rifai i consigli dalle relazioni e scarica':'Aggiungi i consigli dalle relazioni e scarica'}</button>${cbadge('medio')}</span>`}</div>
   ${DIARY.msg?`<div class="msg ${DIARY.msg[0]}" style="margin-top:10px">${esc(DIARY.msg[1])}</div>`:''}</div>`}
 /* ---------- racconto giorno per giorno (per i partecipanti) ---------- */
@@ -1869,7 +1965,7 @@ Regole:
 Rispondi solo con JSON: {"titoloViaggio":"...","sottotitolo":"...","giorni":[{"titolo":"...","percorso":"...","testo":"...","consiglio":""}]}`;
  const r=await SAMPLE.json(prompt,{modelTier:'default'});
  const g=r&&Array.isArray(r.giorni)?r.giorni:null;if(!g||!g.length)throw new Error('Claude non ha restituito il racconto: riprova.');
- S.story={title:String(r.titoloViaggio||tripFull()),sub:String(r.sottotitolo||''),at:Date.now(),
+ S.story={title:String(r.titoloViaggio||tripFull()),sub:String(r.sottotitolo||''),at:Date.now(),fp:fpItin({exc:1}),
   days:S.days.map((d,i)=>{const x=g[i]||{};return {id:d.id,t:String(x.titolo||''),r:String(x.percorso||''),txt:String(x.testo||''),tip:String(x.consiglio||'')}})};touch()}
 async function makeStoryPDF(){await loadScript(LIB.jspdf);const{jsPDF}=window.jspdf;const doc=new jsPDF({unit:'mm',format:'a4'});
  const W=210,H=297,M=16,CW=W-2*M,st=S.story,acc=[194,87,26],ink=[43,38,34],mut=[130,120,112],T=TRIPS[CUR],F='helvetica',BOT=H-16;
@@ -1918,7 +2014,7 @@ async function makeStoryPDF(){await loadScript(LIB.jspdf);const{jsPDF}=window.js
 function storyCard(){const st=S.story,ok=st&&st.days&&st.days.length,miss=ok?S.days.filter(d=>!st.days.some(x=>x.id===d.id&&x.txt)).length:0;
  return `<div class="card"><h2>Racconto giorno per giorno</h2><p class="note" style="margin:0 0 10px">PDF da girare ai partecipanti: per ogni giorno un titolo, il percorso, una descrizione coinvolgente, le tappe dell'itinerario e un consiglio pratico, senza prezzi né note interne.${ok?` Racconto pronto (creato il ${new Date(st.at||Date.now()).toLocaleDateString('it-IT')}).`:' Il racconto non c\'è ancora: lo scrive Claude partendo dall\'itinerario e dalle escursioni.'}</p>
   ${miss?`<div class="msg warn" style="margin-bottom:10px">${miss} giorni non hanno ancora il racconto (l'itinerario è cambiato): usa "Riscrivi il racconto".</div>`:''}
-  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">${STORY.busy?`<span class="note">${esc(STORY.busy)}</span>`:`<button class="btn pri" data-a="storygo" type="button"${dl?'':' disabled'}>${ok?'Scarica PDF racconto':'Crea e scarica PDF racconto'}</button>
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">${STORY.busy?`<span class="note">${esc(STORY.busy)}</span>`:`${ok?pdfDot(pdfSt(st,fpItin({exc:1})),{lbl:1,why:'Da rifare: dopo averlo scritto hai cambiato tappe, hotel o escursioni. Usa «Riscrivi il racconto».'}):''}<button class="btn pri" data-a="storygo" type="button"${dl?'':' disabled'}>${ok?'Scarica PDF racconto':'Crea e scarica PDF racconto'}</button>
    ${ok?`<button class="btn${STORY.edit?' pri':''}" data-a="storyedit" type="button">${STORY.edit?'Chiudi modifica':'Modifica testo'}</button>`:''}
    ${ok?(STORY.ask?`<span class="hclrq">Sei sicuro? Il racconto attuale viene sostituito.</span><button class="btn sm del" data-a="storyregenok" type="button">OK</button><button class="btn sm" data-a="storyno" type="button">Annulla</button>`:`<button class="btn" data-a="storyregen" type="button">Riscrivi il racconto</button>`):''}`}</div>
   ${STORY.msg?`<div class="msg ${STORY.msg[0]}" style="margin-top:10px">${esc(STORY.msg[1])}</div>`:''}${ok&&STORY.edit?storyEditor():''}</div>`}
@@ -2076,7 +2172,7 @@ Relazioni e materiale del viaggio:
   body=ord.map((s,i)=>{const per=Math.floor(room*W[i]/tw);let t=s.text;const b=new TextEncoder().encode(t);if(b.length>per)t=new TextDecoder().decode(b.slice(0,per)).replace(/\uFFFD+$/,'')+'\n[…]';const y=srcYear(s);return `=== ${(s.cat||'rel')==='mo'?'[Dati da MO] ':''}${s.name}${y?' (anno '+y+')':' (anno non indicato)'} ===\n${t}`}).join('\n\n')}
  const r=await SAMPLE.json(head+body,{modelTier:'default'});
  const sec=r&&Array.isArray(r.sezioni)?r.sezioni.filter(x=>x&&x.titolo):null;if(!sec||!sec.length)throw new Error('Claude non ha restituito le info utili: riprova.');
- const old=S.info||{};S.info={title:old.title||tripFull().toUpperCase(),intro:String(r.intro||'Volevo spiegarvi "brevemente" alcune cose riguardo il viaggio…'),sign:old.sign||INFO.sign||'',at:Date.now(),
+ const old=S.info||{};S.info={title:old.title||tripFull().toUpperCase(),intro:String(r.intro||'Volevo spiegarvi "brevemente" alcune cose riguardo il viaggio…'),sign:old.sign||INFO.sign||'',at:Date.now(),fp:fpPlaces(),
   sec:sec.map(x=>({h:String(x.titolo).toUpperCase(),b:String(x.testo||'').replace(/\\n/g,'\n')}))};touch()}
 /* ---------- consigli per me (solo per il coordinatore) ---------- */
 let TIPS={busy:false,msg:'',ask:false,edit:false,from:2023,to:2026};
@@ -2111,12 +2207,12 @@ Materiale:
  const body=parts.map((s,i)=>{const y=srcYear(s);return `=== ${s.cat==='mo'?'[Dati da MO] ':''}${s.name}${s.cat!=='mo'&&y?' (anno '+y+')':''} ===\n${tipExtract(s.text,Math.floor(room*W[i]/tw))}`}).join('\n\n');
  const r=await SAMPLE.json(head+body,{modelTier:'default'});
  const sec=r&&Array.isArray(r.sezioni)?r.sezioni.filter(x=>x&&x.titolo):null;if(!sec||!sec.length)throw new Error('Claude non ha restituito i consigli: riprova.');
- S.tips={title:'CONSIGLI PER ME',intro:String(r.intro||`Promemoria personale per ${tripFull()}, dalle relazioni ${TIPS.from}–${TIPS.to}.`),at:Date.now(),from:TIPS.from,to:TIPS.to,
+ S.tips={title:'CONSIGLI PER ME',intro:String(r.intro||`Promemoria personale per ${tripFull()}, dalle relazioni ${TIPS.from}–${TIPS.to}.`),at:Date.now(),fp:fpPlaces(),from:TIPS.from,to:TIPS.to,
   sec:sec.map(x=>({h:String(x.titolo).toUpperCase(),b:String(x.testo||'').replace(/\\n/g,'\n')}))};touch()}
 function tipsCard(){const I=S.tips,ok=I&&I.sec&&I.sec.length,rel=(INFO.src[CUR]||[]).filter(s=>(s.cat||'rel')==='rel'),nIn=rel.filter(s=>{const y=srcYear(s);return y&&y>=TIPS.from&&y<=TIPS.to}).length;
  return `<div class="card"><h2>Consigli per me</h2><p class="note" style="margin:0 0 10px">PDF solo per te, ricavato dalle relazioni: SIM ed eSIM, documenti, problemi e consigli per ogni dogana e frontiera, e altri suggerimenti importanti.</p>
   <div class="hf" style="margin-top:0;align-items:center"><span class="note">Relazioni dal</span><input class="tipy" data-f="tipy" data-x="from" type="number" min="1980" max="2100" value="${TIPS.from}" aria-label="Dal"><span class="note">al</span><input class="tipy" data-f="tipy" data-x="to" type="number" min="1980" max="2100" value="${TIPS.to}" aria-label="Al"><span class="note">· ${nIn} ${nIn===1?'relazione':'relazioni'} in questo periodo${(INFO.src[CUR]||[]).some(s=>s.cat==='mo')?' + dati da MO':''}</span></div>
-  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px">${TIPS.busy?`<span class="note">${esc(TIPS.busy)}</span>`:`<button class="btn pri" data-a="tipsgo" type="button"${dl?'':' disabled'}>${ok?'Scarica PDF consigli':'Crea e scarica PDF consigli'}</button>
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px">${TIPS.busy?`<span class="note">${esc(TIPS.busy)}</span>`:`${ok?pdfDot(pdfSt(I,fpPlaces()),{lbl:1,why:'Da rifare: dopo averlo scritto hai cambiato date, paesi o luoghi del viaggio. Usa «Riscrivi».'}):''}<button class="btn pri" data-a="tipsgo" type="button"${dl?'':' disabled'}>${ok?'Scarica PDF consigli':'Crea e scarica PDF consigli'}</button>
    ${ok?`<button class="btn${TIPS.edit?' pri':''}" data-a="tipsedit" type="button">${TIPS.edit?'Chiudi modifica':'Modifica testo'}</button>`:''}
    ${ok?(TIPS.ask?`<span class="hclrq">Sei sicuro? Il testo attuale viene sostituito.</span><button class="btn sm del" data-a="tipsregenok" type="button">OK</button><button class="btn sm" data-a="tipsno" type="button">Annulla</button>`:`<button class="btn" data-a="tipsregen" type="button">Riscrivi</button>`):''}`}</div>
   ${ok&&I.from&&(I.from!==TIPS.from||I.to!==TIPS.to)?`<div class="note" style="margin-top:6px">Il testo attuale è stato scritto con le relazioni ${I.from}–${I.to}: usa "Riscrivi" per il nuovo periodo.</div>`:''}
@@ -2162,7 +2258,7 @@ function infoCard(){const I=S.info,ok=I&&I.sec&&I.sec.length,srcs=INFO.src[CUR]|
  return `<div class="card"><h2>Info utili di viaggio</h2><p class="note" style="margin:0 0 10px">Documento da mandare ai partecipanti prima della partenza (formalità di ingresso, meteo, zaino, medicinali, telefonia, emergenze…), sul modello del tuo "Info Utili". Claude lo compila usando le relazioni e il materiale caricati in Importa e backup.</p>
   <div class="srclink"><span>📚 ${srcs.length?`Verranno usati ${srcs.length} ${srcs.length===1?'file caricato':'file caricati'} nello <b>Studio</b>, dando precedenza ai più recenti.`:'Non hai ancora caricato relazioni: caricale nello <b>Studio</b> (passo 1), così Claude le usa per compilare le info.'}</span><button class="btn sm" data-a="gosrc" type="button">Vai al materiale</button></div>
   
-  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px">${INFO.busy?`<span class="note">${esc(INFO.busy)}</span>`:`<button class="btn pri" data-a="infogo" type="button"${dl?'':' disabled'}>${ok?'Scarica PDF info utili':'Crea e scarica PDF info utili'}</button>
+  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px">${INFO.busy?`<span class="note">${esc(INFO.busy)}</span>`:`${ok?pdfDot(pdfSt(I,fpPlaces()),{lbl:1,why:'Da rifare: dopo averlo scritto hai cambiato date, paesi o luoghi del viaggio. Usa «Riscrivi».'}):''}<button class="btn pri" data-a="infogo" type="button"${dl?'':' disabled'}>${ok?'Scarica PDF info utili':'Crea e scarica PDF info utili'}</button>
    ${ok?`<button class="btn${INFO.edit?' pri':''}" data-a="infoedit" type="button">${INFO.edit?'Chiudi modifica':'Modifica testo'}</button>`:''}
    ${ok?(INFO.ask?`<span class="hclrq">Sei sicuro? Il testo attuale viene sostituito.</span><button class="btn sm del" data-a="inforegenok" type="button">OK</button><button class="btn sm" data-a="infono" type="button">Annulla</button>`:`<button class="btn" data-a="inforegen" type="button">Riscrivi</button>`):''}`}</div>
   ${INFO.msg?`<div class="msg ${INFO.msg[0]}" style="margin-top:10px">${esc(INFO.msg[1])}</div>`:''}${ok&&INFO.edit?infoEditor():''}</div>`}
@@ -2208,15 +2304,7 @@ async function makeExportPDF(){await loadScript(LIB.jspdf);await loadScript(LIB.
   run(doc,null,orig);y=doc.lastAutoTable.finalY+6};
  const cur2=(v,c)=>v?`${fmt(v,0)} ${curName(c)}`:'';const eur=(v,c)=>rate(c)?v/rate(c):0;const TT=totals();
 
- if(has('itin')){title('Itinerario');const rows=[],rowDay=[],rowCol=[];
-  S.days.forEach((d,i)=>{const tx=txOf(d),last=d.tappe.length-1;d.tappe.forEach((tp,k)=>{const x=tx[k];if(!tp.trim()&&!x.ds&&!(x.voli||[]).length)return;
-   const base=[k?'':i+1,k?'':dateYY(i),tp,x.m||'',x.m!=='Volo'&&num(x.km)?fmt(num(x.km),0):'',x.m!=='Volo'?x.h||'':''],tail=[k===last?notte(d):'',k===last?(d.hotel.name||''):''];
-   const fl=x.m==='Volo'?(x.voli||[]).filter(f=>f.da||f.a||f.nv):[];
-   if(!fl.length){rows.push([...base,x.ds||'',...tail]);rowDay.push(i);rowCol.push(null);return}
-   fl.forEach((f,n)=>{const gs=flGroups(f);const line=(gs.length?gs.map(z=>z.name).join(' + ')+':  ':'Tutti:  ')+flLine(f);
-    rows.push(n===0?[...base,line,...(n===fl.length-1?tail:['',''])]:['','','','','','',line,...(n===fl.length-1?tail:['',''])]);rowDay.push(i);rowCol.push(gs.length?hex(gs[0].col):[90,90,90])})})});
-  table(['G','Data','Tappe','Mezzo','Km','Tempo','Programma / voli','Notte','Hotel'],rows,{long:[2,6,8],shade:rowDay,columnStyles:{4:{halign:'right'}},
-   didParseCell:dd=>{if(dd.section==='body'&&dd.column.index===6&&rowCol[dd.row.index]){dd.cell.styles.textColor=rowCol[dd.row.index];dd.cell.styles.fontStyle='bold'}}})}
+ if(has('itin')){const nf=!first;first=false;await snCardsInto(doc,planDayG(),{compact:L,notime:EXPO.times==='se'},'Itinerario giorno per giorno',[tripFull(),`dal ${dateYY(0)} al ${dateYY(S.days.length-1)}`,'Partecipanti: '+HL.it.paxTl(P())],{M:L?8:9,top:12,bot:14,newPage:nf,onPage:pageHead})}
  if(has('hotel')||has('hcost')){title('Hotel');const body=hotelGroups().map(g=>{const d=S.days[g[0]],h=d.hotel,ci=cancInfo(h);
    const r=[g.length>1?`${g[0]+1}–${g[g.length-1]+1}`:String(g[0]+1),g.length>1?`${dateYY(g[0])}\n${dateYY(g[g.length-1])}`:dateYY(g[0]),`${h.name||'—'}${h.addr?'\n'+h.addr:''}${h.tel?'\nTel. '+h.tel:''}`,notte(d)||'',
     g.map(j=>['c','p','d'].map(k=>({c:'Col',p:'Pra',d:'Cena'})[k]+':'+({inc:'✓',no:'no',hp:'hotel',calc:'—'})[mealSt(S.days[j].hotel[k])].replace('✓','incl.')).join(' ')).join('\n')];
@@ -2326,7 +2414,7 @@ function fitAll(){document.querySelectorAll('input.fit').forEach(fitInput);docum
 function updateCalc(){
  const set=(id,t)=>{const el=document.getElementById(id);if(el)el.textContent=t};
  S.days.forEach(d=>{const n=notte(d)||'—';set('n'+d.id,n);
-  const tx=txOf(d),km=tx.reduce((a,x)=>a+(x.m==='Volo'?0:num(x.km)),0),hh=tx.reduce((a,x)=>a+(x.m==='Volo'?0:parseH(x.h)),0);set('dk'+d.id,km?fmt(km,1)+' km':'—');set('dh'+d.id,fmtH(hh));set('hn'+d.id,d.hotel.name||'—');set('hnotte'+d.id,n);
+  const tx=txOf(d),km=tx.reduce((a,x)=>a+(x.m==='Volo'?0:num(x.km)),0),hh=tx.reduce((a,x)=>a+(x.m==='Volo'||isFacLeg(x)?0:parseH(x.h)),0);set('dk'+d.id,km?fmt(km,1)+' km':'—');{const fh=tx.reduce((a,x)=>a+(x.m!=='Volo'&&isFacLeg(x)?parseH(x.h):0),0);set('dh'+d.id,fmtH(hh)+(fh?' (+'+fmtH(fh)+' facolt.)':''))}set('hn'+d.id,d.hotel.name||'—');set('hnotte'+d.id,n);
   const c=hotelCalc(d),hs=!blank(d.hotel.imp),cn=curName(d.hotel.cur),r=rate(d.hotel.cur)||0;
   const ci=cancInfo(d.hotel);set('hcs'+d.id,ci?ci.txt:'');
   const hm=document.getElementById('hm'+d.id);if(hm){const q=[d.hotel.name,notte(d)].filter(x=>x&&x.trim()).join(' ');hm.href=q?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q):'https://www.google.com/maps';hm.title=q?'Cerca: '+q:'Scrivi prima il nome dell\'hotel'}
@@ -2802,7 +2890,8 @@ const ddmm=i=>{const x=dObj(i);return x?String(x.getDate()).padStart(2,'0')+'/'+
 const ccOrder=()=>{const C=ccData(),L=C.people.slice(),me=L[0];return [L.find(p=>p.id===C.cassiere),me,...L.slice(1)].filter((p,i,a)=>p&&a.indexOf(p)===i)};
 // pagamenti già fatti per una voce a rate (benzina): quelle prese da «Dal programma» e quelle scritte a mano con lo stesso nome
 function ccRatePaid(p){return ccData().mv.filter(x=>x.type==='sp'&&+x.cur===+p.cur&&(x.src===p.k||(!x.src&&ccIsRate(x.t)))).reduce((a,x)=>({v:a.v+num(x.v),n:a.n+1}),{v:0,n:0})}
-function dayKmH(d){let km=0,h=0;txOf(d).forEach(x=>{km+=num(x.km);h+=parseH(x.h)});return{km,h}}
+const isFacLeg=x=>/\(facoltativ/i.test(String((x&&x.ds)||''));
+function dayKmH(d){let km=0,h=0;txOf(d).forEach(x=>{km+=num(x.km);if(!isFacLeg(x))h+=parseH(x.h)});return{km,h}}
 /* ---- righe compatte ---- */
 function ccLine(x,j){const C=ccData(),T=CCT[x.type]||['?','•'],cn=c=>esc(curName(+c||0)),n=(x.for||[]).length,tutti=n===C.people.length?'tutti':n+(n===1?' persona':' persone');let ico=T[1],t='',s='',v='';
  if(x.type==='sp'){ico=ccIsRate(x.t)?'⛽':x.cat==='Pasto'?'🍽':'💳';t=esc(x.t||'Spesa')+(x.est?'<span class="ccest">stima</span>':'');
@@ -3031,7 +3120,7 @@ function vItinRO(){const ti=ccTodayIdx();
   d.tappe.forEach((tp,k)=>{const x=t[k]||{},fl=x.m==='Volo'?(x.voli||[]).filter(f=>f.da||f.a||f.nv):[],pl=split(tp),dest=pl[pl.length-1]||'',ds=String(x.ds||'').trim();
    if(x.m&&x.m!=='Volo'){const k2=x.m;sum[k2]=sum[k2]||{h:0,km:0};sum[k2].h+=parseH(x.h);sum[k2].km+=num(x.km)}
    if(fl.length)fl.forEach(f=>{const gs=flGroups(f);legs.push({ic:'✈️',lab:(gs.length?gs.map(z=>z.name).join(' + '):'Volo'),txt:flLine(f)})});
-   else if(dest||ds){const meta=[x.m?x.m:'',hh(x.h),num(x.km)?fmt(num(x.km),0)+' km':''].filter(Boolean).join(' · ');legs.push({ic:x.m?ico(x.m):'📍',lab:[meta,meta&&dest?'→ '+dest:dest].filter(Boolean).join(' '),txt:ds})}});
+   else if(dest||ds){const meta=[x.m?x.m:'',hh(x.h),num(x.km)?fmt(num(x.km),0)+' km':''].filter(Boolean).join(' · ');legs.push({ic:x.m?ico(x.m):'📍',lab:[meta,meta&&dest?'→ '+dest:dest].filter(Boolean).join(' '),txt:ds+((fp=>fp?' · 💶 '+fp:'')(facPrice(d,ds)))})}});
   const fly=d.tappe.some((_,k)=>(t[k]||{}).m==='Volo');
   const sm=Object.entries(sum).filter(([m,o])=>o.h||o.km).map(([m,o])=>`${ico(m)} ${[hh(o.h?String(Math.floor(o.h))+':'+String(Math.round((o.h%1)*60)).padStart(2,'0'):''),o.km?fmt(o.km,0)+' km':''].filter(Boolean).join(' · ')}`);
   if(fly)sm.unshift('✈️ volo');
@@ -3065,7 +3154,7 @@ function vRHotelRO(){if(!RO.docs||RO.docs.trip!==CUR){RO.docs={trip:CUR,list:nul
  return (RO.msg?`<div class="msg ${RO.msg[0]}">${esc(RO.msg[1])}</div>`:'')+`<p class="note" style="margin:0 0 8px">Gli hotel già inseriti in Cassa Comune si chiudono da soli. Tocca il nome per aprire o chiudere.</p>`+L.map(({k,D,addr,tel,pag,paid})=>{const il=String(D.intolLine||'').trim(),note=String(D.note||'').split('\n').filter(l=>l.trim()&&l.trim()!==il&&l.trim()!==HL.it.note).join('\n');
   const st=rhState(k,paid),op=OPEN['rh-'+k]??(ti>=0&&st.days.includes(ti));
   return `<details class="card ro rohotel rhdet${st.paid?' paid':''}" id="det-rh-${esc(k)}"${op?' open':''}><summary class="rhsum"><span class="rhd">${esc(st.dd)}</span><b class="rhn">${esc(D.hotel)}</b><span class="pill ${st.paid?'okp':'todo'}">${st.paid?'✓ pagato':'da pagare'}</span></summary><div class="rohead"><div>${addr||tel?`<div class="note">${esc([addr,tel].filter(Boolean).join(' · '))}</div>`:''}</div>
-   <div style="display:flex;gap:6px;flex-wrap:wrap">${!st.paid&&st.can?`<button class="btn pri" data-a="rohins" data-k="${esc(k)}" type="button">Inserisci in cassa</button>`:''}<button class="btn" data-a="rohpdf" data-k="${esc(k)}" type="button"${dl&&!RO.busy?'':' disabled'}>${RO.busy===k?'Preparo…':'Apri PDF'}</button></div></div>
+   <div style="display:flex;gap:6px;flex-wrap:wrap">${!st.paid&&st.can?`<button class="btn pri" data-a="rohins" data-k="${esc(k)}" type="button">Inserisci in cassa</button>`:''}<button class="btn" data-a="rohpdf" data-k="${esc(k)}" type="button"${dl&&!RO.busy?'':' disabled'}>${RO.busy===k?'Preparo…':'Apri PDF'}${pdfDot(pdfSt(hpdfGet(k,'it'),fpHotel(k))||'fresh',{mini:1})}</button></div></div>
    <div class="roinfo">${D.info.filter(x=>String(x[1]).trim()).map(x=>`<span><small>${esc(x[0])}</small><b>${esc(x[1])}</b></span>`).join('')}${pag?`<span><small>Pagamento</small><b>${esc(pag)}${pag==='Anticipato'?(paid?' · già pagato':' · da pagare'):''}</b></span>`:''}</div>
    <div class="tw"><table class="rotab"><thead><tr>${D.head.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${D.rows.filter(r=>r.some(c=>String(c).trim())).map(r=>`<tr>${r.map((c,i)=>`<td${i===2?' class="m"':''}>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody>
    <tfoot><tr><td></td><td><b>${esc(D.total[0])}</b></td><td class="m"><b>${esc(D.total[1])}</b></td></tr></tfoot></table></div>
@@ -3236,7 +3325,7 @@ function stuPanel(d){const L=stuForDay(d);if(!L.length)return '';const have=new 
   ${L.map(p=>`<div class="stupl"><b>${esc(p.n)}</b>${p.items.map(i=>`<div class="stuit${have.has(norm(i.n))?' got':''}"><span class="stuin">${esc(i.n)}<small class="note">${[i.dur?(i.est?'≈ ':'')+i.dur:'',i.pv?`${fmt(i.pv,0)} ${i.pc}${i.per?' / '+i.per:''}${i.py?' ('+i.py+')':''}`:'',i.cnt>1?`citata ${i.cnt} volte`:'',i.note].filter(Boolean).map(esc).join(' · ')}</small></span>
    ${have.has(norm(i.n))?'<span class="note">già inserita</span>':`<button class="btn xs" data-a="stuadd" data-d="${d.id}" data-p="${p.id}" data-i="${i.id}" type="button">+ Aggiungi</button>`}</div>`).join('')}</div>`).join('')}</details>`}
 // tempo già occupato nel giorno: trasferimenti + escursioni (+ orari dei voli)
-function dayTime(d){const t=txOf(d),tr=t.reduce((a,x)=>a+parseH(x.h),0),ex=S.exc.filter(e=>e.day===d.id).reduce((a,e)=>a+parseH(e.dur),0);
+function dayTime(d){const t=txOf(d),tr=t.reduce((a,x)=>a+(isFacLeg(x)?0:parseH(x.h)),0),ex=S.exc.filter(e=>e.day===d.id&&!excFac(e)).reduce((a,e)=>a+parseH(e.dur),0);
  const fl=t.flatMap(x=>x.m==='Volo'?(x.voli||[]).filter(f=>f.dep||f.arr):[]).map(f=>`✈ ${[f.da,f.a].filter(Boolean).join('→')} ${[f.dep,f.arr].filter(Boolean).join('–')}`);
  if(!tr&&!ex&&!fl.length)return '';return `<div class="daytime">${tr?`Trasferimenti ${fmtH(tr)}`:''}${tr&&ex?' · ':''}${ex?`Escursioni ${fmtH(ex)}`:''}${tr||ex?` · <b>Totale ${fmtH(tr+ex)}</b>`:''}${fl.length?`<span class="dtfl">${fl.map(esc).join(' · ')}</span>`:''}</div>`}
 /* ---------- Studio: zone, percorsi degli altri coordinatori, trasferimenti e mappa ---------- */
@@ -4399,19 +4488,19 @@ function snDay(z){const D=S.snday;
   ${v.note.length?`<details class="cdet" data-sid="sdlnote"${STU.open.sdlnote?' open':''} style="margin-top:10px"><summary><b>Le mie considerazioni · ${v.note.length}</b></summary><ul class="snpc">${v.note.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>`:''}
   <div class="sncok"><button class="btn pri" data-a="sndayuse" data-k="${vi}" type="button">⇢ ${D.v.length>1?'Uso la versione '+(vi+1):'Uso questo itinerario'} e lo esporto nell'itinerario bozza</button>${cbadge('pesante')}<span class="note">${D.use===vi&&S.snfinal?'Già esportato: rifacendolo sostituisci l\'itinerario bozza. ':''}Lo completo con orari e dettagli e ti propongo le escursioni secondarie.</span><button class="btn xs" data-a="sndaygo" type="button"${SAMPLE?'':' disabled'}>Rifai</button>${cbadge('medio')}</div></div>`}
 function snDayKey(g){return g?norm(String(g.tappa||'').replace(/[→>›-]+/g,' '))+'|'+norm(g.dorme||''):''}
-const SNK={v:['🚐','Trasferimento'],s:['🏛','Visite, alba e tramonto'],t:['🥾','Trek'],p:['🍽','Pasti e pause'],a:['✈','Volo'],l:['☕','Tempo libero']};
+const SNK={v:['🚐','Trasferimento'],s:['🏛','Visite'],t:['🥾','Trek'],p:['🍽','Pasti e pause'],a:['✈','Volo'],l:['☕','Tempo libero']};
 function snHm(s){const m=String(s||'').match(/^(\d{1,2})[:.](\d{2})$/);return m?+m[1]*60+ +m[2]:null}
 function snDayBar(M){const A=300,Z=1440,W=Z-A,P=x=>Math.max(0,Math.min(100,(x-A)/W*100));
  const seg=M.map(r=>{const s=snHm(r.h);let e=snHm(r.e);if(s==null)return '';if(e==null)e=s+15;if(e<=s)e+=1440;const l=P(s),w=Math.max(.6,P(Math.min(e,Z))-l);return `<i class="k-${esc(r.k)}${r.f?' f':''}" style="left:${l.toFixed(2)}%;width:${w.toFixed(2)}%" title="${esc(r.h+(r.e?'–'+r.e:'')+' · '+r.t)}"></i>`}).join('');
  const tk=[6,9,12,15,18,21].map(h=>`<u style="left:${P(h*60).toFixed(2)}%">${h}:00</u>`).join('');
  return `<div class="sdbar">${seg}${tk}</div>`}
 function snDayCards(G,opt){opt=opt||{};const CP=opt.compact?' cp':'';const leg=`<div class="sdleg">${Object.entries(SNK).map(([k,[ic,n]])=>`<span class="k-${k}"><i></i>${ic} ${n}</span>`).join('')}<span><i class="f"></i>facoltativo</span></div>`;
- return leg+G.map(g=>{const m=snMultiLbl(g.multi),o=g.orari,px=opt.pax&&opt.pax.giorni.find(x=>x.g===g.g),M=((px&&px.marcia)||(o&&o.marcia)||[]).map(r=>r.k==='e'?{...r,k:'s'}:r);
+ return leg+G.map((g,gi)=>{const ALT=gi%2?' alt':'';const m=snMultiLbl(g.multi),o=g.orari,px=opt.pax&&opt.pax.giorni.find(x=>x.g===g.g),M=((px&&px.marcia)||(o&&o.marcia)||[]).map(r=>r.k==='e'?{...r,k:'s'}:r);
   const cosa=px?`<ul class="sndc">${px.cosa.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:(g.cosa.length||(g.sec||[]).length)?`<ul class="sndc">${g.cosa.map(x=>`<li>${snAddHtml(x)}</li>`).join('')}${(g.sec||[]).map(x=>`<li class="sec">＋ ${esc(x)} <span class="note">secondaria</span></li>`).join('')}</ul>`:'<p class="note">—</p>';
   const tm=M.length?`<div><h4>Tabella di marcia (orari stimati)</h4><table class="sdtm">${M.map(r=>`<tr class="k-${esc(r.k)}${r.f?' f':''}"><td class="h">${esc(r.h)}${r.e?'–'+esc(r.e):''}</td><td class="k"><span class="kd" title="${esc((SNK[r.k]||['',''])[1])}">${(SNK[r.k]||['•'])[0]}</span></td><td>${esc(r.t)}${r.f?'<span class="sdf">facoltativo</span>':''}</td></tr>`).join('')}</table></div>`:'';
   const sid='sdc'+g.g;if(opt.compact){const chi=!opt.pax&&(g.chi||[]).length?`<div class="sdhc2">👥 L'hanno fatto: ${esc(g.chi.join(', '))}</div>`:'';
-   return `<details class="sdc${CP}" open><summary class="sdhc"><div class="sdhc1"><b class="gg">G${g.g}</b><span class="dd">${esc(dateShort(g.g-1))}</span><b class="tp">${esc(g.tappa)}</b>${m?`<span class="sndm">${esc(m.n)}${m.a?` · gg ${m.a}/${m.b}`:''}</span>`:''}${g.dorme?`<span class="dm">🛏 ${esc(g.dorme)}</span>`:''}${o&&o.part?`<span class="pp">🕗 ${esc(o.part)}${o.arr?` <small>→ ${esc(o.arr)}</small>`:''}</span>`:''}</div>${chi}</summary>${M.some(r=>snHm(r.h)!=null)?snDayBar(M):''}${M.length?snAlignHtml(g,px,M,opt):''}</details>`}
-  return `<details class="sdc${CP}"${opt.pdf?' open':` data-sid="${sid}"${STU.open[sid]?' open':''}`}><summary class="sdch"><div class="sdcg"><b>G${g.g}</b><span>${esc(dateShort(g.g-1))}</span></div><div class="sdct"><b>${esc(g.tappa)}</b>${m?` <span class="sndm">${esc(m.n)}${m.a?` · gg ${m.a}/${m.b}`:''}</span>`:''}${g.dorme?`<div class="note">🛏 ${esc(g.dorme)}</div>`:''}${!opt.pax&&(g.chi||[]).length?`<div class="sdchi">👥 L'hanno fatto: ${esc(g.chi.join(', '))}</div>`:''}</div>${o&&o.part?`<div class="sdcp"><small>Partenza</small><b>🕗 ${esc(o.part)}</b>${o.arr?`<small>Arrivo: ${esc(o.arr)}</small>`:''}</div>`:''}</summary>${M.some(r=>snHm(r.h)!=null)?snDayBar(M):''}${M.length?snAlignHtml(g,px,M,opt):`<div class="sdcb"><div><h4>Cosa si fa</h4>${cosa}</div>${tm}</div>`}${opt.pdf?'':snSecDay(g.g)}</details>`}).join('')}
+   return `<details class="sdc${CP}${ALT}" open><summary class="sdhc"><div class="sdhc1"><b class="gg">G${g.g}</b><span class="dd">${esc(dateShort(g.g-1))}</span><b class="tp">${esc(g.tappa)}</b>${m?`<span class="sndm">${esc(m.n)}${m.a?` · gg ${m.a}/${m.b}`:''}</span>`:''}${g.dorme?`<span class="dm">🛏 ${esc(g.dorme)}</span>`:''}${o&&o.part?`<span class="pp">🕗 ${esc(o.part)}${o.arr?` <small>→ ${esc(o.arr)}</small>`:''}</span>`:''}</div>${chi}</summary>${!opt.notime&&M.some(r=>snHm(r.h)!=null)?snDayBar(M):''}${M.length?snAlignHtml(g,px,M,opt):''}</details>`}
+  return `<details class="sdc${CP}${ALT}"${opt.pdf?' open':` data-sid="${sid}"${STU.open[sid]?' open':''}`}><summary class="sdch"><div class="sdcg"><b>G${g.g}</b><span>${esc(dateShort(g.g-1))}</span></div><div class="sdct"><b>${esc(g.tappa)}</b>${m?` <span class="sndm">${esc(m.n)}${m.a?` · gg ${m.a}/${m.b}`:''}</span>`:''}${g.dorme?`<div class="note">🛏 ${esc(g.dorme)}</div>`:''}${!opt.pax&&(g.chi||[]).length?`<div class="sdchi">👥 L'hanno fatto: ${esc(g.chi.join(', '))}</div>`:''}</div>${o&&o.part?`<div class="sdcp"><small>Partenza</small><b>🕗 ${esc(o.part)}</b>${o.arr?`<small>Arrivo: ${esc(o.arr)}</small>`:''}</div>`:''}</summary>${!opt.notime&&M.some(r=>snHm(r.h)!=null)?snDayBar(M):''}${M.length?snAlignHtml(g,px,M,opt):`<div class="sdcb"><div><h4>Cosa si fa</h4>${cosa}</div>${tm}</div>`}${opt.pdf?'':snSecDay(g.g)}</details>`}).join('')}
 /* ----- 4 · completa l'itinerario esportato: dettagli dalle relazioni (aggiunte tra [[ ]]), tabella di marcia, km e dislivelli dei trek, chi ha fatto la tappa ----- */
 let SNFD={busy:'',msg:'',hl:true};
 const snNoAdd=s=>String(s||'').replace(/\[\[|\]\]/g,'');
@@ -4493,7 +4582,7 @@ function snSecDay(g){const X=snSecX();if(!X)return '';const L=X.list.map((x,i)=>
 let SNPDF={busy:'',msg:'',lang:'en'};
 const SNPL={en:{n:'English',stage:'Stage',notes:'Notes / activities'},fr:{n:'Français',stage:'Étape',notes:'Notes / activités'},es:{n:'Español',stage:'Etapa',notes:'Notas / actividades'}};
 function snPdfBox(F){const pr=[F.pax&&F.pax.v===3&&F.pax.src===snSrcKey(F)?'partecipanti':'',...Object.entries(F.corrx||{}).filter(([k,v])=>v.src===snSrcKey(F)).map(([k])=>'corrispondente '+k.toUpperCase())].filter(Boolean);
- return `<details class="card cdet sdpdf" data-sid="snpdfbox"${STU.open.snpdfbox||SNPDF.busy?' open':''}><summary><b>⬇ PDF per me, per i partecipanti e per il corrispondente</b>${SNPDF.busy?`<span class="snpill run">${esc(SNPDF.busy)}</span>`:pr.length?`<span class="snpill ok">pronti: ${esc(pr.join(', '))}</span>`:''}</summary><div class="sdpb">${SNPDF.busy?`<span class="note"><b>${esc(SNPDF.busy)}</b></span>`:`<button class="btn sm" data-a="snpdf" data-k="me" type="button"${dl?'':' disabled'}>Completo (per me)</button>${cbadge('no')}<button class="btn sm" data-a="snpdf" data-k="pax" type="button"${dl&&SAMPLE?'':' disabled'}>Per i partecipanti</button>${cbadge('leggero')}<span class="sp" style="width:6px"></span><button class="btn sm" data-a="snpdf" data-k="corr" type="button"${dl&&SAMPLE?'':' disabled'}>Per il corrispondente</button>${cbadge('leggero')}<select data-f="snpdflang" aria-label="Lingua per il corrispondente">${Object.entries(SNPL).map(([k,v])=>`<option value="${k}"${SNPDF.lang===k?' selected':''}>${v.n}</option>`).join('')}</select>`}${SNPDF.msg?`<div class="msg ${SNPDF.msg[0]}" style="flex-basis:100%;margin:6px 0 0">${esc(SNPDF.msg[1])}</div>`:''}<span class="note" style="flex-basis:100%">Per i partecipanti tolgo costi, pagamenti, mance e note tecniche. Per il corrispondente: giorno, data, tappa e le attività in breve, nella lingua scelta. «Claude · leggero» solo la prima volta: poi li rifaccio solo se cambi l'itinerario.</span></div></details>`}
+ return `<details class="card cdet sdpdf" data-sid="snpdfbox"${STU.open.snpdfbox||SNPDF.busy?' open':''}><summary><b>⬇ PDF per me, per i partecipanti e per il corrispondente</b>${SNPDF.busy?`<span class="snpill run">${esc(SNPDF.busy)}</span>`:pr.length?`<span class="snpill ok">pronti: ${esc(pr.join(', '))}</span>`:''}</summary><div class="sdpb">${SNPDF.busy?`<span class="note"><b>${esc(SNPDF.busy)}</b></span>`:`<button class="btn sm" data-a="snpdf" data-k="me" type="button"${dl?'':' disabled'}>Completo (per me)${pdfDot('fresh',{mini:1})}</button>${cbadge('no')}<button class="btn sm" data-a="snpdf" data-k="pax" type="button"${dl&&SAMPLE?'':' disabled'}>Per i partecipanti${pdfDot('fresh',{mini:1})}</button>${cbadge('leggero')}<span class="sp" style="width:6px"></span><button class="btn sm" data-a="snpdf" data-k="corr" type="button"${dl&&SAMPLE?'':' disabled'}>Per il corrispondente${pdfDot('fresh',{mini:1})}</button>${cbadge('leggero')}<select data-f="snpdflang" aria-label="Lingua per il corrispondente">${Object.entries(SNPL).map(([k,v])=>`<option value="${k}"${SNPDF.lang===k?' selected':''}>${v.n}</option>`).join('')}</select>`}${SNPDF.msg?`<div class="msg ${SNPDF.msg[0]}" style="flex-basis:100%;margin:6px 0 0">${esc(SNPDF.msg[1])}</div>`:''}<span class="note" style="flex-basis:100%">Per i partecipanti tolgo costi, pagamenti, mance e note tecniche. Per il corrispondente: giorno, data, tappa e le attività in breve, nella lingua scelta. «Claude · leggero» solo la prima volta: poi li rifaccio solo se cambi l'itinerario.</span></div></details>`}
 const snSrcKey=F=>String(F.det||F.at)+'|'+F.giorni.map(g=>(g.sec||[]).length).join('');
 const snPlain=g=>[...g.cosa.map(snNoAdd),...(g.sec||[]).map(s=>'Facoltativo: '+s)];
 async function snPaxRun(F){if(F.pax&&F.pax.v===3&&F.pax.src===snSrcKey(F))return F.pax;
@@ -4528,6 +4617,49 @@ async function snItinPDF(D){await loadScript(LIB.jspdf);await loadScript(LIB.aut
   didDrawPage:()=>{const n=doc.internal.getNumberOfPages();doc.setFont('helvetica','normal');doc.setFontSize(7.5);doc.setTextColor(120);doc.text(safe(tripFull()),M,H-6);doc.text(String(n),W-M,H-6,{align:'right'})}});
  if(D.foot&&D.foot.length){let y=doc.lastAutoTable.finalY+6;if(y>H-30){doc.addPage();y=M+4}doc.setFont('helvetica','bold');doc.setFontSize(10);doc.setTextColor(...green);doc.text(safe(D.footT||''),M,y);doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(30);y+=5;D.foot.forEach(x=>{doc.splitTextToSize('- '+safe(x),W-2*M).forEach(l=>{if(y>H-14){doc.addPage();y=M+4}doc.text(l,M,y);y+=4.2})})}
  return doc.output('blob')}
+// le schede giorno per giorno (come in Studio) dentro un PDF già aperto: aggiunge le pagine che servono
+async function snCardsInto(doc,G,opt,title,info,P0){await loadScript(LIB.h2c);const root=document.documentElement,th=root.getAttribute('data-theme'),land=!!opt.compact;root.setAttribute('data-theme','light');
+ const box=document.createElement('div');box.className='sdpdfcap';box.style.cssText=`position:fixed;left:-12000px;top:0;width:${land?1450:1000}px;background:#fff;padding:4px`;
+ box.innerHTML=`<div class="snpdfh" style="padding:4px 4px 10px"><div style="font-size:26px;font-weight:700;color:#1f6f5c">${esc(title)}</div><div style="font-size:14px;color:#55625d;margin-top:4px">${info.map(esc).join(' · ')}</div></div>`+snDayCards(G,{...opt,pdf:true});
+ document.body.appendChild(box);
+ try{await new Promise(r=>setTimeout(r,60));const W=land?297:210,H=land?210:297,M=P0.M,cw=W-2*M,top=P0.top,bot=H-P0.bot;let y=top;
+  if(P0.newPage)doc.addPage();if(P0.onPage)P0.onPage();
+  const els=[box.querySelector('.snpdfh'),box.querySelector('.sdleg'),...box.querySelectorAll('.sdc')].filter(Boolean);
+  for(const el of els){const c=await window.html2canvas(el,{scale:2,backgroundColor:'#ffffff',logging:false,useCORS:true});let w=cw,h=c.height*cw/c.width;
+   if(h>bot-top){w=cw*(bot-top)/h;h=bot-top}if(y+h>bot&&y>top){doc.addPage();if(P0.onPage)P0.onPage();y=top}doc.addImage(c.toDataURL('image/jpeg',0.88),'JPEG',M+(cw-w)/2,y,w,h);y+=h+(el.classList.contains('sdc')?(land?2.5:4):2)}}
+ finally{box.remove();if(th==null)root.removeAttribute('data-theme');else root.setAttribute('data-theme',th)}}
+// l'itinerario di Pianificazione nel formato delle schede di Studio: una riga della tabella di marcia per ogni tappa, con gli orari ricavati dalle durate
+function planDayG(){const pad=n=>String(n).padStart(2,'0'),hm=m=>{m=((Math.round(m)%1440)+1440)%1440;return Math.floor(m/60)+':'+pad(m%60)},
+ tm=s=>{const x=String(s||'').match(/(\d{1,2})[:.](\d{2})/);return x?+x[1]*60+ +x[2]:null},F=S.snfinal&&S.snfinal.giorni||[],sp=x=>String(x||'').split(';').map(y=>y.trim()).filter(Boolean);
+ return S.days.map((d,i)=>{const t=txOf(d),fg=F.find(x=>x.g===i+1),M=[],cosa=[];
+  const fl0=t[0]&&t[0].m==='Volo'?((t[0].voli||[]).find(f=>tm(f.dep)!=null)):null,SM=((fg&&fg.orari&&fg.orari.marcia)||[]).filter(r=>tm(r.h)!=null&&/^\d/.test(String(r.h))),used=new Set();
+  const m0=SM.find(r=>!r.f);let cur=fl0?tm(fl0.dep):m0?tm(m0.h):(fg&&fg.orari&&tm(fg.orari.part))??8*60,start=null,lunch=false,lastTo='';
+  // orario dei colleghi: la riga della tabella di marcia dello Studio che parla della stessa tappa (stesso tipo: spostamento o attività)
+  const smT=(ds,pl,mv)=>{const T=new Set(escTok(ds+' '+pl.join(' ')));let best=null,bs=0;SM.forEach((r,j)=>{if(used.has(j)||(mv?!/[vt]/.test(r.k):/[vt]/.test(r.k)&&!/trek/i.test(ds)))return;let sc=0;if(mv&&pl.length>1){// spostamento: conta la destinazione (dopo l'ultima freccia) e la partenza (prima)
+     const A=String(r.t).split('→'),dst=new Set(escTok(A[A.length-1])),org=new Set(A.length>1?escTok(A.slice(0,-1).join(' ')):[]);
+     escTok(pl[pl.length-1]).forEach(w=>{if(dst.has(w))sc+=2});escTok(pl[0]).forEach(w=>{if(org.has(w))sc++})}
+    else escTok(r.t).forEach(w=>{if(T.has(w))sc++});if(sc>bs){bs=sc;best=j}});if(best==null)return null;
+   // trek a pezzi: se prima del pezzo trovato c'è un altro pezzo di trek non ancora usato (e non già passato), si parte da quello
+   const tb=tm(SM[best].h),k0=SM[best].k!=='t'?-1:SM.findIndex((r,j)=>!used.has(j)&&j!==best&&r.k===SM[best].k&&!r.f===!SM[best].f&&tm(r.h)>=cur&&tm(r.h)<tb);if(k0>=0)best=k0;
+   used.add(best);return tm(SM[best].h)};
+  const places=[];d.tappe.forEach(x=>sp(x).forEach(y=>{if(!places.length||norm(places[places.length-1])!==norm(y))places.push(y)}));
+  d.tappe.forEach((tp,k)=>{const LI=k,x=t[k]||{},pl=sp(tp),from=pl[0]||'',to=pl[pl.length-1]||'',ds=String(x.ds||'').trim(),fac=isFacLeg(x),dur=parseH(x.h)*60;
+   if(x.m==='Volo'){(x.voli||[]).filter(f=>f.da||f.a||f.nv).forEach(f=>{const a=tm(f.dep),b=tm(f.arr),gs=flGroups(f);if(start==null&&a!=null)start=a;
+     M.push({h:a!=null?hm(a):'',e:b!=null?hm(b):'',k:'a',t:`${f.da||''} → ${f.a||''}${f.comp||f.nv?' · '+[f.comp,f.nv].filter(Boolean).join(' '):''}${gs.length?' ('+gs.map(z=>z.name).join(' + ')+')':''}`,c:[]});if(b!=null)cur=b;lastTo=f.a||lastTo});return}lastTo=''
+   if(!tp.trim()&&!ds)return;
+   const fix=tm(x.o),st=fix!=null?fix:smT(ds,pl,!!x.m),cur0=cur;if(fix!=null)cur=fix;if(st!=null&&(st>cur||start==null))cur=st;
+   // orari verosimili (solo con le tappe che ci sono, senza aggiungerne): cena la sera, tramonto verso le 17:15
+   if(st==null&&/cena/i.test(ds)&&!fac)cur=Math.max(cur,/monaci/i.test(ds)?18*60:19*60+30);
+   if(st==null&&/tramonto/i.test(ds)&&dur)cur=Math.max(cur,17*60+15-dur+30);
+   if(start==null)start=cur;const h=hm(cur),e=dur?hm(cur+dur):'',km=num(x.km)?fmt(num(x.km),1).replace(/[.,]0$/,'')+' km':'';
+   if(x.m){const trek=/piedi/i.test(x.m),gen=/^(trasferiment|trekking|volo)/i.test(ds)||!ds;
+    M.push({li:LI,h,e,k:trek?'t':'v',t:`${trek?'Trek':'Trasferimento in '+x.m.toLowerCase()} ${from}${to&&norm(to)!==norm(from)?' → '+to:''}${km?' · '+km:''}`,...(fac?{f:1}:{}),c:gen?[]:[cosa.push(ds)-1]})}
+   else{const k=/cena|pranzo|colazione|aperitivo|momo|merenda/i.test(ds)?'p':/tempo libero|shopping|thamel|relax/i.test(ds)?'l':'s';
+    M.push({li:LI,h,e,k,t:to||from,...(fac?{f:1}:{}),c:ds?[cosa.push(ds)-1]:[]})}
+   if(!fac)cur+=dur;else if(st!=null)cur=cur0});
+  const last=M.filter(r=>!r.f).pop(),hn=/^\s*(volo|casa|aereo)\s*$/i.test(d.hotel.name||'')||d.hotel.c==='no'&&!d.hotel.name?'':(d.hotel.name||''),nt=notte(d);
+  return {g:i+1,tappa:places.length>1?places[0]+' → '+places[places.length-1]:(places[0]||''),dorme:[hn,hn&&nt&&!norm(hn).includes(norm(nt))?nt:''].filter(Boolean).join(', '),multi:fg&&fg.multi||'',
+   cosa,orari:{part:start!=null?hm(start):'',arr:last&&(last.e||last.h)?`${last.k==='a'&&lastTo?lastTo:(places[places.length-1]||'')} ≈ ${last.e||last.h}`:'',marcia:M}}})}
 async function snCardsPDF(G,opt,title,info){await loadScript(LIB.jspdf);await loadScript(LIB.h2c);const{jsPDF}=window.jspdf,root=document.documentElement,th=root.getAttribute('data-theme'),land=!!opt.compact;root.setAttribute('data-theme','light');
  const box=document.createElement('div');box.className='sdpdfcap';box.style.cssText=`position:fixed;left:-12000px;top:0;width:${land?1450:1000}px;background:#fff;padding:4px`;
  box.innerHTML=`<div class="snpdfh" style="padding:4px 4px 10px"><div style="font-size:26px;font-weight:700;color:#1f6f5c">${esc(title)}</div><div style="font-size:14px;color:#55625d;margin-top:4px">${info.map(esc).join(' · ')}</div></div>`+snDayCards(G,{...opt,pdf:true});
@@ -4544,7 +4676,7 @@ async function snPdfGo(kind){const F=S.snfinal;if(!F)return;SNPDF.msg='';const l
  try{let D,name;
   if(kind==='me'||kind==='pax'){let X=null;if(kind==='pax'){SNPDF.busy='Claude prepara la versione per i partecipanti…';render();useStart('PDF per i partecipanti');X=await snPaxRun(F);useEnd()}SNPDF.busy='Preparo il PDF…';render();
    const info=[tripFull(),`dal ${fd(0)} al ${fd(S.days.length-1)}`,'Partecipanti: '+HL.it.paxTl(P())];
-   const blob=await snCardsPDF(F.giorni,kind==='pax'?{pax:X,compact:true}:{compact:true},kind==='pax'?'Programma di viaggio':'Itinerario bozza · coordinatore',kind==='pax'?info:[...info,F.from]);
+   const blob=await snCardsPDF(F.giorni,kind==='pax'?{pax:X,compact:true,notime:true}:{compact:true},kind==='pax'?'Programma di viaggio':'Itinerario bozza · coordinatore',kind==='pax'?info:[...info,F.from]);
    const ok=await saveFile(`${fname(tripFull())}-itinerario-${kind==='pax'?'partecipanti':'coordinatore'}.pdf`,blob);SNPDF.msg=ok?['ok','PDF scaricato.']:['warn','Download annullato.'];SNPDF.busy='';render();return}
   if(kind==='me0'){SNPDF.busy='Preparo il PDF…';render();
    D={title:'Itinerario bozza · coordinatore',land:true,fs:7.8,info:[...I,['Versione',F.from]],head:['G','Data','Tappa','Partenza','Cosa si fa','Tabella di marcia'],
@@ -4606,9 +4738,13 @@ function snAlign(items,M){const tok=s=>new Set(escTok(snNoAdd(s))),A=M.map(()=>[
   if(bj>=0&&bs>=1)A[bj].push(it);else rest.push(it)});
  return {A,rest}}
 function snAlignHtml(g,px,M,opt){opt=opt||{};const items=px?px.cosa.map(s=>({s,h:esc(s)})):[...g.cosa.map(s=>({s,h:opt.pdf?esc(snNoAdd(s)):snAddHtml(s)})),...(g.sec||[]).map(s=>({s,h:`＋ ${esc(s)} <span class="note">secondaria</span>`}))];
- const {A,rest}=snAlign(items,M),cell=L=>L.length?`<ul class="sndc">${L.map(x=>`<li>${x.h}</li>`).join('')}</ul>`:'';
- return `<div class="sdalw"><table class="sdal"><colgroup><col class="cc"><col class="ch"><col class="ck"><col></colgroup><thead><tr><th class="c">Cosa si fa</th><th colspan="3">Tabella di marcia (orari stimati)</th></tr></thead><tbody>${M.map((r,j)=>`<tr class="k-${esc(r.k)}${r.f?' f':''}${A[j].length?'':' nc'}"><td class="c">${cell(A[j])}</td><td class="h">${esc(r.h)}${r.e?'–'+esc(r.e):''}</td><td class="k"><span class="kd" title="${esc((SNK[r.k]||['',''])[1])}">${(SNK[r.k]||['•'])[0]}</span></td><td class="t">${esc(r.t)}${r.f?'<span class="sdf">facoltativo</span>':''}</td></tr>`).join('')}${rest.length?`<tr class="ex"><td class="c">${cell(rest)}</td><td class="h" colspan="3"><span class="note">da sapere per la giornata</span></td></tr>`:''}</tbody></table></div>`}
+ const {A,rest}=snAlign(items,M),NT=!!opt.notime,cell=L=>L.length?`<ul class="sndc">${L.map(x=>`<li>${x.h}</li>`).join('')}</ul>`:'';
+ return `<div class="sdalw"><table class="sdal${NT?' nt':''}"><colgroup><col class="cc"><col class="ch"><col class="ck"><col></colgroup><thead><tr><th class="c">Cosa si fa</th><th colspan="3">${NT?'Programma della giornata':'Tabella di marcia (orari stimati)'}</th></tr></thead><tbody>${M.map((r,j)=>`<tr class="k-${esc(r.k)}${r.f?' f':''}${A[j].length?'':' nc'}"><td class="c">${cell(A[j])}</td><td class="h">${NT?'':esc(r.h)+(r.e?'–'+esc(r.e):'')}</td><td class="k"><span class="kd" title="${esc((SNK[r.k]||['',''])[1])}">${(SNK[r.k]||['•'])[0]}</span></td><td class="t">${esc(r.t)}${r.f?'<span class="sdf">facoltativo</span>':''}</td></tr>`).join('')}${rest.length?`<tr class="ex"><td class="c">${cell(rest)}</td><td class="h" colspan="3"><span class="note">da sapere per la giornata</span></td></tr>`:''}</tbody></table></div>`}
+// righe del MO e delle relazioni che contengono distanze in km, per riempire i km dei trasferimenti
+function snKmSnips(max=18000){const src=[...srcSorted('mo').filter(x=>/itinerar/i.test(x.name||'')),...srcSorted('rel')];let out='',seen=new Set();
+ for(const x of src){const L=String(x.text||'').split('\n');let upto=-1;for(let i=0;i<L.length;i++){if(i<=upto||!/\d\s*km\b/i.test(L[i]))continue;upto=i+2;const w=L.slice(Math.max(0,i-4),i+3).join(' ').replace(/\s+/g,' ').trim();const k=w.slice(0,120);if(seen.has(k))continue;seen.add(k);const add='- '+w+'\n';if(out.length+add.length>max)return out;out+=add}}return out}
 async function snLegRun(){const F=S.snfinal,M=['Bus','Barca','4x4','Piedi'];
+ let KMS='';try{await loadSources();KMS=snKmSnips()}catch(e){}
  const days=S.days.map((d,j)=>{const g=F.giorni.find(x=>x.g===j+1);return g&&d.tappe.length?{d,g}:null}).filter(Boolean);if(!days.length)return 0;
  const r=await stuAsk(`Viaggio: ${tripFull()}. Devo scrivere l'itinerario in Pianificazione con le TAPPE fatte così (esempio del coordinatore, giorno Kathmandu → Bhaktapur):
 - tappa "Kathmandu; Bhaktapur" · descrizione "Trasferimento" · tempo "1h" · mezzo "Bus"
@@ -4616,7 +4752,7 @@ async function snLegRun(){const F=S.snfinal,M=['Bus','Barca','4x4','Piedi'];
 Cioè: ogni SPOSTAMENTO è una tappa "Partenza; Arrivo" con descrizione "Trasferimento" (o "Trekking", "Volo") con il suo tempo, km e mezzo; ogni VISITA o ATTIVITÀ è una tappa a sé con solo il nome del luogo, una sola attività per tappa, con la sua durata nel tempo. Ogni attività che prima avrei separato con «;» diventa una tappa.
 Nella descrizione NIENTE costi e niente orari o durate (le durate vanno nel tempo), niente consigli pratici. Colazioni, pranzi e cene normali non sono tappe; i pasti speciali sì (es. "Cena con i monaci", "Cena al ristorante Shiva"). Le facoltative con «(facoltativo)» in fondo.
 L'ultima tappa del giorno deve essere nel luogo dove si dorme. I voli intercontinentali e i giorni in volo: una tappa sola come ora.
-Tempo nel formato "1h30" o "45min". Mezzo solo tra ${M.join(', ')} (per i voli lascia vuoto). Km solo se li conosci.
+Tempo nel formato "1h30" o "45min". Mezzo solo tra ${M.join(', ')} (per i voli lascia vuoto). Km: per ogni spostamento (anche i trasferimenti in bus o 4x4, non solo i trekking) cerca la distanza nelle DISTANZE DAL MATERIALE qui sotto, anche se la tratta è scritta al contrario o con un nome un po' diverso; se più colleghi danno valori diversi usa quello più frequente. Se la tratta non c'è lascia km vuoto: non stimare e non inventare.${KMS?'\n\nDISTANZE DAL MATERIALE (righe dei colleghi con i km):\n'+KMS:''}
 
 ${days.map(({d,g})=>`G${g.g} · ${g.tappa} · dorme: ${g.dorme||'?'}
 TAPPE DI ORA: ${d.tappe.map(l=>String(l).replace(';',' →')).join(' | ')}
@@ -4865,8 +5001,8 @@ function tripStats(id){const t=TRIPS[id],prev=S;const out={name:tripFull(id)||'S
 function suggestedPhase(s){return 'pre'}
 function vTripHome(){const s=tripStats(CUR),sp=suggestedPhase(s);
  return `<div class="crumb"><button class="crb" data-a="gohome" type="button">‹ Tutti i viaggi</button></div>${snNewBanner()}
- <section class="hero thero">${HERO}<div class="herotx"><span class="tflags big">${s.flags||'🌍'}</span><h1 class="htitle">${esc(s.name)}</h1><p class="hsub">${[s.dates,s.n?s.n+' giorni':'',s.pax?s.pax+' partecipanti':''].filter(Boolean).map(esc).join(' · ')}</p>
-  <div class="hchips">${isArch(CUR)?`<span class="twhen">📦 Archiviato</span><button class="btn sm" data-a="tunarch" data-id="${esc(CUR)}" type="button">Ripristina</button>`:''}${s.when?`<span class="twhen ${s.whenCls}">${esc(s.when)}</span>`:''}${s.pp?`<span class="twhen">${s.real?'Speso a persona':'A persona'} ${fmt(s.pp,0)} €${!s.real&&s.ppf?` (${fmt(s.ppf,0)} € con i facoltativi)`:''}</span>`:''}</div></div></section>
+ <section class="hero thero">${HERO}<div class="herotx"><span class="tflags big">${s.flags||'🌍'}</span><h1 class="htitle">${esc(yrSplit(s.name)[0]||s.name)}</h1><p class="hsub">${[s.dates,s.n?s.n+' giorni':'',s.pax?s.pax+' partecipanti':''].filter(Boolean).map(esc).join(' · ')}</p>
+  <div class="hchips">${yrSplit(s.name)[1]?`<span class="twhen tyrh">${esc(yrLbl(yrSplit(s.name)[1]))}</span>`:''}${isArch(CUR)?`<span class="twhen">📦 Archiviato</span><button class="btn sm" data-a="tunarch" data-id="${esc(CUR)}" type="button">Ripristina</button>`:''}${s.when?`<span class="twhen ${s.whenCls}">${esc(s.when)}</span>`:''}${s.pp?`<span class="twhen">${s.real?'Speso a persona':'A persona'} ${fmt(s.pp,0)} €${!s.real&&s.ppf?` (${fmt(s.ppf,0)} € con i facoltativi)`:''}</span>`:''}</div></div></section>
  <div class="pgrid">${Object.entries(PHASES).map(([k,p],i)=>`<button class="pcard${k===sp?' sug':''}${p.tabs.length?'':' soon'}" ${p.tabs.length?`data-a="phase" data-p="${k}"`:'disabled'} type="button" style="--c1:${HCOL[i][0]};--c2:${HCOL[i][1]}">
    <span class="pband"><span class="pico">${p.ico}</span><span class="pname">${p.t}</span></span>
    <span class="pbody"><span class="pdesc">${esc(p.d)}</span>${p.tabs.length?`<span class="ptabs">${p.tabs.map(x=>`<span>${esc(VIEWS[x][0])}</span>`).join('')}</span><span class="topen">Entra ›</span>`:'<span class="topen soonl">Prossimamente</span>'}</span></button>`).join('')}</div>`}
@@ -4876,7 +5012,7 @@ function vHome(){const all=sortedIds().slice().sort((x,y)=>{const a=tripStats(x)
  ${(()=>{let lb=0;try{lb=+localStorage.getItem('cv-lastbak')||0}catch(e){}const d=lb?Math.floor((Date.now()-lb)/864e5):-1;return d<0||d>=30?`<div class="bakrem"><span>💾 ${d<0?'Da questo dispositivo non hai ancora scaricato un backup dei viaggi.':`Ultimo backup scaricato ${d} giorni fa.`} Una copia ogni tanto ti protegge da qualsiasi imprevisto.</span><button class="btn sm" data-a="backup" type="button">Scarica backup</button></div>`:''})()}
  <div class="hgridt"><h2>I tuoi viaggi</h2><span class="note">${ids.length} ${ids.length===1?'viaggio':'viaggi'}</span></div>
  <div class="tgrid">${ids.map((id,i)=>{const s=tripStats(id),c=HCOL[i%HCOL.length];
-  return `<div class="tcard" style="--c1:${c[0]};--c2:${c[1]}"><button class="tmain" data-a="opentrip" data-id="${esc(id)}" type="button"><span class="tband"><span class="tflags">${s.flags||'🌍'}</span><span class="tname">${esc(s.name)}</span>${s.dates?`<span class="tdates">${esc(s.dates)}</span>`:''}</span>
+  return `<div class="tcard" style="--c1:${c[0]};--c2:${c[1]}"><button class="tmain" data-a="opentrip" data-id="${esc(id)}" type="button"><span class="tband">${(()=>{const[nm,yr]=yrSplit(s.name);return `<span class="tftop"><span class="tflags">${s.flags||'🌍'}</span>${yr?`<span class="tyr">${esc(yrLbl(yr))}</span>`:''}</span><span class="tname">${esc(nm||s.name)}</span>`})()}${s.dates?`<span class="tdates">${esc(s.dates)}</span>`:''}</span>
    <span class="tbody">${s.when?`<span><span class="twhen in ${s.whenCls}">${esc(s.when)}</span></span>`:''}
    <span class="tmeta">${s.n?`<span>${s.n} giorni</span>`:''}${s.pax?`<span>${esc(s.pax)} partecipanti</span>`:''}</span>
    ${s.pp?`<span class="tpp"><small>${s.real?'Speso a persona':'A persona'}</small><b>${fmt(s.pp,0)} €</b>${!s.real&&s.ppf?`<small>(${fmt(s.ppf,0)} € con i facoltativi)</small>`:''}</span>`:'<span class="tpp empty"><small>Costi da inserire</small></span>'}<span class="topen">Apri ›</span></span></button>
@@ -4930,7 +5066,7 @@ document.addEventListener('click',async ev=>{
  if(a==='ndaysok'&&DAYMSG){const cut=S.days.slice(DAYMSG.keep),ids=new Set(cut.map(x=>x.id));S.exc=S.exc.filter(x=>!ids.has(x.day));S.days.length=DAYMSG.keep;if(SELDAY!=='all'&&dayIdx(SELDAY)<0)SELDAY=S.days[S.days.length-1].id;DAYMSG=null;touch();render();return}
  if(a==='ndaysno'){DAYMSG=null;render();return}
  if(a==='selday'){SELDAY=t.dataset.d==='all'?'all':+t.dataset.d;const sy=window.scrollY;render();window.scrollTo(0,sy);return}
- if(a==='expset'){EXPO.secs=new Set(EXP_PRESETS[t.dataset.p]);EXPO.msg='';render();return}
+ if(a==='expset'){EXPO.secs=new Set(EXP_PRESETS[t.dataset.p]);EXPO.times=t.dataset.p==='part'?'se':'all';EXPO.msg='';render();return}
  if(a==='gosrc'){if(!PHASES.study){toast('Lo Studio è nella versione online');return}PHASE='study';tab='snew';SN.step=1;STU.open.snsrc=true;render();const el=document.getElementById('srcCardEl');if(el)el.scrollIntoView({block:'start'});return}
  if(a==='srccopy'){const x=document.getElementById('srcAsk');const txt=x?x.textContent:'';try{await navigator.clipboard.writeText(txt);t.textContent='Copiata ✓'}catch(e){const r=document.createRange();r.selectNodeContents(x);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);t.textContent='Selezionata: premi Cmd+C'}return}
  if(a==='hpdf'){RHP.open=t.dataset.k;RHP.msg=null;render();return}
@@ -5000,6 +5136,8 @@ document.addEventListener('click',async ev=>{
  if(a==='gsall'){STU.gsall=STU.gsall||{};STU.gsall[t.dataset.k]=true;const el=document.getElementById('gsres');if(el)el.innerHTML=gsHtml();return}
  if(a==='sugminepdf'){t.disabled=true;try{await sugMinePdf()}catch(e){toast((e&&e.message)||String(e))}t.disabled=false;return}
  if(a==='diarygo'||a==='diarytips'){if(DIARY.busy)return;if(a==='diarytips'&&claudeBusy()){toast('Claude sta già lavorando: aspetta che finisca.');return}await diaryGo(a==='diarytips');return}
+ if(a==='flck'){FLCK.busy=true;FLCK.msg=null;STU.open.flck=true;render();useStart('Verifica con i voli');try{await flCheckRun()}catch(e){FLCK.msg=['bad',(e&&e.message)||String(e)]}finally{useEnd()}FLCK.busy=false;render();return}
+ if(a==='flpdf'){t.disabled=true;try{const ok=await flightPlanPdf();FLP.msg=ok===false?'Download annullato.':'PDF scaricato.'}catch(e){FLP.msg=(e&&e.message)||String(e)}t.disabled=false;render();return}
  if(a==='laupdf'){t.disabled=true;try{const ok=await laundryPdf();LAU.msg=ok===false?'Download annullato.':'PDF scaricato.'}catch(e){LAU.msg=(e&&e.message)||String(e)}t.disabled=false;render();return}
  if(a==='pdfall'){if(PDFX.busy)return;await pdfAllGo();return}
  if(a==='pipeupd'){if(claudeBusy()){toast('Claude sta già lavorando: aspetta che finisca.');return}await pipeUpdGo(t.dataset.k);return}
@@ -5208,6 +5346,7 @@ document.addEventListener('click',async ev=>{
   const w=applyImport(IMPP);touch();IMPP=null;IMP={itin:'',hotel:'',exc:''};
   IMPMSG=w.length?['warn','Importato. Da controllare: '+w.join(' · ')]:['ok','Importato. Controlla Itinerario, Hotel e Riepilogo.'];render();return}
  if(a==='addtap'){const x=S.days[dayIdx(d)];txOf(x);x.tappe.push('');x.tx.push(emptyTx())}
+ if(a==='mvtap'){const x=S.days[dayIdx(d)];txOf(x);const k=+t.dataset.k,j=k+(+t.dataset.dir);if(j<0||j>=x.tappe.length)return;[x.tappe[k],x.tappe[j]]=[x.tappe[j],x.tappe[k]];[x.tx[k],x.tx[j]]=[x.tx[j],x.tx[k]]}
  if(a==='deltap'){const x=S.days[dayIdx(d)];txOf(x);x.tappe.splice(+t.dataset.k,1);x.tx.splice(+t.dataset.k,1);if(!x.tappe.length){x.tappe.push('');x.tx.push(emptyTx())}}
  if(a==='addday'){const nd=newDay();if(t.dataset.d==='end')S.days.push(nd);else S.days.splice(dayIdx(d)+1,0,nd);if(SELDAY!=='all')SELDAY=nd.id}
  if(a==='delday'){if(S.days.length<2)return;if(!confirmBtn(t))return;const di=dayIdx(d);S.exc=S.exc.filter(e=>e.day!==d);S.days.splice(di,1);if(SELDAY!=='all')SELDAY=S.days[Math.max(0,di-1)].id}
@@ -5215,7 +5354,7 @@ document.addEventListener('click',async ev=>{
   S.exc.push({id:nidv,day,prog:'',cur:1,tlf:false,tipo:'pax',imp:''});touch();render();
   const ip=document.getElementById('e-prog-'+nidv);if(ip){ip.closest('.exrow').scrollIntoView({block:'center'});ip.focus({preventScroll:true})}return}
  if(a==='delexc'){S.exc=S.exc.filter(e=>e.id!==+t.dataset.e)}
- if(['addtap','deltap','addday','delday','addexc','delexc'].includes(a)){touch();render()}});
+ if(['addtap','deltap','mvtap','addday','delday','addexc','delexc'].includes(a)){const sy=window.scrollY;touch();render();if(a==='mvtap')window.scrollTo(0,sy)}});
 document.addEventListener('input',ev=>{
  const t=ev.target;if(t.classList&&t.classList.contains('fit'))fitInput(t);if(t.classList&&t.classList.contains('grow'))growTA(t);
  if(t.id==='tripName'||t.id==='tripYr'){const a=document.getElementById('tripName').value.trim(),b=document.getElementById('tripYr').value.trim();TRIPS[CUR].name=(a+(b?' '+b:'')).trim();touch();const o=document.querySelector(`#tripSel option[value="${CSS.escape(CUR)}"]`);if(o)o.textContent=tripFull()||'Senza nome';return}
@@ -5224,9 +5363,10 @@ document.addEventListener('input',ev=>{
  if(f==='expsec'){if(t.checked)EXPO.secs.add(k);else EXPO.secs.delete(k);EXPO.msg='';const n=document.querySelector('#btnExp+.note');if(n)n.textContent=`${EXPO.secs.size} sezioni · ${tripFull()}`;return}
  if(f==='expgrp'){EXPO.grp=t.value;return}
  if(f==='expor'){EXPO.orient=t.value;return}
+ if(f==='exptimes'){EXPO.times=t.value;return}
  if(f==='flimp'){FLIMP.text=t.value;return}
  if(f==='link')return;
- if(f==='p')S.p.n=t.value;if(f==='start')S.start=t.value;if(f==='ct')S.countries=t.value;
+ if(f==='p')S.p.n=t.value;if(f==='ptlf')S.p.tlfMin=t.value;if(f==='start')S.start=t.value;if(f==='ct')S.countries=t.value;
  if(f==='cn')S.cur[+k].name=t.value;if(f==='cr')S.cur[+k].rate=t.value;if(f==='m')S.meals[k]=t.value;
  if(f==='tap')S.days[dayIdx(+t.dataset.d)].tappe[+k]=t.value;
  if(f==='tx')txOf(S.days[dayIdx(+t.dataset.d)])[+k][t.dataset.x]=t.value;
@@ -5337,7 +5477,7 @@ document.addEventListener('change',ev=>{const t=ev.target;
   const sy=window.scrollY;render();window.scrollTo(0,sy);return}
  const f=t.dataset.f;if(f==='tx'&&t.dataset.x==='m'){const sy=window.scrollY;render();window.scrollTo(0,sy);return}
 if(f==='e'&&t.dataset.k==='day'&&SELDAY!=='all')SELDAY=+t.value;
-if(f==='cn'||f==='start'||f==='p'||(f==='h'&&t.dataset.k==='name')||(f==='e'&&t.dataset.k==='dur')||(t.tagName==='SELECT'&&(f==='e'||f==='h'))){render();
+if(f==='cn'||f==='start'||f==='p'||f==='ptlf'||(f==='h'&&t.dataset.k==='name')||(f==='e'&&t.dataset.k==='dur')||(t.tagName==='SELECT'&&(f==='e'||f==='h'))){render();
   if(f==='e'&&t.dataset.k==='day'){const el=document.getElementById('e-day-'+t.dataset.e);if(el){(el.closest('.exrow')||el).scrollIntoView({block:'center'});el.focus({preventScroll:true})}}}});
 
 window.TRAVEL=true;delete PHASES.study;delete PHASES.post;loadLocal();try{travelStart()}catch(e){}render();initCloud();

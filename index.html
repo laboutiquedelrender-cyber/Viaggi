@@ -1,6 +1,6 @@
 <!doctype html><html lang="it"><head><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Viaggio">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202611260915 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202611260916 -->
 <meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
 .modet>summary{cursor:pointer;padding:2px 0}.modet[open]>summary{margin-bottom:6px}.relsec{margin:0 0 8px}.cdet.relsec>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;background:var(--bg);transition:background .15s}.cdet.relsec>summary::-webkit-details-marker{display:none}.cdet.relsec>summary::before{content:'▸';color:var(--accent);font-size:12px;transition:transform .15s}.cdet.relsec[open]>summary::before{transform:rotate(90deg)}.cdet.relsec>summary b{color:var(--accent)}.cdet.relsec>summary .note{margin-left:auto;font-size:12px}.cdet.relsec>summary:hover{background:var(--card)}.cdet.relsec[open]>summary{border-bottom-left-radius:4px;border-bottom-right-radius:4px}.relsec>textarea{margin-top:6px}.reldg{margin:6px 0 6px}.reldg>summary{cursor:pointer}.reldg b{font-size:13px}.reldg>textarea{margin-top:6px}.reldg textarea,.moitem>textarea{width:100%;box-sizing:border-box}
 .uidlg{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px}.uidlg-b{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:16px;max-width:420px;width:100%;box-sizing:border-box}.uidlg-b p{margin:0 0 12px;line-height:1.45}.uidlg-b input{width:100%;box-sizing:border-box;margin-bottom:12px}.uidlg-a{display:flex;justify-content:flex-end;gap:8px}
@@ -897,6 +897,14 @@ summary .sugbox h3,.sugbox>summary{cursor:pointer}.sugbox>summary h3{display:inl
 #cccashc.cccashd>summary{display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none}#cccashc.cccashd>summary::-webkit-details-marker{display:none}
 #cccashc.cccashd>summary h2{flex:1;margin:0}#cccashc.cccashd[open]>summary{margin-bottom:10px}.cccsum{font-size:20px;text-align:right;white-space:nowrap;line-height:1.15}.cccsum small{display:block;font-size:12px;font-weight:500;opacity:.85}
 :root.ui2 #view details#cccashc.cdet>summary{color:inherit}
+/* Cassa: spesa a persona e apertura delle schede dall'alto (2026-11-26) */
+.ccpp{margin-top:10px;border-radius:12px;padding:10px 12px;background:rgba(255,255,255,.12)}.ccpph{font-weight:700;margin-bottom:4px}
+.ccppr{display:flex;justify-content:space-between;gap:10px;padding:3px 0;font-size:14px}.ccppr b{white-space:nowrap}
+.ccppd{border-top:1px solid rgba(255,255,255,.25);margin-top:4px;padding-top:6px;font-weight:600}.ccppd.over b{color:#ffd2c7}.ccppd.under b{color:#c9f2de}
+:root:not(.ui2) .ccpp{background:var(--sec)}:root:not(.ui2) .ccppd{border-top-color:var(--line)}:root:not(.ui2) .ccppd.over b{color:var(--bad)}:root:not(.ui2) .ccppd.under b{color:var(--ok)}
+#view>details{scroll-margin-top:10px}
+:root.ui2 #view #cccashc .ccpp,:root.ui2 #view #cccashc .ccpp span,:root.ui2 #view #cccashc .ccpp div{color:var(--accent-fg)}:root.ui2 #view #cccashc .ccpp b{color:var(--accent-fg);font-size:15px}:root.ui2 #view #cccashc .ccppd.over b{color:#ffd2c7}:root.ui2 #view #cccashc .ccppd.under b{color:#c9f2de}
+:root.ui2 #view #cccashc .cccashb .ccmx b{font-size:13px}
 </style>
 
 <div class="toph">
@@ -919,6 +927,7 @@ summary .sugbox h3,.sugbox>summary{cursor:pointer}.sugbox>summary h3{display:inl
   <div class="tabs" role="tablist" id="tabs"></div>
 </div>
 <div id="syncbar" class="syncbar" hidden></div><main id="view"></main>
+<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 26/11/2026 09:16</p>
 
 <script>
 /* ---------- stato ---------- */
@@ -3192,6 +3201,19 @@ function vCComune(){const C=ccData();if(CCDAY==null){const ti=ccTodayIdx();CCDAY
  const mov=`<div class="card"><h2>Movimenti</h2>${chips}${flt}<div class="ccdaytitle">${tl}</div>${add}${msg}${list?`<details class="cdet" id="det-ccmv"${OPEN.ccmv?' open':''}><summary><h3 style="margin:0;font-size:14px">Movimenti inseriti <span class="note" style="font-weight:400">· ${idx.length}</span></h3></summary>${list}${tot}</details>`:'<p class="note">Nessun movimento'+(CCTYPE||(CCCAT&&catOn)?' di questo tipo':'')+(CCDAY==='all'?'':' in questo giorno')+'.</p>'}</div>`;
  const sheet=CCED?ccEdSheet():CCPICK?ccPickPanel():CCCLOSE?ccCloseSheet():'';
  return people+mov+ccCash()+ccPrev()+ccCambi()+ccSaldi()+sheet}
+// a persona: previsto dal programma e speso dalla Cassa, fino al giorno scelto (o a oggi) e in tutto
+function ccPerPax(){const C=ccData(),T=totals(),np=C.people.length||P(),pp=P()||np;if(!T.te&&!C.mv.some(x=>x.type==='sp'))return '';
+ let di=CCDAY!=='all'&&CCDAY!=null?dayIdx(CCDAY):ccTodayIdx();const ti=ccTodayIdx();if(di<0){const a=dObj(0),td=new Date();td.setHours(0,0,0,0);di=a&&td<a?-1:S.days.length-1}
+ const pvAll=T.te/pp,pvTo=di>=0?T.rows.slice(0,di+1).reduce((a,r)=>a+r.eur,0)/pp:0;let spAll=0,spTo=0;
+ C.mv.forEach(x=>{if(x.type!=='sp'||!num(x.v))return;const e=ccEur(x.v,+x.cur||0)/np;spAll+=e;const i=dayIdx(x.day);if(di>=0&&i>=0&&i<=di)spTo+=e});
+ const d=spTo-pvTo,lbl=di>=0?`G${di+1} · ${esc(ddmm(di))}`:'';
+ return `<div class="ccpp"><div class="ccpph">A persona</div>
+  <div class="ccppr"><span>Previsto in tutto</span><b>${fmt(pvAll,0)} €</b></div>
+  ${di>=0?`<div class="ccppr"><span>Previsto fino al ${lbl}</span><b>${fmt(pvTo,0)} €</b></div>
+  <div class="ccppr"><span>Speso fino al ${lbl}</span><b>${fmt(spTo,0)} €</b></div>
+  ${pvTo||spTo?`<div class="ccppr ccppd ${d>0.5?'over':d<-0.5?'under':''}"><span>${Math.abs(d)<0.5?'In linea con il previsto':d>0?'Sopra il previsto di':'Sotto il previsto di'}</span><b>${Math.abs(d)<0.5?'✓':fmt(Math.abs(d),0)+' €'}</b></div>`:''}`:''}
+  ${Math.abs(spAll-spTo)>0.5||di<0?`<div class="ccppr"><span>Speso in tutto finora</span><b>${fmt(spAll,0)} €</b></div>`:''}
+ </div>`}
 function ccCash(){const C=ccData(),K=ccCalc(),T=totals(),cs=[...new Set([0,...cassaCurs(),...Object.keys(K.cash).map(Number)])],spent={};
  C.mv.forEach(x=>{if(x.type==='sp')spent[+x.cur||0]=(spent[+x.cur||0]||0)+num(x.v)});let mancaE=0;
  const box=c=>{const v0=K.cash[c]||0,v=c&&Math.abs(ccEur(v0,c))<1?0:v0;let mx='';if(c){const rest=Math.max(0,(T.tc[c]||0)-(spent[c]||0)),man=Math.max(0,rest-Math.max(0,v));
@@ -3201,6 +3223,7 @@ function ccCash(){const C=ccData(),K=ccCalc(),T=totals(),cs=[...new Set([0,...ca
  const sumE=Math.abs(K.cashEur)<0.005?'0':fmt(K.cashEur,2);
  return `<details class="card cdet cccashd" id="cccashc"${OPEN.cccash?' open':''}><summary><h2>In cassa <span class="note" style="font-weight:400">· tenuta da ${esc(ccName(C.cassiere))}</span></h2><b class="cccsum">${sumE} €${mancaE>0.5?`<small>da cambiare ≈ ${fmt(mancaE,0)} €</small>`:''}</b></summary><div class="cccashg">${boxes}
   <div class="cccashb tot"><small>Totale in euro</small><b>${Math.abs(K.cashEur)<0.005?'0':fmt(K.cashEur,2)} €</b>${mancaE>0.5?`<span class="ccmx">da cambiare ≈ ${fmt(mancaE,0)} €</span>`:''}</div></div>
+  ${ccPerPax()}
   <p class="note" style="margin:6px 0 0">Nelle monete locali un importo che vale meno di 1 € è mostrato come 0. «Manca»: quanto serve ancora in quella moneta per arrivare al totale previsto nel programma, tolto quello già speso e quello in cassa.</p>
   <div style="margin-top:8px"><button class="btn" data-a="ccclose" type="button">🔒 Chiudi la cassa</button></div></details>`}
 // rettifiche in euro: + soldi rientrati in cassa (es. prestiti restituiti), − soldi usciti
@@ -5403,6 +5426,7 @@ document.addEventListener('click',ev=>{const sm=ev.target&&ev.target.closest&&ev
  // schede che non leggono OPEN: le sistemo a mano
  sids.forEach(k=>{const x=document.getElementById(k);if(x&&x.open)x.open=false});
  const n=document.getElementById(id);if(n){if(n.open!==want)n.open=want;const dy=n.getBoundingClientRect().top-top;if(Math.abs(dy)>1)window.scrollBy(0,dy)}},true);
+document.addEventListener('click',ev=>{const sm=ev.target&&ev.target.closest&&ev.target.closest('#view>details>summary');if(!sm||tab!=='ccom')return;const d=sm.parentElement;setTimeout(()=>{if(d.open)d.scrollIntoView({behavior:'smooth',block:'start'})},40)},true);
 document.addEventListener('toggle',ev=>{if(ev.target&&ev.target.open&&ev.target.querySelectorAll)ev.target.querySelectorAll('textarea.grow').forEach(growTA);const sid=ev.target&&ev.target.dataset&&ev.target.dataset.sid;if(sid)STU.open[sid]=ev.target.open;if(ev.target&&ev.target.tagName==='DETAILS'&&!ev.target.open)ev.target.querySelectorAll('details[open]').forEach(d=>{d.open=false;if(d.dataset.sid)STU.open[d.dataset.sid]=false});const id=ev.target&&ev.target.id;if(id&&id.startsWith('det-'))OPEN[id.slice(4)]=ev.target.open;if(id==='cccashc')OPEN.cccash=ev.target.open;if(id&&id.startsWith('srcDet-')){INFO.open=INFO.open&&typeof INFO.open==='object'?INFO.open:{};INFO.open[id.slice(7)]=ev.target.open}},true);
 document.addEventListener('change',ev=>{const t=ev.target;
  if(t.dataset&&t.dataset.f==='bztp'){const sy=window.scrollY;render();window.scrollTo(0,sy);return}

@@ -1,6 +1,6 @@
 <!doctype html><html lang="it"><head><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Viaggio">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202611260916 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#1f6f5c"><meta name="robots" content="noindex,nofollow"><!-- v202611260945 -->
 <meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
 .modet>summary{cursor:pointer;padding:2px 0}.modet[open]>summary{margin-bottom:6px}.relsec{margin:0 0 8px}.cdet.relsec>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;background:var(--bg);transition:background .15s}.cdet.relsec>summary::-webkit-details-marker{display:none}.cdet.relsec>summary::before{content:'▸';color:var(--accent);font-size:12px;transition:transform .15s}.cdet.relsec[open]>summary::before{transform:rotate(90deg)}.cdet.relsec>summary b{color:var(--accent)}.cdet.relsec>summary .note{margin-left:auto;font-size:12px}.cdet.relsec>summary:hover{background:var(--card)}.cdet.relsec[open]>summary{border-bottom-left-radius:4px;border-bottom-right-radius:4px}.relsec>textarea{margin-top:6px}.reldg{margin:6px 0 6px}.reldg>summary{cursor:pointer}.reldg b{font-size:13px}.reldg>textarea{margin-top:6px}.reldg textarea,.moitem>textarea{width:100%;box-sizing:border-box}
 .uidlg{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px}.uidlg-b{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:12px;padding:16px;max-width:420px;width:100%;box-sizing:border-box}.uidlg-b p{margin:0 0 12px;line-height:1.45}.uidlg-b input{width:100%;box-sizing:border-box;margin-bottom:12px}.uidlg-a{display:flex;justify-content:flex-end;gap:8px}
@@ -927,7 +927,7 @@ summary .sugbox h3,.sugbox>summary{cursor:pointer}.sugbox>summary h3{display:inl
   <div class="tabs" role="tablist" id="tabs"></div>
 </div>
 <div id="syncbar" class="syncbar" hidden></div><main id="view"></main>
-<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 26/11/2026 09:16</p>
+<p class="appver" style="text-align:center;font-size:12px;color:var(--muted);margin:24px 0 12px">Versione da viaggio del 26/11/2026 09:45</p>
 
 <script>
 /* ---------- stato ---------- */
@@ -1775,6 +1775,7 @@ async function saveFile(filename,data){if(!dl)throw new Error('Il download non �
 let MCP=null,SAMPLE=null;const FIND={};
 /* ---------- barra in fondo allo schermo mentre Claude lavora: rossa con il tempo che passa, verde quando ha finito ---------- */
 let CB={n:0,t0:0,lab:'',err:'',tm:null,end:null};
+function mcpWrap(m){if(!m||typeof m.callTool!=='function')return m;const c=m.callTool.bind(m);try{m.callTool=async(...a)=>{cbStart();try{const r=await c(...a);CB.err='';return r}catch(e){CB.err=(e&&e.message)||String(e);throw e}finally{cbEnd()}}}catch(e){}return m}
 function cbWrap(s){if(!s||(typeof s!=='function'&&typeof s.json!=='function'))return s;const j=s.json.bind(s),w=async(...a)=>{cbStart();try{const r=await j(...a);CB.err='';return r}catch(e){CB.err=(e&&e.message)||String(e);throw e}finally{cbEnd()}};
  try{// la capacità è sia una funzione (conversazione) sia un oggetto con json() e limits(): li tengo tutti
  const f=typeof s==='function'?async(...a)=>{cbStart();try{const r=await s(...a);CB.err='';return r}catch(e){CB.err=(e&&e.message)||String(e);throw e}finally{cbEnd()}}:{};
@@ -1787,7 +1788,7 @@ function cbEnd(){CB.n=Math.max(0,CB.n-1);if(CB.n)return;
  // aspetta un attimo: molte operazioni fanno più richieste una dopo l'altra
  const tEnd=Date.now();CB.end=setTimeout(()=>{if(CB.n)return;clearInterval(CB.tm);CB.tm=null;const lab=CB.lab||cbLab(),b=cbEl(),s=Math.round((tEnd-CB.t0)/1000);CB.t0=0;CB.lab='';
   if(CB.err){b.className='on bad';b.innerHTML=`<span>⚠️ ${esc(lab)}: non riuscito · ${esc(CB.err).slice(0,140)}</span><button type="button" data-cbx aria-label="Chiudi">×</button>`}
-  else{b.className='on ok';b.innerHTML=`<span>✓ Fatto: ${esc(lab)} <small>(${Math.floor(s/60)}:${String(s%60).padStart(2,'0')})</small></span><button type="button" data-cbx aria-label="Chiudi">×</button>`;setTimeout(()=>{if(!CB.n&&b.classList.contains('ok')){b.className='';document.body.classList.remove('cbon')}},6000)}
+  else{b.className='on ok';b.innerHTML=`<span>✓ ${lab&&lab!=='Claude sta lavorando'?'Fatto: '+esc(lab):'Claude ha finito'} <small>(${Math.floor(s/60)}:${String(s%60).padStart(2,'0')})</small></span><button type="button" data-cbx aria-label="Chiudi">×</button>`;setTimeout(()=>{if(!CB.n&&b.classList.contains('ok')){b.className='';document.body.classList.remove('cbon')}},6000)}
   CB.err=''},1500)}
 function cbShow(){if(!CB.n&&!CB.tm)return;const b=cbEl(),s=Math.round((Date.now()-CB.t0)/1000);if(!CB.lab&&USE&&USE.t)CB.lab=USE.t;
  b.className='on run';document.body.classList.add('cbon');b.innerHTML=`<span class="cbsp" aria-hidden="true"></span><span>⏳ ${esc(cbLab())}… <b>${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}</b></span><small>puoi scorrere la pagina, ti avviso quando ha finito</small>`}
@@ -2564,7 +2565,7 @@ function onCloud(snap){if(snap.metadata.fromCache&&firstSync)return;
  if(!Object.keys(pend).length&&!Object.values(inflight).some(Boolean))setSync('ok')}
 async function initCloud(){
  if(!window.claude||!window.claude.use){setSync('local');return}
- claude.use('mcp').then(m=>{MCP=m}).catch(()=>{});claude.use('sample').then(s=>{SAMPLE=cbWrap(s)}).catch(()=>{});
+ claude.use('mcp').then(m=>{MCP=mcpWrap(m)}).catch(()=>{});claude.use('sample').then(s=>{SAMPLE=cbWrap(s)}).catch(()=>{});
  claude.use('downloads').then(d=>{dl=d;const b=document.getElementById('btnPdf');if(b)b.disabled=!dl;render()}).catch(()=>{});
  try{const[d,u]=await Promise.all([claude.use('db'),claude.use('user')]);if(!d||!u){setSync('local');return}
   const uidv=await u.id();if(!uidv){setSync('local');return}
